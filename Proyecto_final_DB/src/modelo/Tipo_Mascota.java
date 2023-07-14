@@ -9,6 +9,7 @@ package modelo;
  * @author Anthony Moya
  */
 public class Tipo_Mascota {
+
     private String nombre;
 
     public Tipo_Mascota(String nombre) {
@@ -23,5 +24,6 @@ public class Tipo_Mascota {
         this.nombre = nombre;
     }
     
+>>>>>>> anthony
     
 }
