@@ -8,6 +8,22 @@ package modelo;
  *
  * @author Anthony Moya
  */
-public class Cliente {
+public class Cliente extends Persona{
+    
+    private String estado;
+
+    public Cliente(String estado, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
+        super(cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+        this.estado = estado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
     
 }

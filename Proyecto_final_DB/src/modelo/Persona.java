@@ -9,7 +9,7 @@ package modelo;
  * @author Anthony Moya
  */
 public class Persona {
-    private int codigo;
+
     private String cedula;
     private String nombre;
     private String apellido;
@@ -18,8 +18,8 @@ public class Persona {
     private String telefono;
     private String correo;
 
-    public Persona(int codigo, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
-        this.codigo = codigo;
+    public Persona( String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
+
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -27,14 +27,6 @@ public class Persona {
         this.direccion_s = direccion_s;
         this.telefono = telefono;
         this.correo = correo;
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
     }
 
     public String getCedula() {
