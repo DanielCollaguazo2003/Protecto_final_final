@@ -8,6 +8,6 @@ package modelo;
  *
  * @author Anthony Moya
  */
-public class Mascota {
+public class Tipo_Mascota {
     
 }
