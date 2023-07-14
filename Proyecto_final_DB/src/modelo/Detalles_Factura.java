@@ -9,5 +9,6 @@ package modelo;
  * @author Anthony Moya
  */
 public class Detalles_Factura {
+    private Cabecera_Factura cabecera;
     
 }

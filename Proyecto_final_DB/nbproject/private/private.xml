@@ -3,12 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Tipo_Mascota.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Detalles_Factura.java</file>
             <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/vista/VistaLogin.java</file>
-=======
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/vista/VistaUsuarios.java</file>
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/vista/VistaLogin.java</file>
->>>>>>> 3613af3b44e6c09b4730147ffe9f53b3cc06bd5f
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Cliente.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Rol.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Cabecera_Factura.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Usuario.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Detalle_Factura.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Empleado.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Servicio.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Mascota.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Permiso.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Persona.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Cita.java</file>
         </group>
     </open-files>
 </project-private>
