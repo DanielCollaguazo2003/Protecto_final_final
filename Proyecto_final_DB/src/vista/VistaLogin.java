@@ -4,6 +4,10 @@
  */
 package vista;
 
+import java.awt.event.ActionListener;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author XaviO_o
@@ -32,9 +36,9 @@ public class VistaLogin extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        remember = new javax.swing.JCheckBox();
         sesion = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        olvido = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -60,11 +64,11 @@ public class VistaLogin extends javax.swing.JFrame {
         jLabel6.setText("Usuario");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        jCheckBox1.setForeground(new java.awt.Color(73, 80, 87));
-        jCheckBox1.setText("Recuerdame");
-        jCheckBox1.setBorder(null);
-        jCheckBox1.setContentAreaFilled(false);
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        remember.setForeground(new java.awt.Color(73, 80, 87));
+        remember.setText("Recuerdame");
+        remember.setBorder(null);
+        remember.setContentAreaFilled(false);
+        jPanel1.add(remember, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
         sesion.setBackground(new java.awt.Color(204, 255, 255));
         sesion.setForeground(new java.awt.Color(94, 174, 253));
@@ -77,17 +81,17 @@ public class VistaLogin extends javax.swing.JFrame {
         });
         jPanel1.add(sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 390, 40));
 
-        jButton2.setForeground(new java.awt.Color(116, 120, 141));
-        jButton2.setText("¿Olvidaste la contraseña?");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        olvido.setForeground(new java.awt.Color(116, 120, 141));
+        olvido.setText("¿Olvidaste la contraseña?");
+        olvido.setBorder(null);
+        olvido.setBorderPainted(false);
+        olvido.setContentAreaFilled(false);
+        olvido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                olvidoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 190, 20));
+        jPanel1.add(olvido, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 190, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, -1));
@@ -108,10 +112,23 @@ public class VistaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_sesionActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void olvidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_olvidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_olvidoActionPerformed
 
+    public void listener_login(ActionListener l){
+       sesion.addActionListener(l);
+    }
+
+    public JPasswordField getPassword() {
+        return password;
+    }
+
+    public JTextField getUser() {
+        return user;
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -148,8 +165,6 @@ public class VistaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -157,7 +172,9 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton olvido;
     private javax.swing.JPasswordField password;
+    private javax.swing.JCheckBox remember;
     private javax.swing.JButton sesion;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
