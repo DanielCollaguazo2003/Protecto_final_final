@@ -46,7 +46,9 @@ Connection con;
             while (res.next()) {
                 JOptionPane.showMessageDialog(vl,"Inicio de sesion exitosa!");
             }
-res = ps.executeQuery();
+            
+            res = ps.executeQuery();
+            
             if (res.next() == false){
                 JOptionPane.showMessageDialog(vl,"Inicio de sesion Fallida!");
             }
