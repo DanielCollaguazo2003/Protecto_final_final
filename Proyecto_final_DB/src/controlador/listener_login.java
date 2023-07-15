@@ -13,6 +13,11 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import vista.VistaLogin;
 
+import javax.xml.bind.DatatypeConverter;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 /**
  *
  * @author XaviO_o
@@ -22,12 +27,13 @@ public class listener_login implements ActionListener {
     String sSQL = "";
     ConexionOracle conexion;
     VistaLogin vl;
-    PreparedStatement ps=null;
-Connection con;
+    PreparedStatement ps = null;
+    Connection con;
+
     public listener_login(ConexionOracle conexion, VistaLogin vl, Connection con) {
         this.conexion = conexion;
         this.vl = vl;
-        this.con=con;
+        this.con = con;
     }
 
     @Override
@@ -37,25 +43,33 @@ Connection con;
             String user = vl.getUser().getText();
             String password = vl.getPassword().getText();
 
-            
             ps = con.prepareStatement("SELECT usu_nombre_usuario, usu_contrasenia FROM vt_usuarios_sistema WHERE (usu_nombre_usuario=?) AND (usu_contrasenia=?)");
             ps.setString(1, user);
             ps.setString(2, password);
             ResultSet res = ps.executeQuery();
 
             while (res.next()) {
-                JOptionPane.showMessageDialog(vl,"Inicio de sesion exitosa!");
+                JOptionPane.showMessageDialog(vl, "Inicio de sesion exitosa!");
             }
-            
+
             res = ps.executeQuery();
-            
-            if (res.next() == false){
-                JOptionPane.showMessageDialog(vl,"Inicio de sesion Fallida!");
+
+            if (res.next() == false) {
+                JOptionPane.showMessageDialog(vl, "Inicio de sesion Fallida!");
             }
         } catch (SQLException x) {
             System.out.println(x);
             System.out.println("no");
         }
+    }
+
+    private String generarCifrado() throws NoSuchAlgorithmException {
+        String password = "Collaguazo123";
+
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
+        String md5 = DatatypeConverter.printHexBinary(digest);
+        return md5;
     }
 
 }
