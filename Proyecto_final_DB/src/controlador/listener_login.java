@@ -17,6 +17,7 @@ import javax.xml.bind.DatatypeConverter;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import vista.VistaGeneralSistema;
 
 /**
  *
@@ -29,11 +30,13 @@ public class listener_login implements ActionListener {
     VistaLogin vl;
     PreparedStatement ps = null;
     Connection con;
+    VistaGeneralSistema vGeneral;
 
-    public listener_login(ConexionOracle conexion, VistaLogin vl, Connection con) {
+    public listener_login(ConexionOracle conexion, VistaLogin vl, Connection con, VistaGeneralSistema vGeneral) {
         this.conexion = conexion;
         this.vl = vl;
         this.con = con;
+        this.vGeneral = vGeneral;
     }
 
     @Override
@@ -49,7 +52,8 @@ public class listener_login implements ActionListener {
             ResultSet res = ps.executeQuery();
 
             while (res.next()) {
-                JOptionPane.showMessageDialog(vl, "Inicio de sesion exitosa!");
+                //JOptionPane.showMessageDialog(vl, "Inicio de sesion exitosa!");
+                vGeneral.setVisible(true);
             }
 
             res = ps.executeQuery();

@@ -20,7 +20,7 @@ public class VistaLogin extends javax.swing.JFrame {
      */
     public VistaLogin() {
         initComponents();
-        this.setExtendedState(6);
+        //this.setExtendedState(6);
     }
 
     /**
@@ -178,7 +178,10 @@ public class VistaLogin extends javax.swing.JFrame {
     public JTextField getUser() {
         return user;
     }
-    
+     
+    public void listenerCrearUser(ActionListener l){
+        create.addActionListener(l);
+    }
     
     /**
      * @param args the command line arguments
