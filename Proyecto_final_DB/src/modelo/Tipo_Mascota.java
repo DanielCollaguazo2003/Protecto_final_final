@@ -24,6 +24,4 @@ public class Tipo_Mascota {
         this.nombre = nombre;
     }
     
->>>>>>> anthony
-    
 }

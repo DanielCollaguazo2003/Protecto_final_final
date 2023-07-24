@@ -1,11 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controlador;
 
-import com.mysql.cj.jdbc.PreparedStatementWrapper;
-import com.mysql.cj.xdevapi.PreparableStatement;
+
 import conexion.ConexionOracle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +19,8 @@ public class listener_login implements ActionListener {
     ConexionOracle conexion;
     VistaLogin vl;
     PreparedStatement ps=null;
-Connection con;
+    Connection con;
+    
     public listener_login(ConexionOracle conexion, VistaLogin vl, Connection con) {
         this.conexion = conexion;
         this.vl = vl;
