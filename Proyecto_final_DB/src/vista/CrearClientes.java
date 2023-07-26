@@ -21,6 +21,7 @@ public class CrearClientes extends javax.swing.JFrame {
         f.ubi="/imagenes/fondogrande.png";
         this.setContentPane(f);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
