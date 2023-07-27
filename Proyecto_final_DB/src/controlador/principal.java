@@ -48,7 +48,7 @@ public class principal {
         listenerServicios lser = new listenerServicios(ser);
         ListenerCreateUser lCreateUs = new ListenerCreateUser(createUser);
         ListenerCitas cit = new ListenerCitas(citas);
-        ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
+        //ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         
         vGeneral.listenerActualizar(lactcli);
         vGeneral.listenerClientes(lcli);
