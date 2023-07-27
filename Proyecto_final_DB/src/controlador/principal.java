@@ -6,10 +6,8 @@ package controlador;
 
 import conexion.ConexionOracle;
 import java.sql.Connection;
-import modelo.Cliente;
-import modelo.DefaultListaClientes;
-import modelo.DefaultTablaClientes;
-import modelo.Empleado;
+import java.util.ArrayList;
+import modelo.*;
 import vista.ActualizarCliente;
 import vista.Citas;
 import vista.Clientes;
@@ -26,8 +24,14 @@ import vista.Vista_Crear_Usuario;
  */
 public class principal {
     public static void main(String[] args) {
+        
+        //MODELOS
         VistaLogin vl = new VistaLogin();
         ConexionOracle conexion =  new ConexionOracle();
+        DefaultListaDetalles listaDetalles = new DefaultListaDetalles();
+        DefaultTablaDetalles tablaDetalles = new DefaultTablaDetalles(listaDetalles);
+        
+        
         
         ActualizarCliente actCli = new ActualizarCliente();
         Clientes c = new Clientes();
@@ -42,6 +46,10 @@ public class principal {
         Connection con = conexion.conectar();
         listener_login ll = new listener_login(conexion, vl, con, vGeneral);
         
+          Controlador controlador = new Controlador(vGeneral, conexion, con);
+        controlador.serviciosBoxList();
+        
+        
         listenerActualizarClientes lactcli = new listenerActualizarClientes(actCli);
         listenerClientes lcli = new listenerClientes(c);
         listenerCrearClientes laddcli = new listenerCrearClientes(ccli);
@@ -49,13 +57,19 @@ public class principal {
         listenerServicios lser = new listenerServicios(ser);
         ListenerCreateUser lCreateUs = new ListenerCreateUser(createUser);
         ListenerCitas cit = new ListenerCitas(citas);
+        ListenerBucarClienteGeneral lBusGen = new ListenerBucarClienteGeneral(conexion, con, vGeneral);
+        ListenerAddServicio lAddService = new ListenerAddServicio(controlador.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles);
+        ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         
+        vGeneral.listenerDeleteDetalle(lDeleteDetalle);
+        vGeneral.listenerAnadirServicios(lAddService);
         vGeneral.listenerActualizar(lactcli);
         vGeneral.listenerClientes(lcli);
         vGeneral.listenerCrearCli(laddcli);
         vGeneral.listenerEmpleados(lemp);
         vGeneral.listenerServicios(lser);
         vGeneral.listenerCitas(cit);
+        vGeneral.listenerBuscar(lBusGen);
         vl.listenerCrearUser(lCreateUs);
         
         DefaultListaClientes lisCli = new DefaultListaClientes();
