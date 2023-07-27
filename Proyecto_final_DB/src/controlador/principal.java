@@ -35,7 +35,6 @@ public class principal {
         Empleados emp = new Empleados();
         Servicios ser = new Servicios();
         Citas citas = new Citas();
-        
         VistaGeneralSistema vGeneral = new VistaGeneralSistema();
         Vista_Crear_Usuario createUser = new Vista_Crear_Usuario();
         
@@ -49,6 +48,7 @@ public class principal {
         listenerServicios lser = new listenerServicios(ser);
         ListenerCreateUser lCreateUs = new ListenerCreateUser(createUser);
         ListenerCitas cit = new ListenerCitas(citas);
+        ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         
         vGeneral.listenerActualizar(lactcli);
         vGeneral.listenerClientes(lcli);
@@ -57,6 +57,8 @@ public class principal {
         vGeneral.listenerServicios(lser);
         vGeneral.listenerCitas(cit);
         vl.listenerCrearUser(lCreateUs);
+        ccli.addActionListenerCrear(lrc);
+        
         
         DefaultListaClientes lisCli = new DefaultListaClientes();
         conexionClientes conCli = new conexionClientes(conexion, con);

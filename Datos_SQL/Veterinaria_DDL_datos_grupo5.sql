@@ -113,4 +113,5 @@ INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargad
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
 
+SELECT * FROM vt_usu
 
