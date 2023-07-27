@@ -56,13 +56,10 @@ public class principal {
         listenerServicios lser = new listenerServicios(ser);
         ListenerCreateUser lCreateUs = new ListenerCreateUser(createUser);
         ListenerCitas cit = new ListenerCitas(citas);
-<<<<<<< HEAD
         ListenerBucarClienteGeneral lBusGen = new ListenerBucarClienteGeneral(conexion, con, vGeneral);
         ListenerAddServicio lAddService = new ListenerAddServicio(controlador.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
-=======
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
->>>>>>> d5d0eb351184dc5a3ba7ab371f980cca2acc61f7
         
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
