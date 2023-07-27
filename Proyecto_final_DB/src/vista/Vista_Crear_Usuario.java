@@ -15,6 +15,7 @@ public class Vista_Crear_Usuario extends javax.swing.JFrame {
      */
     public Vista_Crear_Usuario() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

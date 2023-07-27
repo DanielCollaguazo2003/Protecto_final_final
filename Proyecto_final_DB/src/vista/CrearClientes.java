@@ -7,7 +7,9 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +23,7 @@ public class CrearClientes extends javax.swing.JFrame {
         f.ubi="/imagenes/fondogrande.png";
         this.setContentPane(f);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -294,6 +297,11 @@ public class CrearClientes extends javax.swing.JFrame {
             }
         });
     }
+
+    public void addActionListenerCrear(ActionListener a) {
+        regreadd.addActionListener(a);
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton crearadd;
