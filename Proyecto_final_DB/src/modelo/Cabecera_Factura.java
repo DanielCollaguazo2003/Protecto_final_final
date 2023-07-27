@@ -11,6 +11,8 @@ import java.util.Date;
  * @author Anthony Moya
  */
 public class Cabecera_Factura {
+    
+    private int codigo_cb;
     private Date fecha_emision;
     private float subtotal;
     private float valor_iva;
@@ -18,13 +20,22 @@ public class Cabecera_Factura {
     private Cliente cliente;
     private Usuario usuario;
 
-    public Cabecera_Factura(Date fecha_emision, float subtotal, float valor_iva, float total, Cliente cliente, Usuario usuario) {
+    public Cabecera_Factura(int codigo_cb, Date fecha_emision, float subtotal, float valor_iva, float total, Cliente cliente, Usuario usuario) {
+        this.codigo_cb = codigo_cb;
         this.fecha_emision = fecha_emision;
         this.subtotal = subtotal;
         this.valor_iva = valor_iva;
         this.total = total;
         this.cliente = cliente;
         this.usuario = usuario;
+    }
+
+    public int getCodigo_cb() {
+        return codigo_cb;
+    }
+
+    public void setCodigo_cb(int codigo_cb) {
+        this.codigo_cb = codigo_cb;
     }
 
     public Date getFecha_emision() {
@@ -73,7 +84,5 @@ public class Cabecera_Factura {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }
-    
-    
+    }    
 }

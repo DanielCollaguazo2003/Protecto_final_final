@@ -12,17 +12,19 @@ import java.util.Date;
  */
 public class Cita {
     
+    private int codigo_cita;
     private Date fecha;
     private String estado;
     private Cliente cliente;
-    private Mascota mascota;
+    private String nombre_mascota;
     private Empleado empleado;
 
-    public Cita(Date fecha, String estado, Cliente cliente, Mascota mascota, Empleado empleado) {
+    public Cita(int codigo_cita, Date fecha, String estado, Cliente cliente, String nombre_mascota, Empleado empleado) {
+        this.codigo_cita = codigo_cita;
         this.fecha = fecha;
         this.estado = estado;
         this.cliente = cliente;
-        this.mascota = mascota;
+        this.nombre_mascota = nombre_mascota;
         this.empleado = empleado;
     }
 
@@ -50,12 +52,12 @@ public class Cita {
         this.cliente = cliente;
     }
 
-    public Mascota getMascota() {
-        return mascota;
+    public String getNombre_mascota() {
+        return nombre_mascota;
     }
 
-    public void setMascota(Mascota mascota) {
-        this.mascota = mascota;
+    public void setNombre_mascota(String nombre_mascota) {
+        this.nombre_mascota = nombre_mascota;
     }
 
     public Empleado getEmpleado() {
@@ -65,6 +67,12 @@ public class Cita {
     public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
     }
-    
-    
+
+    public int getCodigo_cita() {
+        return codigo_cita;
+    }
+
+    public void setCodigo_cita(int codigo_cita) {
+        this.codigo_cita = codigo_cita;
+    }
 }

@@ -10,12 +10,14 @@ package modelo;
  */
 public class Servicio {
     
+    private int codigo_s;
     private String nombre;
     private String descripcion;
     private float precio;
     private float iva;
 
-    public Servicio(String nombre, String descripcion, float precio, float iva) {
+    public Servicio(int codigo_s, String nombre, String descripcion, float precio, float iva) {
+        this.codigo_s = codigo_s;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -52,6 +54,14 @@ public class Servicio {
 
     public void setIva(float iva) {
         this.iva = iva;
+    }
+
+    public int getCodigo_s() {
+        return codigo_s;
+    }
+
+    public void setCodigo_s(int codigo_s) {
+        this.codigo_s = codigo_s;
     }
     
     

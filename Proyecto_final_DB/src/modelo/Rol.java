@@ -10,10 +10,12 @@ package modelo;
  */
 public class Rol {
     
+    private int codigo_rol;
     private String nombre;
     private String descripcion;
 
-    public Rol(String nombre, String descripcion) {
+    public Rol(int codigo_rol, String nombre, String descripcion) {
+        this.codigo_rol = codigo_rol;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
@@ -32,6 +34,14 @@ public class Rol {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public int getCodigo_rol() {
+        return codigo_rol;
+    }
+
+    public void setCodigo_rol(int codigo_rol) {
+        this.codigo_rol = codigo_rol;
     }
     
     

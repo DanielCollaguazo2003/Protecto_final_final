@@ -10,6 +10,7 @@ package modelo;
  */
 public class Persona {
 
+    private int codigo_p;
     private String cedula;
     private String nombre;
     private String apellido;
@@ -18,8 +19,9 @@ public class Persona {
     private String telefono;
     private String correo;
 
-    public Persona( String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
+    public Persona(int codigo_p, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
 
+        this.codigo_p = codigo_p;
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -85,10 +87,15 @@ public class Persona {
         this.correo = correo;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion_p=" + direccion_p + ", direccion_s=" + direccion_s + ", telefono=" + telefono + ", correo=" + correo + '}';
+    public int getCodigo_p() {
+        return codigo_p;
     }
+
+    public void setCodigo_p(int codigo_p) {
+        this.codigo_p = codigo_p;
+    }
+
+    
     
     
     
