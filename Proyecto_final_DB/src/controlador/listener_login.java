@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controlador;
 
 import com.mysql.cj.jdbc.PreparedStatementWrapper;
@@ -53,6 +50,7 @@ public class listener_login implements ActionListener {
 
             while (res.next()) {
                 //JOptionPane.showMessageDialog(vl, "Inicio de sesion exitosa!");
+                vl.setVisible(false);
                 vGeneral.setVisible(true);
             }
 
@@ -68,7 +66,7 @@ public class listener_login implements ActionListener {
     }
 
     private String generarCifrado() throws NoSuchAlgorithmException {
-        String password = "Collaguazo123";
+        String password = "Sigua123";
 
         MessageDigest md = MessageDigest.getInstance("MD5");
         byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
