@@ -13,8 +13,8 @@ public class ConexionOracle {
 
     private final String DRIVER = "oracle.jdbc.driver.OracleDriver";
     private final String URL = "jdbc:oracle:thin:@//localhost:1521/XE";
-    private final String USER = "veterinaria";
-    private final String PASWORD = "12345";
+    private final String USER = "proyecto_final";
+    private final String PASWORD = "clave";
     public Connection cadena;
 
     public ConexionOracle() {

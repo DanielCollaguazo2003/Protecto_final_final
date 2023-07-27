@@ -39,7 +39,6 @@ public class principal {
         Empleados emp = new Empleados();
         Servicios ser = new Servicios();
         Citas citas = new Citas();
-        
         VistaGeneralSistema vGeneral = new VistaGeneralSistema();
         Vista_Crear_Usuario createUser = new Vista_Crear_Usuario();
         
@@ -57,9 +56,13 @@ public class principal {
         listenerServicios lser = new listenerServicios(ser);
         ListenerCreateUser lCreateUs = new ListenerCreateUser(createUser);
         ListenerCitas cit = new ListenerCitas(citas);
+<<<<<<< HEAD
         ListenerBucarClienteGeneral lBusGen = new ListenerBucarClienteGeneral(conexion, con, vGeneral);
         ListenerAddServicio lAddService = new ListenerAddServicio(controlador.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
+=======
+        ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
+>>>>>>> d5d0eb351184dc5a3ba7ab371f980cca2acc61f7
         
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
@@ -71,6 +74,8 @@ public class principal {
         vGeneral.listenerCitas(cit);
         vGeneral.listenerBuscar(lBusGen);
         vl.listenerCrearUser(lCreateUs);
+        ccli.addActionListenerCrear(lrc);
+        
         
         DefaultListaClientes lisCli = new DefaultListaClientes();
         conexionClientes conCli = new conexionClientes(conexion, con);
