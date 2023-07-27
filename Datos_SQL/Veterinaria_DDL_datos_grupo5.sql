@@ -83,7 +83,7 @@ INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Rocky',4);
 INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Lily',6);
 INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Coco',1);
 
-
+SELECT * FROM vt_clientes;
 
 
 
@@ -107,11 +107,18 @@ CREATE SEQUENCE permisos_codigo_seq
 START WITH 1
 MAXVALUE 99999
 INCREMENT BY 1
-NOCACHE
+NOCACHE;
 
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargado de la Facturacion de la veterinaria',1);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
 
-SELECT * FROM vt_usu
+SELECT * FROM vt_personas;
+SELECT * FROM vt_empleados;
+SELECT * FROM vt_usuarios_sistema;
 
+SELECT * FROM vt_usuarios_sistema;
+
+INSERT INTO vt_usuarios_sistema VALUES(2, 'DanielCollaguazo','Collaguazo123',1);
+
+COMMIT;
