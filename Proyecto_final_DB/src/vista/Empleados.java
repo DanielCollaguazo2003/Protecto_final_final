@@ -46,7 +46,7 @@ public class Empleados extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         eliminarEmp = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1215, 780));
         setMinimumSize(new java.awt.Dimension(1215, 780));
         setPreferredSize(new java.awt.Dimension(1215, 780));

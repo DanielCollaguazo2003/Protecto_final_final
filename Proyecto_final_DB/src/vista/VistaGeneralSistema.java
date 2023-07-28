@@ -93,9 +93,9 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         anadirSer = new javax.swing.JButton();
         deleteDetalle = new javax.swing.JButton();
         facturar = new javax.swing.JButton();
+        finSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setUndecorated(true);
 
@@ -631,16 +631,25 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
                         .addGap(21, 21, 21))))
         );
 
+        finSesion.setFont(new java.awt.Font("Dubai Medium", 0, 12)); // NOI18N
+        finSesion.setForeground(new java.awt.Color(28, 119, 144));
+        finSesion.setText("Finalizar Sesion");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(19, 19, 19))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(finSesion)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(19, 19, 19))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -650,7 +659,9 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(finSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -812,6 +823,10 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     public void listenerDeleteDetalle(ActionListener l){
         deleteDetalle.addActionListener(l);
     }
+    
+    public void listenerFinSesion(ActionListener l){
+        finSesion.addActionListener(l);
+    }
 
     public JTextField getCedulacam() {
         return cedulacam;
@@ -887,6 +902,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     private javax.swing.JButton empleados;
     private javax.swing.JButton estadisticas;
     private javax.swing.JButton facturar;
+    private javax.swing.JButton finSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;

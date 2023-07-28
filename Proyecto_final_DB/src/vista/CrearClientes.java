@@ -64,7 +64,7 @@ public class CrearClientes extends javax.swing.JFrame {
         regreadd = new javax.swing.JButton();
         crearadd = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(975, 695));
         setMinimumSize(new java.awt.Dimension(975, 695));
         setPreferredSize(new java.awt.Dimension(975, 695));

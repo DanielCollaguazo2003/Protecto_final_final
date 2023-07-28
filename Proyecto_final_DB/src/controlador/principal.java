@@ -56,10 +56,12 @@ public class principal {
         listenerServicios lser = new listenerServicios(ser);
         ListenerCreateUser lCreateUs = new ListenerCreateUser(createUser);
         ListenerCitas cit = new ListenerCitas(citas);
+        //ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         ListenerBucarClienteGeneral lBusGen = new ListenerBucarClienteGeneral(conexion, con, vGeneral);
         ListenerAddServicio lAddService = new ListenerAddServicio(controlador.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
+        ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl);
         
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
@@ -70,6 +72,7 @@ public class principal {
         vGeneral.listenerServicios(lser);
         vGeneral.listenerCitas(cit);
         vGeneral.listenerBuscar(lBusGen);
+        vGeneral.listenerFinSesion(lfs);
         vl.listenerCrearUser(lCreateUs);
         ccli.addActionListenerCrear(lrc);
         
@@ -81,6 +84,7 @@ public class principal {
         c.setModeloTabla(tableCli);
         
         vl.listener_login(ll);
+        vl.listenerIniSesion(ll);
         
         vl.setVisible(true);
     }

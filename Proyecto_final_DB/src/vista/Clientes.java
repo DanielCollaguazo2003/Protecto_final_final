@@ -48,7 +48,7 @@ public class Clientes extends javax.swing.JFrame {
         eliminarEmp = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1215, 780));
         setSize(new java.awt.Dimension(1215, 780));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
