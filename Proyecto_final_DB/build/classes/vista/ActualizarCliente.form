@@ -2,14 +2,15 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
+<<<<<<< HEAD
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[975, 695]"/>
     </Property>
+=======
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+>>>>>>> c8b8d198eda2d97335e5ae35f6d861b1a2429509
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[975, 695]"/>
-    </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[975, 695]"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>

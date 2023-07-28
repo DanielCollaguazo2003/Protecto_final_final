@@ -10,6 +10,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+
 /**
  *
  * @author XaviO_o
@@ -62,10 +63,13 @@ public class ActualizarCliente extends javax.swing.JFrame {
         f.ubi = "/imagenes/actualizar.png";
         jPanel1 = f;
 
+<<<<<<< HEAD
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(975, 695));
+=======
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+>>>>>>> c8b8d198eda2d97335e5ae35f6d861b1a2429509
         setMinimumSize(new java.awt.Dimension(975, 695));
-        setPreferredSize(new java.awt.Dimension(975, 695));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
