@@ -69,8 +69,7 @@ public class ListenerBucarClienteGeneral implements ActionListener {
                 JOptionPane.showMessageDialog(vGeneral, "Usuario no encontrado!");
             }
         } catch (SQLException x) {
-            System.out.println(x);
-            System.out.println("no");
+            System.out.println("Informacion incorrecta");
         }
     }
 

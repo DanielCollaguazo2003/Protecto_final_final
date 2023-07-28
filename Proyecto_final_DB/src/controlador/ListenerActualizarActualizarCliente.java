@@ -66,8 +66,9 @@ public class ListenerActualizarActualizarCliente implements ActionListener {
             ps.close();
 
         } catch (SQLException ex) {
-            //Logger.getLogger(ListenerActualizarActualizarCliente.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Ocurrio un error");
             JOptionPane.showMessageDialog(actualizarCli, "Error al actualizar la Base de Datos");
+            
         }
 
     }
