@@ -13,8 +13,8 @@ public class ConexionOracle {
 
     private final String DRIVER = "oracle.jdbc.driver.OracleDriver";
     private final String URL = "jdbc:oracle:thin:@//localhost:1521/XE";
-    private final String USER = "proyecto_final";
-    private final String PASWORD = "clave";
+    private final String USER = "veterinaria";
+    private final String PASWORD = "12345";
     public Connection cadena;
 
     public ConexionOracle() {
@@ -27,6 +27,8 @@ public class ConexionOracle {
             this.cadena = DriverManager.getConnection(URL, USER, PASWORD);
 
         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("xddddd");
+            System.out.println("mamahuevo");
             JOptionPane.showMessageDialog(null, e.getMessage());
             System.exit(0);
         }
