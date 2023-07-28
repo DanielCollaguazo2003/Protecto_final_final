@@ -84,7 +84,8 @@ INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Lily',6);
 INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Coco',1);
 
 
-
+SELECT * FROM vt_clientes;
+SELECT * FROM vt_personas;
 
 
 CREATE SEQUENCE citas_codigo_seq 
@@ -100,9 +101,6 @@ INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-08-13', 'YYY
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-07-25', 'YYYY-MM-DD'),'I',2,1,4);
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-08-01', 'YYYY-MM-DD'),'A',2,3,2);
 
-
-
-
 CREATE SEQUENCE permisos_codigo_seq 
 START WITH 1
 MAXVALUE 99999
@@ -110,14 +108,38 @@ INCREMENT BY 1
 NOCACHE;
 
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargado de la Facturacion de la veterinaria',1);
-<<<<<<< HEAD
+
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',2);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',2);
-=======
+
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
 
-SELECT * FROM vt_usu
->>>>>>> 332b233ecc7a6601a982dd059cff17ef98e70a2d
+UPDATE vt_personas p
+SET p.per_cedula = '0102532324',
+    p.per_nombre = 'David',
+    p.per_apellido = 'Crespo',
+    p.per_direccion_principal = 'jaja',
+    p.per_direccion_secundaria = 'Via a Jadan',
+    p.per_telefono = '090909',
+    p.per_correo_electronico = 'dcrespo@email.com'
+WHERE EXISTS (
+    SELECT 1
+    FROM vt_clientes c
+    WHERE p.per_codigo = c.per_codigo
+      AND c.cli_codigo = 3
+);
 
-INSERT INTO vt_usuarios_sistema VALUES (1,'Sigua123','Sigua123',3);
+
+SELECT * FROM vt_clientes;
+SELECT * FROM vt_personas;
+
+commit;
+
+SELECT c.cli_codigo 
+FROM vt_clientes c, vt_personas p 
+WHERE p.per_codigo=c.per_codigo;
+
+SELECT * FROM vt_clientes c, vt_personas p 
+WHERE (c.per_codigo=p.per_codigo) 
+and (p.per_cedula=p.per_cedula and c.cli_estado='A');

@@ -35,6 +35,8 @@ public class listener_login implements ActionListener, KeyListener {
         this.vl = vl;
         this.con = con;
         this.vGeneral = vGeneral;
+        this.vl.getUser().addKeyListener(this);
+        this.vl.getPassword().addKeyListener(this);
     }
 
     @Override
@@ -78,9 +80,7 @@ public class listener_login implements ActionListener, KeyListener {
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
+    public void keyTyped(KeyEvent e) {}
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -116,8 +116,6 @@ public class listener_login implements ActionListener, KeyListener {
     }
 
     @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
+    public void keyReleased(KeyEvent e) {}
 
 }

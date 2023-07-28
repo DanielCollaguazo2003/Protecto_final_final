@@ -7,8 +7,10 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -37,24 +39,20 @@ public class ActualizarCliente extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        id = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        apeliido = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        correo = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField3 = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        direccionPrin = new javax.swing.JTextField();
+        direccionSecu = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        telefono = new javax.swing.JTextField();
         buscarAct = new javax.swing.JButton();
         Actualizar = new javax.swing.JButton();
         regreadd1 = new javax.swing.JButton();
@@ -82,54 +80,47 @@ public class ActualizarCliente extends javax.swing.JFrame {
         jLabel2.setText("Nombres:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 70, 20));
 
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 400, 40));
+        id.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 400, 40));
 
         jLabel3.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel3.setText("Apellidos:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 70, 20));
 
-        jTextField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 410, 40));
+        apeliido.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(apeliido, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 410, 40));
 
         jLabel4.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
-        jLabel4.setText("N° de Documento:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 120, 20));
+        jLabel4.setText("N° de Identificación:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 130, 20));
 
         jLabel5.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel5.setText("Correo Electronico:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 120, 20));
 
-        jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 400, 40));
+        correo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 400, 40));
 
-        jLabel6.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
-        jLabel6.setText("Repetir Correo Electronico:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 170, 20));
-
-        jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 410, 40));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+593", "+095", "+895" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+593" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 130, 40));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 130, 40));
 
-        jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 400, 40));
+        nombre.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 400, 40));
 
         jLabel7.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel7.setText("Dirección Principal:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 120, 20));
 
-        jTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 400, 40));
+        direccionPrin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(direccionPrin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 400, 40));
 
-        jTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 410, 40));
+        direccionSecu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(direccionSecu, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 410, 40));
 
         jLabel8.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel8.setText("Dirección Secundaria:");
@@ -137,17 +128,10 @@ public class ActualizarCliente extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel9.setText("Telefono Convencional o Celular");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 200, 20));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 210, 20));
 
-        jTextField8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 270, 40));
-
-        jTextField9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 410, 40));
-
-        jLabel10.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
-        jLabel10.setText("Fecha de nacimiento:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 170, 20));
+        telefono.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 280, 40));
 
         buscarAct.setBackground(new java.awt.Color(255, 255, 253));
         buscarAct.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
@@ -182,7 +166,7 @@ public class ActualizarCliente extends javax.swing.JFrame {
                 ActualizarMouseExited(evt);
             }
         });
-        jPanel2.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 140, 40));
+        jPanel2.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 190, 40));
 
         regreadd1.setBackground(new java.awt.Color(255, 255, 253));
         regreadd1.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
@@ -202,9 +186,9 @@ public class ActualizarCliente extends javax.swing.JFrame {
                 regreadd1ActionPerformed(evt);
             }
         });
-        jPanel2.add(regreadd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 140, 40));
+        jPanel2.add(regreadd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, 190, 40));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 900, 520));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 900, 420));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -279,6 +263,15 @@ public class ActualizarCliente extends javax.swing.JFrame {
             this.ubi = ubi;
         }
     }
+    
+    public void listenerBuscarCliente(ActionListener l){
+        buscarAct.addActionListener(l);
+    }
+    
+    public void listenerActualizarCliente(ActionListener l){
+        Actualizar.addActionListener(l);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -313,32 +306,59 @@ public class ActualizarCliente extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Actualizar;
+    private javax.swing.JTextField apeliido;
     private javax.swing.JButton buscarAct;
+    private javax.swing.JTextField correo;
+    private javax.swing.JTextField direccionPrin;
+    private javax.swing.JTextField direccionSecu;
+    private javax.swing.JTextField id;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField nombre;
     private javax.swing.JButton regreadd1;
+    private javax.swing.JTextField telefono;
     // End of variables declaration//GEN-END:variables
+
+    public JTextField getApeliido() {
+        return apeliido;
+    }
+
+    public JTextField getCorreo() {
+        return correo;
+    }
+
+    public JTextField getDireccionPrin() {
+        return direccionPrin;
+    }
+
+    public JTextField getDireccionSecu() {
+        return direccionSecu;
+    }
+
+    public JTextField getNombre() {
+        return nombre;
+    }
+
+    public JTextField getTelefono() {
+        return telefono;
+    }
+
+    public JTextField getId() {
+        return id;
+    }
+
 }

@@ -876,10 +876,6 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         return totalIvaGen;
     }
     
-    
-    
-    
-    
     public void tableModelDetalles(TableModel m){
         tableDetalles.setModel(m);
     }
