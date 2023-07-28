@@ -23,7 +23,4 @@ public class Tipo_Mascota {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
->>>>>>> anthony
-    
 }
