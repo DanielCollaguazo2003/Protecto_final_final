@@ -27,6 +27,8 @@ public class ConexionOracle {
             this.cadena = DriverManager.getConnection(URL, USER, PASWORD);
 
         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("xddddd");
+            System.out.println("mamahuevo");
             JOptionPane.showMessageDialog(null, e.getMessage());
             System.exit(0);
         }

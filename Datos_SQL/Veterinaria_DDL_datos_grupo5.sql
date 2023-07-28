@@ -110,7 +110,14 @@ INCREMENT BY 1
 NOCACHE;
 
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargado de la Facturacion de la veterinaria',1);
+<<<<<<< HEAD
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',2);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',2);
+=======
+INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
+INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
+
+SELECT * FROM vt_usu
+>>>>>>> 332b233ecc7a6601a982dd059cff17ef98e70a2d
 
 INSERT INTO vt_usuarios_sistema VALUES (1,'Sigua123','Sigua123',3);
