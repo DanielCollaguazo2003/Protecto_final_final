@@ -57,7 +57,7 @@ public class principal {
         vGeneral.listenerServicios(lser);
         vGeneral.listenerCitas(cit);
         vl.listenerCrearUser(lCreateUs);
-        ccli.addActionListenerCrear(lrc);
+        //ccli.addActionListenerCrear(lrc);
         
         
         DefaultListaClientes lisCli = new DefaultListaClientes();
