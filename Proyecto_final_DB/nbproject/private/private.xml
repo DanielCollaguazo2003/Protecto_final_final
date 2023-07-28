@@ -13,14 +13,7 @@
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/imagenes/fondo.png</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/conexion/ConexionOracle.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cliente.java</file>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/Controlador.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Rol.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/ListenerAddServicio.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/ListenerBucarClienteGeneral.java</file>
-=======
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Rol.java</file>
->>>>>>> master
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/Servicios.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/listener_login.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cabecera_Factura.java</file>
@@ -29,10 +22,6 @@
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/principal.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/Clientes.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Servicio.java</file>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/DefaultTablaDetalles.java</file>
-=======
->>>>>>> master
         </group>
     </open-files>
 </project-private>
