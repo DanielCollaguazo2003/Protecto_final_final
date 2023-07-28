@@ -6,6 +6,7 @@ package vista;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -189,7 +190,10 @@ public class VistaLogin extends javax.swing.JFrame {
         return sesion;
     }
     
-    
+    //Metodo para iniciar sesion por una tecla
+    public void listenerIniSesion(KeyListener l){
+        sesion.addKeyListener(l);
+    }    
     /**
      * @param args the command line arguments
      */

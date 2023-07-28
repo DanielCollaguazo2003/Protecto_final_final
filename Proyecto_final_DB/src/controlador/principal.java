@@ -84,6 +84,7 @@ public class principal {
         c.setModeloTabla(tableCli);
         
         vl.listener_login(ll);
+        vl.listenerIniSesion(ll);
         
         vl.setVisible(true);
     }
