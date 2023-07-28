@@ -39,7 +39,7 @@ public class ListenerBucarClienteGeneral implements ActionListener{
         try {
 
             String cedula = vGeneral.getCedulacam().getText();
-            ps = con.prepareStatement("SELECT * FROM vt_clientes c, vt_personas p WHERE (c.per_codigo=p.per_codigo) and (p.per_cedula=? and c.cli_estado='A')");
+            ps = con.prepareStatement("SELECT * FROM veterinaria.vt_clientes c, veterinaria.vt_personas p WHERE (c.per_codigo=p.per_codigo) and (p.per_cedula=? and c.cli_estado='A')");
             ps.setString(1, cedula);
             ResultSet res = ps.executeQuery();
             

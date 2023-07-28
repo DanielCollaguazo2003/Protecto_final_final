@@ -52,7 +52,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         jPanel2 = f;
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        usuarioLabel = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -170,9 +170,9 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logotexto.png"))); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Daniel Alfredo Collaguazo Malla (Administrador)");
+        usuarioLabel.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        usuarioLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        usuarioLabel.setText("Daniel Alfredo Collaguazo Malla (Administrador)");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -181,9 +181,9 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
-                .addGap(139, 139, 139)
+                .addGap(120, 120, 120)
+                .addComponent(usuarioLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
+                .addGap(140, 140, 140)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -194,9 +194,11 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(usuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -827,6 +829,10 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     public void listenerFinSesion(ActionListener l){
         finSesion.addActionListener(l);
     }
+    
+    public void listenerFacturar(ActionListener l){
+        facturar.addActionListener(l);
+    }
 
     public JTextField getCedulacam() {
         return cedulacam;
@@ -875,6 +881,10 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     public JLabel getTotalIvaGen() {
         return totalIvaGen;
     }
+
+    public JLabel getUsuarioLabel() {
+        return usuarioLabel;
+    }
     
     
     
@@ -916,7 +926,6 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
@@ -938,5 +947,6 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     private javax.swing.JLabel telefonoGen;
     private javax.swing.JLabel totalGen;
     private javax.swing.JLabel totalIvaGen;
+    private javax.swing.JLabel usuarioLabel;
     // End of variables declaration//GEN-END:variables
 }
