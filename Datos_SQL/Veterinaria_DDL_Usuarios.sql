@@ -8,4 +8,4 @@ SELECT*
 FROM dba_roles
 ORDER BY role;
 
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA veterinariaa TO empleados_administrador;
+GRANT ALL PRIVILEGES TO empleados_administrador;
