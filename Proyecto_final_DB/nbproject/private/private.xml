@@ -2,18 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/modelo/Tipo_Mascota.java</file>
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/controlador/listener_login.java</file>
+            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/controlador/ListenerBucarClienteGeneral.java</file>
             <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/conexion/ConexionOracle.java</file>
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/controlador/Controlador.java</file>
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cliente.java</file>
-            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/vista/VistaLogin.java</file>
+            <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/vista/ActualizarCliente.java</file>
             <file>file:/C:/Users/mateo/OneDrive/Escritorio/Proyecto_Final_Final/Protecto_final_final/Proyecto_final_DB/src/controlador/principal.java</file>
         </group>
-=======
-        <group/>
->>>>>>> master
     </open-files>
 </project-private>
