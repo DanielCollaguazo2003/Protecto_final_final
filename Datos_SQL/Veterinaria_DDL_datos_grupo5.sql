@@ -83,7 +83,7 @@ INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Rocky',4);
 INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Lily',6);
 INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Coco',1);
 
-
+SELECT * FROM vt_clientes;
 
 
 
@@ -117,7 +117,19 @@ INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encarg
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
 
+<<<<<<< HEAD
 SELECT * FROM vt_usu
 >>>>>>> 332b233ecc7a6601a982dd059cff17ef98e70a2d
 
 INSERT INTO vt_usuarios_sistema VALUES (1,'Sigua123','Sigua123',3);
+=======
+SELECT * FROM vt_personas;
+SELECT * FROM vt_empleados;
+SELECT * FROM vt_usuarios_sistema;
+
+SELECT * FROM vt_usuarios_sistema;
+
+INSERT INTO vt_usuarios_sistema VALUES(2, 'DanielCollaguazo','Collaguazo123',1);
+
+COMMIT;
+>>>>>>> c8b8d198eda2d97335e5ae35f6d861b1a2429509

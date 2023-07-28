@@ -13,13 +13,15 @@ import java.util.Date;
  */
 public class Cabecera_Factura {
     private LocalDateTime fecha_emision;
+    private int codigo_cb;
     private float subtotal;
     private float valor_iva;
     private float total;
     private Cliente cliente;
     private Usuario usuario;
 
-    public Cabecera_Factura(LocalDateTime fecha_emision, float subtotal, float valor_iva, float total, Cliente cliente, Usuario usuario) {
+    public Cabecera_Factura(int codigo_cb, LocalDateTime fecha_emision, float subtotal, float valor_iva, float total, Cliente cliente, Usuario usuario) {
+        this.codigo_cb = codigo_cb;
         this.fecha_emision = fecha_emision;
         this.subtotal = subtotal;
         this.valor_iva = valor_iva;
@@ -67,7 +69,5 @@ public class Cabecera_Factura {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }
-    
-    
+    }    
 }

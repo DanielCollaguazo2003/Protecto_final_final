@@ -72,7 +72,7 @@ public class Controlador {
         ListenerBucarClienteGeneral lBusGen = new ListenerBucarClienteGeneral(conexion, con, vGeneral);
         Cliente cli = null;
         Usuario usu = null;
-        Cabecera_Factura factura = new Cabecera_Factura(LocalDateTime.MIN, 0, 0, 0, cli, usu);
+        Cabecera_Factura factura = new Cabecera_Factura(0,LocalDateTime.MIN, 0, 0, 0, cli, usu);
         ListenerAddServicio lAddService = new ListenerAddServicio(controladorServicios.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles, factura);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
@@ -114,4 +114,6 @@ public class Controlador {
         
         vGeneral.setVisible(true);
     }
+    
+    
 }

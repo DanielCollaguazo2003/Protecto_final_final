@@ -44,13 +44,14 @@ public class conexionClientes {
 
             while (res.next()) {
                 Cliente c = new Cliente(res.getString("cli_estado"),
-                        res.getString("per_cedula"),
-                        res.getString("per_nombre"),
-                        res.getString("per_apellido"),
-                        res.getString("per_direccion_principal"),
-                        res.getString("per_direccion_secundaria"),
-                        res.getString("per_telefono"),
-                        res.getString("per_correo_electronico"));
+                                    res.getInt("per_codigo"),
+                                    res.getString("per_cedula"),
+                                    res.getString("per_nombre"),
+                                    res.getString("per_apellido"),
+                                    res.getString("per_direccion_principal"),
+                                    res.getString("per_direccion_secundaria"), 
+                                    res.getString("per_telefono"),
+                                    res.getString("per_correo_electronico"));
                 lisCli.addElement(c);
                 System.out.println(c.toString());
             }

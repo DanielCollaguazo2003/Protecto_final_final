@@ -10,7 +10,9 @@ import java.awt.Image;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -41,25 +43,23 @@ public class CrearClientes extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldNDoc = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldApellidos = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jTextFieldCorreo = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField3 = new javax.swing.JTextField();
+        jTextFieldCorreoRep = new javax.swing.JTextField();
+        jComboBoxCodigoP = new javax.swing.JComboBox<>();
+        jTextFieldNombres = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        jTextFieldDirPrincipal = new javax.swing.JTextField();
+        jTextFieldDirSec = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jTextFieldNumCell = new javax.swing.JTextField();
+        jComboBoxTipoDoc = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         regreadd = new javax.swing.JButton();
         crearadd = new javax.swing.JButton();
@@ -99,15 +99,15 @@ public class CrearClientes extends javax.swing.JFrame {
         jLabel2.setText("Nombres:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 70, 20));
 
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 410, 40));
+        jTextFieldNDoc.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldNDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 410, 40));
 
         jLabel3.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel3.setText("Apellidos:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 70, 20));
 
-        jTextField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 410, 40));
+        jTextFieldApellidos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 410, 40));
 
         jLabel4.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel4.setText("N° de Documento:");
@@ -117,36 +117,36 @@ public class CrearClientes extends javax.swing.JFrame {
         jLabel5.setText("Correo Electronico:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 120, 20));
 
-        jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 400, 40));
+        jTextFieldCorreo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 400, 40));
 
         jLabel6.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel6.setText("Repetir Correo Electronico:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 170, 20));
 
-        jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 410, 40));
+        jTextFieldCorreoRep.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldCorreoRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 410, 40));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+593", "+095", "+895" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxCodigoP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+593", "+095", "+895" }));
+        jComboBoxCodigoP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxCodigoPActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 130, 40));
+        jPanel2.add(jComboBoxCodigoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 130, 40));
 
-        jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 400, 40));
+        jTextFieldNombres.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 400, 40));
 
         jLabel7.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel7.setText("Dirección Principal:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 120, 20));
 
-        jTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 400, 40));
+        jTextFieldDirPrincipal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldDirPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 400, 40));
 
-        jTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 410, 40));
+        jTextFieldDirSec.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldDirSec, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 410, 40));
 
         jLabel8.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel8.setText("Dirección Secundaria:");
@@ -156,23 +156,16 @@ public class CrearClientes extends javax.swing.JFrame {
         jLabel9.setText("Telefono Convencional o Celular");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 200, 20));
 
-        jTextField8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 270, 40));
+        jTextFieldNumCell.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(jTextFieldNumCell, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 270, 40));
 
-        jTextField9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 410, 40));
-
-        jLabel10.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
-        jLabel10.setText("Fecha de nacimiento:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 170, 20));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Cédula", "Ruc" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxTipoDoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Cedula" }));
+        jComboBoxTipoDoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jComboBoxTipoDocActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 400, 40));
+        jPanel2.add(jComboBoxTipoDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 400, 40));
 
         jLabel11.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel11.setText("Tipo de Documento:");
@@ -217,13 +210,13 @@ public class CrearClientes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxCodigoPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCodigoPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxCodigoPActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jComboBoxTipoDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoDocActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jComboBoxTipoDocActionPerformed
 
     private void regreaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regreaddActionPerformed
         // TODO add your handling code here:
@@ -298,17 +291,101 @@ public class CrearClientes extends javax.swing.JFrame {
         });
     }
 
+    public JComboBox<String> getjComboBoxCodigoP() {
+        return jComboBoxCodigoP;
+    }
+
+    public void setjComboBoxCodigoP(JComboBox<String> jComboBoxCodigoP) {
+        this.jComboBoxCodigoP = jComboBoxCodigoP;
+    }
+
+    public JComboBox<String> getjComboBoxTipoDoc() {
+        return jComboBoxTipoDoc;
+    }
+
+    public void setjComboBoxTipoDoc(JComboBox<String> jComboBoxTipoDoc) {
+        this.jComboBoxTipoDoc = jComboBoxTipoDoc;
+    }
+
+    public JTextField getjTextFieldApellidos() {
+        return jTextFieldApellidos;
+    }
+
+    public void setjTextFieldApellidos(JTextField jTextFieldApellidos) {
+        this.jTextFieldApellidos = jTextFieldApellidos;
+    }
+
+    public JTextField getjTextFieldCorreo() {
+        return jTextFieldCorreo;
+    }
+
+    public void setjTextFieldCorreo(JTextField jTextFieldCorreo) {
+        this.jTextFieldCorreo = jTextFieldCorreo;
+    }
+
+    public JTextField getjTextFieldCorreoRep() {
+        return jTextFieldCorreoRep;
+    }
+
+    public void setjTextFieldCorreoRep(JTextField jTextFieldCorreoRep) {
+        this.jTextFieldCorreoRep = jTextFieldCorreoRep;
+    }
+
+    public JTextField getjTextFieldDirPrincipal() {
+        return jTextFieldDirPrincipal;
+    }
+
+    public void setjTextFieldDirPrincipal(JTextField jTextFieldDirPrincipal) {
+        this.jTextFieldDirPrincipal = jTextFieldDirPrincipal;
+    }
+
+    public JTextField getjTextFieldDirSec() {
+        return jTextFieldDirSec;
+    }
+
+    public void setjTextFieldDirSec(JTextField jTextFieldDirSec) {
+        this.jTextFieldDirSec = jTextFieldDirSec;
+    }
+
+    public JTextField getjTextFieldNDoc() {
+        return jTextFieldNDoc;
+    }
+
+    public void setjTextFieldNDoc(JTextField jTextFieldNDoc) {
+        this.jTextFieldNDoc = jTextFieldNDoc;
+    }
+
+    public JTextField getjTextFieldNombres() {
+        return jTextFieldNombres;
+    }
+
+    public void setjTextFieldNombres(JTextField jTextFieldNombres) {
+        this.jTextFieldNombres = jTextFieldNombres;
+    }
+
+    public JTextField getjTextFieldNumCell() {
+        return jTextFieldNumCell;
+    }
+
+    public void setjTextFieldNumCell(JTextField jTextFieldNumCell) {
+        this.jTextFieldNumCell = jTextFieldNumCell;
+    }
+
+    
+    
     public void addActionListenerCrear(ActionListener a) {
         regreadd.addActionListener(a);
     }
     
+    public void addActionListenerCrearUsuario(ActionListener a){
+        crearadd.addActionListener(a);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton crearadd;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBoxCodigoP;
+    private javax.swing.JComboBox<String> jComboBoxTipoDoc;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -320,15 +397,14 @@ public class CrearClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextFieldApellidos;
+    private javax.swing.JTextField jTextFieldCorreo;
+    private javax.swing.JTextField jTextFieldCorreoRep;
+    private javax.swing.JTextField jTextFieldDirPrincipal;
+    private javax.swing.JTextField jTextFieldDirSec;
+    private javax.swing.JTextField jTextFieldNDoc;
+    private javax.swing.JTextField jTextFieldNombres;
+    private javax.swing.JTextField jTextFieldNumCell;
     private javax.swing.JButton regreadd;
     // End of variables declaration//GEN-END:variables
 }

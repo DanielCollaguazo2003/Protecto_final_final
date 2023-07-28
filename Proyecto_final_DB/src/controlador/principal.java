@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controlador;
 
+import vista.*;
 import conexion.ConexionOracle;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -41,12 +39,12 @@ public class principal {
         // Interrumpir el hilo después de 5 segundos
         hilo.interrupt();
     }*/
-
         //MODELOS
         VistaLogin vl = new VistaLogin();
         VistaGeneralSistema vGeneral = new VistaGeneralSistema();
         //Controlador controlador = new Controlador(vl, vGeneral, "veterinaria", "12345");
         listener_login ll = new listener_login(vl, vGeneral);
+
         vl.listener_login(ll);
         vl.listenerIniSesion(ll);
 

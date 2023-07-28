@@ -8,6 +8,7 @@ SELECT*
 FROM dba_roles
 ORDER BY role;
 
+<<<<<<< HEAD
 -- Privilegios para el administrador
 GRANT ALL PRIVILEGES TO empleados_administrador;
 
@@ -37,3 +38,6 @@ GRANT empleados_generales TO daniel_general;
 GRANT empleados_generales TO paul_general;
 -- Se asigna el privilegio de crear tablas dentro del propio esquema 
 GRANT CREATE TABLE TO empleado_contabilidad;
+=======
+GRANT ALL PRIVILEGES TO empleados_administrador;
+>>>>>>> anthony

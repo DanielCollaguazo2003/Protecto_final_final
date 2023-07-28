@@ -12,8 +12,8 @@ public class Cliente extends Persona{
     
     private String estado;
 
-    public Cliente(String estado, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
-        super(cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+    public Cliente(String estado, int codigo_p, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
+        super(codigo_p, cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
         this.estado = estado;
     }
 
@@ -24,11 +24,4 @@ public class Cliente extends Persona{
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-    @Override
-    public String toString() {
-        return "Cliente{" + "estado=" + estado + '}';
-    }
-    
-    
 }
