@@ -877,9 +877,6 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     }
     
     
-    
-    
-    
     public void tableModelDetalles(TableModel m){
         tableDetalles.setModel(m);
     }

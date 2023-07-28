@@ -48,7 +48,7 @@ public class Controlador {
             ResultSet res = cn.executeQuery(sSQL);
             while (res.next()) {
                 s = new Servicio(res.getInt("ser_codigo"), res.getString("ser_nombre"),res.getString("ser_descripcion"),res.getFloat("ser_precio"),res.getString("ser_iva"));
-                vGeneral.getServicioBox().addItem(String.valueOf(s.getCodigo()) + " " + s.getNombre());
+                vGeneral.getServicioBox().addItem(String.valueOf(s.getCodigo_s()) + " " + s.getNombre());
                 listServicios.add(s);
             }
         } catch (SQLException x) {

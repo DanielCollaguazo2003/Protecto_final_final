@@ -64,7 +64,7 @@ public class DefaultTablaDetalles extends AbstractTableModel {
     public Object getValueAt(int row, int col) {
         switch (col) {
             case 0:
-                return listaDetalles.getElementAt(row).getCodigo();
+                return listaDetalles.getElementAt(row).getCodigo_dt();
             case 1:
                 return listaDetalles.getElementAt(row).getCantidad();
             case 2:
