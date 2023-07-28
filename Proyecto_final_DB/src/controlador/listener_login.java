@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 package controlador;
 
 
@@ -29,18 +26,14 @@ public class listener_login implements ActionListener, KeyListener {
     String sSQL = "";
     ConexionOracle conexion;
     VistaLogin vl;
-<<<<<<< HEAD
+
     PreparedStatement ps=null;
-    Connection con;
-    
-    public listener_login(ConexionOracle conexion, VistaLogin vl, Connection con) {
-=======
-    PreparedStatement ps = null;
     Connection con;
     VistaGeneralSistema vGeneral;
 
     public listener_login(ConexionOracle conexion, VistaLogin vl, Connection con, VistaGeneralSistema vGeneral) {
->>>>>>> master
+
+
         this.conexion = conexion;
         this.vl = vl;
         this.con = con;
