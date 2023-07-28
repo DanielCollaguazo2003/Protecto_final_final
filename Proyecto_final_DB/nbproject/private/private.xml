@@ -3,30 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/Citas.java</file>
+            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Tipo_Mascota.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Persona.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/ActualizarCliente.java</file>
+            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Detalle_Factura.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Permiso.java</file>
+            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Empleado.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/imagenes/cabecera.png</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/imagenes/fondo.png</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/conexion/ConexionOracle.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cliente.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/CrearClientes.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cabecera_Factura.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vistasPrueba/vistaPrueba2.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/ListenerRegresarCreacionClientes.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Tipo_Mascota.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/listenerActualizarClientes.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/VistaGeneralSistema.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Detalle_Factura.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Empleado.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/DefaultListaClientes.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Rol.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/listener_login.java</file>
+            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cabecera_Factura.java</file>
+            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Usuario.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Cita.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/principal.java</file>
-            <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/Clientes.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/modelo/Servicio.java</file>
         </group>
     </open-files>

@@ -23,6 +23,7 @@ public class listenerClientes implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         c.setVisible(true);
+        System.out.println("si se abrio");
     }
 
 }

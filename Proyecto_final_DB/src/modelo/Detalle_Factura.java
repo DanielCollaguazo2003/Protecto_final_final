@@ -9,8 +9,12 @@ package modelo;
  * @author Anthony Moya
  */
 public class Detalle_Factura {
+<<<<<<< HEAD
     
     private int codigo_dt;
+=======
+    private int codigo;
+>>>>>>> master
     private int cantidad;
     private float precio_unitario;
     private float subtotal;
@@ -19,8 +23,13 @@ public class Detalle_Factura {
     private Cabecera_Factura cabecera_factura;
     private Servicio servicio;
 
+<<<<<<< HEAD
     public Detalle_Factura(int codigo_dt, int cantidad, float precio_unitario, float subtotal, float valor_iva, float total, Cabecera_Factura cabecera_factura, Servicio servicio) {
         this.codigo_dt = codigo_dt;
+=======
+    public Detalle_Factura(int codigo, int cantidad, float precio_unitario, float subtotal, float valor_iva, float total, Cabecera_Factura cabecera_factura, Servicio servicio) {
+        this.codigo = codigo;
+>>>>>>> master
         this.cantidad = cantidad;
         this.precio_unitario = precio_unitario;
         this.subtotal = subtotal;
@@ -86,12 +95,21 @@ public class Detalle_Factura {
         this.servicio = servicio;
     }
 
+<<<<<<< HEAD
     public int getCodigo_dt() {
         return codigo_dt;
     }
 
     public void setCodigo_dt(int codigo_dt) {
         this.codigo_dt = codigo_dt;
+=======
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+>>>>>>> master
     }
     
     
