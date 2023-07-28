@@ -10,11 +10,13 @@ package modelo;
  */
 public class Usuario {
     
+    private int codigo_u;
     private String nombre_usuario;
     private String contrasena;
     private Empleado empleado;
 
-    public Usuario(String nombre_usuario, String contrasena, Empleado empleado) {
+    public Usuario(int codigo_u, String nombre_usuario, String contrasena, Empleado empleado) {
+        this.codigo_u = codigo_u;
         this.nombre_usuario = nombre_usuario;
         this.contrasena = contrasena;
         this.empleado = empleado;
@@ -43,7 +45,13 @@ public class Usuario {
     public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
     }
-    
-    
+
+    public int getCodigo_u() {
+        return codigo_u;
+    }
+
+    public void setCodigo_u(int codigo_u) {
+        this.codigo_u = codigo_u;
+    }
     
 }

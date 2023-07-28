@@ -13,8 +13,8 @@ public class Empleado extends Persona {
     private String tipo;
     private Rol rol;
 
-    public Empleado(String tipo, Rol rol, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
-        super(cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+    public Empleado(String tipo, Rol rol, int codigo_p, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
+        super(codigo_p, cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
         this.tipo = tipo;
         this.rol = rol;
     }
@@ -34,7 +34,4 @@ public class Empleado extends Persona {
     public void setRol(Rol rol) {
         this.rol = rol;
     }
-
-    
-    
 }

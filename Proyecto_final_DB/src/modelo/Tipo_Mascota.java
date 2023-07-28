@@ -10,9 +10,11 @@ package modelo;
  */
 public class Tipo_Mascota {
 
+    private int codigo_tm;
     private String nombre;
 
-    public Tipo_Mascota(String nombre) {
+    public Tipo_Mascota(int codigo_tm, String nombre) {
+        this.codigo_tm = codigo_tm;
         this.nombre = nombre;
     }
 
@@ -23,4 +25,13 @@ public class Tipo_Mascota {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public int getCodigo_tm() {
+        return codigo_tm;
+    }
+
+    public void setCodigo_tm(int codigo_tm) {
+        this.codigo_tm = codigo_tm;
+    }
+
 }
