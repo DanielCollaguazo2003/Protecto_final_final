@@ -23,6 +23,9 @@ import vista.Vista_Crear_Usuario;
 public class principal {
     public static void main(String[] args) {
         
+        System.out.println("Hola mundo");
+        
+        
         //MODELOS
         VistaLogin vl = new VistaLogin();
         ConexionOracle conexion =  new ConexionOracle();
