@@ -48,7 +48,7 @@ public class principal {
         Connection con = conexion.conectar();
         listener_login ll = new listener_login(conexion, vl, con, vGeneral);
         
-          Controlador controlador = new Controlador(vGeneral, conexion, con);
+        Controlador controlador = new Controlador(vGeneral, conexion, con);
         controlador.serviciosBoxList();
         
         
