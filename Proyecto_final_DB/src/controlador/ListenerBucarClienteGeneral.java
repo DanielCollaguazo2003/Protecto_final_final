@@ -20,20 +20,21 @@ import vista.VistaLogin;
  *
  * @author XaviO_o
  */
-public class ListenerBucarClienteGeneral implements ActionListener{
+public class ListenerBucarClienteGeneral implements ActionListener {
+
     String sSQL = "";
     ConexionOracle conexion;
     PreparedStatement ps = null;
     Connection con;
     VistaGeneralSistema vGeneral;
     Cliente cli = null;
+
     public ListenerBucarClienteGeneral(ConexionOracle conexion, Connection con, VistaGeneralSistema vGeneral) {
         this.conexion = conexion;
         this.con = con;
         this.vGeneral = vGeneral;
     }
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
@@ -42,7 +43,7 @@ public class ListenerBucarClienteGeneral implements ActionListener{
             ps = con.prepareStatement("SELECT * FROM vt_clientes c, vt_personas p WHERE (c.per_codigo=p.per_codigo) and (p.per_cedula=? and c.cli_estado='A')");
             ps.setString(1, cedula);
             ResultSet res = ps.executeQuery();
-            
+
             while (res.next()) {
                 String estado = res.getString("cli_estado");
                 String nombre = res.getString("per_nombre");
@@ -53,10 +54,10 @@ public class ListenerBucarClienteGeneral implements ActionListener{
                 String telefono = res.getString("per_telefono");
                 String correo = res.getString("per_correo_electronico");
                 cli = new Cliente(estado, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
-                
-                vGeneral.getNombreGen().setText(cli.getNombre()+" "+cli.getApellido());
+
+                vGeneral.getNombreGen().setText(cli.getNombre() + " " + cli.getApellido());
                 vGeneral.getCedulaGen().setText(cli.getCedula());
-                vGeneral.getDireccionGen().setText(cli.getDireccion_p()+" "+cli.getDireccion_s());
+                vGeneral.getDireccionGen().setText(cli.getDireccion_p() + " " + cli.getDireccion_s());
                 vGeneral.getTelefonoGen().setText(cli.getTelefono());
                 vGeneral.getCorreoGen().setText(cli.getCorreo());
 
@@ -72,9 +73,9 @@ public class ListenerBucarClienteGeneral implements ActionListener{
             System.out.println("no");
         }
     }
-    
-    public Cliente getCliente(){
+
+    public Cliente getCliente() {
         return cli;
     }
-    
+
 }

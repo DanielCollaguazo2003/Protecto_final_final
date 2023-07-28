@@ -25,6 +25,9 @@ import vista.Vista_Crear_Usuario;
 public class principal {
     public static void main(String[] args) {
         
+        System.out.println("Hola mundo");
+        
+        
         //MODELOS
         VistaLogin vl = new VistaLogin();
         ConexionOracle conexion =  new ConexionOracle();
@@ -61,7 +64,11 @@ public class principal {
         ListenerAddServicio lAddService = new ListenerAddServicio(controlador.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
-        ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl);
+        ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl, actCli, citas, c, ccli, emp, ser, createUser);
+        
+        
+        ListernerActualizarBuscarClientes labc = new ListernerActualizarBuscarClientes(conexion, con, actCli);
+        ListenerActualizarActualizarCliente laac = new ListenerActualizarActualizarCliente(conexion, con, actCli);
         
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
@@ -75,6 +82,8 @@ public class principal {
         vGeneral.listenerFinSesion(lfs);
         vl.listenerCrearUser(lCreateUs);
         ccli.addActionListenerCrear(lrc);
+        actCli.listenerBuscarCliente(labc);
+        actCli.listenerActualizarCliente(laac);
         
         
         DefaultListaClientes lisCli = new DefaultListaClientes();
