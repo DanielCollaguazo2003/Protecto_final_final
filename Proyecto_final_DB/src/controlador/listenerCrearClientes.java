@@ -13,6 +13,7 @@ import vista.CrearClientes;
  * @author XaviO_o
  */
 public class listenerCrearClientes implements ActionListener{
+    
     CrearClientes ccli;
 
     public listenerCrearClientes(CrearClientes ccli) {

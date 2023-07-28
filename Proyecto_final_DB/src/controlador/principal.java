@@ -63,6 +63,7 @@ public class principal {
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl);
+        ListenerCrearClienteSistema lccs = new ListenerCrearClienteSistema(ccli, conexion);
         
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
@@ -76,7 +77,7 @@ public class principal {
         vGeneral.listenerFinSesion(lfs);
         vl.listenerCrearUser(lCreateUs);
         ccli.addActionListenerCrear(lrc);
-        
+        ccli.addActionListenerCrearUsuario(lccs);
         
         DefaultListaClientes lisCli = new DefaultListaClientes();
         conexionClientes conCli = new conexionClientes(conexion, con);
