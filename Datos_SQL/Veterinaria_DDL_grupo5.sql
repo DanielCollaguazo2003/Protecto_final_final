@@ -1,10 +1,13 @@
 ------****CREACIÓN DEL USUARIO****----------
+
 --ALTER SESSION SET "_ORACLE_SCRIPT"=true;
 
 --CREATE USER veterinaria
 --IDENTIFIED BY 12345;
 
 --GRANT DBA TO veterinaria;
+
+--DROP USER veterinaria cascade;
 
 -- Generado por Oracle SQL Developer Data Modeler 22.2.0.165.1149
 --   en:        2023-07-09 20:51:34 COT
@@ -50,7 +53,7 @@ CREATE TABLE vt_citas (
     cit_estado              CHAR(1) NOT NULL,
     emp_codigo              NUMBER(5) NOT NULL,
     cli_codigo              NUMBER(7) NOT NULL,
-    mas_codigo              NUMBER(7) NOT NULL
+    tip_codigo              NUMBER(7) NOT NULL
 );
 
 COMMENT ON COLUMN vt_citas.cit_codigo IS
@@ -135,19 +138,7 @@ CREATE UNIQUE INDEX vt_empleados__idx ON
 
 ALTER TABLE vt_empleados ADD CONSTRAINT vt_empleados_pk PRIMARY KEY ( emp_codigo );
 
-CREATE TABLE vt_mascotas (
-    mas_codigo                   NUMBER(7) NOT NULL,
-    mas_nombre                   VARCHAR2(60) NOT NULL,
-    tip_codigo                   NUMBER(5) NOT NULL
-);
 
-COMMENT ON COLUMN vt_mascotas.mas_codigo IS
-    'Codigo unico de la mascota';
-
-COMMENT ON COLUMN vt_mascotas.mas_nombre IS
-    'Nombre de la mascota';
-
-ALTER TABLE vt_mascotas ADD CONSTRAINT vt_mascotas_pk PRIMARY KEY ( mas_codigo );
 
 CREATE TABLE vt_permisos (
     prm_codigo          NUMBER(5) NOT NULL,
@@ -298,8 +289,8 @@ ALTER TABLE vt_citas
         REFERENCES vt_empleados ( emp_codigo );
 
 ALTER TABLE vt_citas
-    ADD CONSTRAINT cit_mas_fk FOREIGN KEY ( mas_codigo )
-        REFERENCES vt_mascotas ( mas_codigo );
+    ADD CONSTRAINT cit_tip_mas_fk FOREIGN KEY ( tip_codigo )
+        REFERENCES vt_tipos_mascotas ( tip_codigo );
 
 ALTER TABLE vt_clientes
     ADD CONSTRAINT cli_per_fk FOREIGN KEY ( per_codigo )
@@ -320,10 +311,6 @@ ALTER TABLE vt_empleados
 ALTER TABLE vt_empleados
     ADD CONSTRAINT emp_rol_fk FOREIGN KEY ( rol_codigo )
         REFERENCES vt_roles ( rol_codigo );
-
-ALTER TABLE vt_mascotas
-    ADD CONSTRAINT mas_tip_fk FOREIGN KEY ( tip_codigo )
-        REFERENCES vt_tipos_mascotas ( tip_codigo );
 
 ALTER TABLE vt_permisos
     ADD CONSTRAINT per_rol_fk FOREIGN KEY ( rol_codigo )

@@ -1,11 +1,11 @@
-CREATE SEQUENCE roles_codigo_seq 
+CREATE SEQUENCE roles_cod_seq 
 START WITH 1
 MAXVALUE 99999
 INCREMENT BY 1
 NOCACHE;
 
-INSERT INTO vt_roles VALUES(roles_codigo_seq.nextval, 'Administrador', 'Encargado de la gestión y administración de la clínica veterinaria');
-INSERT INTO vt_roles VALUES(roles_codigo_seq.nextval, 'General', 'Encargado de la facturación, creación y actualizar datos de los clientes');
+INSERT INTO vt_roles VALUES(roles_cod_seq.nextval, 'Administrador', 'Encargado de la gestión y administración de la clínica veterinaria');
+INSERT INTO vt_roles VALUES(roles_cod_seq.nextval, 'General', 'Encargado de la facturación, creación y actualizar datos de los clientes');
 
 
 
@@ -68,24 +68,6 @@ INSERT INTO vt_tipos_mascotas VALUES (tipos_mascotas_codigo_seq.nextval,'Ave');
 INSERT INTO vt_tipos_mascotas VALUES (tipos_mascotas_codigo_seq.nextval,'Reptil');
 INSERT INTO vt_tipos_mascotas VALUES (tipos_mascotas_codigo_seq.nextval,'Pez');
 
-CREATE SEQUENCE mascotas_codigo_seq 
-START WITH 1
-MAXVALUE 99999
-INCREMENT BY 1
-NOCACHE;
-
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Max',1); 
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Luna',3);
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Jack',2);
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Duke',5);
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Milo',4);
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Rocky',4);
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Lily',6);
-INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Coco',1);
-
-
-
-
 
 CREATE SEQUENCE citas_codigo_seq 
 START WITH 1
@@ -94,23 +76,20 @@ INCREMENT BY 1
 NOCACHE;
 
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-07-13', 'YYYY-MM-DD'),'A',2,4,5);
-INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2020-05-20', 'YYYY-MM-DD'),'I',4,2,8);
+INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2020-05-20', 'YYYY-MM-DD'),'I',4,2,3);
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-06-25', 'YYYY-MM-DD'),'A',2,2,3);
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-08-13', 'YYYY-MM-DD'),'A',4,3,6);
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-07-25', 'YYYY-MM-DD'),'I',2,1,4);
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-08-01', 'YYYY-MM-DD'),'A',2,3,2);
 
 
-
-
 CREATE SEQUENCE permisos_codigo_seq 
 START WITH 1
 MAXVALUE 99999
 INCREMENT BY 1
-NOCACHE
+NOCACHE;
 
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargado de la Facturacion de la veterinaria',1);
-INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
-INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
-
+INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',2);
+INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',2);
 
