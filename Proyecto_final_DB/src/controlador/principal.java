@@ -61,6 +61,7 @@ public class principal {
         ListenerAddServicio lAddService = new ListenerAddServicio(controlador.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
+        ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl);
         
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
@@ -71,6 +72,7 @@ public class principal {
         vGeneral.listenerServicios(lser);
         vGeneral.listenerCitas(cit);
         vGeneral.listenerBuscar(lBusGen);
+        vGeneral.listenerFinSesion(lfs);
         vl.listenerCrearUser(lCreateUs);
         ccli.addActionListenerCrear(lrc);
         

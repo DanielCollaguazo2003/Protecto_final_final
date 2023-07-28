@@ -6,6 +6,8 @@ import com.mysql.cj.xdevapi.PreparableStatement;
 import conexion.ConexionOracle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import vista.VistaLogin;
@@ -20,7 +22,7 @@ import vista.VistaGeneralSistema;
  *
  * @author XaviO_o
  */
-public class listener_login implements ActionListener {
+public class listener_login implements ActionListener{
 
     String sSQL = "";
     ConexionOracle conexion;
@@ -52,6 +54,8 @@ public class listener_login implements ActionListener {
                 //JOptionPane.showMessageDialog(vl, "Inicio de sesion exitosa!");
                 vl.setVisible(false);
                 vGeneral.setVisible(true);
+                vl.getUser().setText("");
+                vl.getPassword().setText("");
             }
 
             res = ps.executeQuery();

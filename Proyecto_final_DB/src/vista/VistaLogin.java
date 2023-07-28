@@ -6,6 +6,7 @@ package vista;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -183,6 +184,11 @@ public class VistaLogin extends javax.swing.JFrame {
     public void listenerCrearUser(ActionListener l){
         create.addActionListener(l);
     }
+
+    public JButton getSesion() {
+        return sesion;
+    }
+    
     
     /**
      * @param args the command line arguments

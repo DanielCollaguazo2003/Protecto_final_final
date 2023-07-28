@@ -83,7 +83,7 @@ public class Citas extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(870, 620));
         setMinimumSize(new java.awt.Dimension(870, 620));
         setPreferredSize(new java.awt.Dimension(870, 620));
