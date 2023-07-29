@@ -32,7 +32,7 @@ import vista.VistaGeneralSistema;
 public class ListenerAddServicio implements ActionListener {
 
     ArrayList<Servicio> listServicios;
-    Cliente cli;
+    Usuario usu;
     VistaGeneralSistema vGeneral;
     DefaultListaDetalles listaDetalles;
     DefaultTablaDetalles tableDetalles;
@@ -43,13 +43,17 @@ public class ListenerAddServicio implements ActionListener {
     float cantidadTotal = 0;
     float cantidadIVA = 0;
 
-    public ListenerAddServicio(ArrayList<Servicio> listServicios, Cliente cli, VistaGeneralSistema vGeneral, DefaultListaDetalles listaDetalles, DefaultTablaDetalles tableDetalles, Cabecera_Factura factura) {
+    ArrayList<Detalle_Factura> listDetalles;
+    ListenerBucarClienteGeneral lBuscarCliente = null;
+
+    public ListenerAddServicio(ArrayList<Servicio> listServicios, Usuario usu, VistaGeneralSistema vGeneral, DefaultListaDetalles listaDetalles, DefaultTablaDetalles tableDetalles, ListenerBucarClienteGeneral lBuscarCliente) {
         this.listServicios = listServicios;
-        this.cli = cli;
+        this.usu = usu;
         this.vGeneral = vGeneral;
         this.listaDetalles = listaDetalles;
         this.tableDetalles = tableDetalles;
-        this.factura = factura;
+        this.listDetalles = new ArrayList<>();
+        this.lBuscarCliente = lBuscarCliente;
     }
 
     @Override
@@ -60,7 +64,7 @@ public class ListenerAddServicio implements ActionListener {
         Servicio ServicioCompleto = null;
         //comparamos el codigo obtenido para obtener el servicio de nuestra tabla de servicios
         for (Servicio ser : listServicios) {
-            if (ser.getCodigo_s()== Integer.parseInt(partes[0])) {
+            if (ser.getCodigo_s() == Integer.parseInt(partes[0])) {
                 ServicioCompleto = ser;
             }
         }
@@ -77,15 +81,15 @@ public class ListenerAddServicio implements ActionListener {
         subtotal = cantidad * ServicioCompleto.getPrecio();
         total = subtotal + totalIva;
         //////
-        Usuario usu = null;
         if (buscarDetalle(ServicioCompleto) == false) {
-            factura = new Cabecera_Factura(0, fechaHoraActual, 0, 0, 0, cli, usu);
+            factura = new Cabecera_Factura(0, fechaHoraActual, 0, 0, 0, lBuscarCliente.getCliente(), usu);
             Detalle_Factura detalle = new Detalle_Factura(ServicioCompleto.getCodigo_s(), cantidad, ServicioCompleto.getPrecio(), subtotal, totalIva, total, factura, ServicioCompleto);
-/*
+            /*
             Cabecera_Factura cabecera = new Cabecera_Factura(0,new Date(2023, 02, 12), 0, 0, 0, cli, usu);
             Detalle_Factura detalle = new Detalle_Factura(ServicioCompleto.getCodigo_s(), cantidad, ServicioCompleto.getPrecio(), subtotal, totalIva, total, cabecera, ServicioCompleto);
-*/
+             */
             listaDetalles.addElement(detalle);
+            listDetalles.add(detalle);
             vGeneral.tableModelDetalles(tableDetalles);
 
         } else {
@@ -103,7 +107,7 @@ public class ListenerAddServicio implements ActionListener {
         float subtotal = 0;
         float total = 0;
         for (Detalle_Factura detalles : listaDetalles.getListaDetalles()) {
-            if (nuevoServicio.getCodigo_s()== detalles.getCodigo_dt()) {
+            if (nuevoServicio.getCodigo_s() == detalles.getCodigo_dt()) {
                 int cantidadNueva = detalles.getCantidad();
                 detalles.setCantidad(cantidadNueva + 1);
 
@@ -148,6 +152,10 @@ public class ListenerAddServicio implements ActionListener {
         vGeneral.getTotalGen().setText("$ " + String.valueOf(cantidadTotal));
     }
 
+    public ArrayList<Detalle_Factura> getListDetalles() {
+        return listDetalles;
+    }
+
     /*
     public void agregarDetalleBD(){
         try {
@@ -186,4 +194,11 @@ public class ListenerAddServicio implements ActionListener {
             System.out.println("no");
         }
     }*/
+    public ArrayList<Servicio> getListServicios() {
+        return listServicios;
+    }
+
+    public Cabecera_Factura getFactura() {
+        return factura;
+    }
 }

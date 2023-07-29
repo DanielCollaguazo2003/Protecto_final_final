@@ -1,20 +1,10 @@
 
 package controlador;
 
-import vista.*;
-import conexion.ConexionOracle;
-import java.sql.Connection;
-import java.util.ArrayList;
+
 import modelo.*;
-import vista.ActualizarCliente;
-import vista.Citas;
-import vista.Clientes;
-import vista.CrearClientes;
-import vista.Empleados;
-import vista.Servicios;
 import vista.VistaGeneralSistema;
 import vista.VistaLogin;
-import vista.Vista_Crear_Usuario;
 
 /**
  *
@@ -23,22 +13,6 @@ import vista.Vista_Crear_Usuario;
 public class principal {
 
     public static void main(String[] args) {
-        /*  public class Principal {
-    public static void main(String[] args) {
-        // Crear y comenzar el hilo
-        MiHilo hilo = new MiHilo();
-        hilo.start();
-
-        try {
-            // Agregar un tiempo de espera para interrumpir el hilo después de 5 segundos
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        // Interrumpir el hilo después de 5 segundos
-        hilo.interrupt();
-    }*/
         //MODELOS
         VistaLogin vl = new VistaLogin();
         VistaGeneralSistema vGeneral = new VistaGeneralSistema();
@@ -56,7 +30,8 @@ public class principal {
             System.out.println("esperando");
         }
         hiloVerfificacion.interrupt();
-        Controlador controlador = new Controlador(vl, vGeneral, ll.getUser(), ll.getPassword());
+        Usuario usu = ll.getUsu();
+        Controlador controlador = new Controlador(vl, vGeneral, ll.getUser(), ll.getPassword(), usu);
     }
 
 }

@@ -30,7 +30,23 @@ public class Cabecera_Factura {
         this.usuario = usuario;
     }
 
+    public LocalDateTime getFecha_emision() {
+        return fecha_emision;
+    }
 
+    public void setFecha_emision(LocalDateTime fecha_emision) {
+        this.fecha_emision = fecha_emision;
+    }
+
+    public int getCodigo_cb() {
+        return codigo_cb;
+    }
+
+    public void setCodigo_cb(int codigo_cb) {
+        this.codigo_cb = codigo_cb;
+    }
+
+    
     public float getSubtotal() {
         return subtotal;
     }

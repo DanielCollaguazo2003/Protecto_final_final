@@ -30,16 +30,7 @@ import vista.Vista_Crear_Usuario;
  */
 public class Controlador {
 
-    VistaLogin vl;
-    VistaGeneralSistema vGeneral;
-    String user;
-    String password;
-
-    public Controlador(VistaLogin vl, VistaGeneralSistema vGeneral, String user, String password) {
-        this.vl = vl;
-        this.vGeneral = vGeneral;
-        this.user = user;
-        this.password = password;
+    public Controlador(VistaLogin vl, VistaGeneralSistema vGeneral, String user, String password, Usuario usu) {
 
         ConexionOracle conexion = new ConexionOracle(user, password);
 
@@ -70,36 +61,26 @@ public class Controlador {
         ListenerCitas cit = new ListenerCitas(citas);
         //ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         ListenerBucarClienteGeneral lBusGen = new ListenerBucarClienteGeneral(conexion, con, vGeneral);
-        Cliente cli = null;
-        Usuario usu = null;
-        Cabecera_Factura factura = new Cabecera_Factura(0,LocalDateTime.MIN, 0, 0, 0, cli, usu);
-        ListenerAddServicio lAddService = new ListenerAddServicio(controladorServicios.getListServicios(), lBusGen.getCliente(), vGeneral, listaDetalles, tablaDetalles, factura);
+        Cliente cli = lBusGen.getCliente();
+        ListenerAddServicio lAddService = new ListenerAddServicio(controladorServicios.getListServicios(), usu, vGeneral, listaDetalles, tablaDetalles, lBusGen);
         ListenerDeleteDetalle lDeleteDetalle = new ListenerDeleteDetalle(vGeneral, listaDetalles, tablaDetalles);
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl);
+        ListenerFacturar lFacturar = new ListenerFacturar(conexion, vl, vGeneral, con, lAddService);
 
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
-
         vGeneral.listenerAnadirServicios(lAddService);
-
         vGeneral.listenerActualizar(lactcli);
-
         vGeneral.listenerClientes(lcli);
-
         vGeneral.listenerCrearCli(laddcli);
-
         vGeneral.listenerEmpleados(lemp);
-
         vGeneral.listenerServicios(lser);
-
         vGeneral.listenerCitas(cit);
-
         vGeneral.listenerBuscar(lBusGen);
-
         vGeneral.listenerFinSesion(lfs);
-
         vl.listenerCrearUser(lCreateUs);
-
+        vGeneral.listenerFacturar(lFacturar);
+        
         ccli.addActionListenerCrear(lrc);
 
         DefaultListaClientes lisCli = new DefaultListaClientes();

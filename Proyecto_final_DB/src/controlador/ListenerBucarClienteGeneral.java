@@ -45,6 +45,7 @@ public class ListenerBucarClienteGeneral implements ActionListener{
             
             while (res.next()) {
                 String estado = res.getString("cli_estado");
+                int codigo = res.getInt("cli_codigo");
                 String nombre = res.getString("per_nombre");
                 String apellido = res.getString("per_apellido");
                 String cedulaCli = res.getString("per_cedula");
@@ -52,7 +53,7 @@ public class ListenerBucarClienteGeneral implements ActionListener{
                 String direccion_s = res.getString("per_direccion_secundaria");
                 String telefono = res.getString("per_telefono");
                 String correo = res.getString("per_correo_electronico");
-                cli = new Cliente(estado,0, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+                cli = new Cliente(estado,codigo, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
                 
                 vGeneral.getNombreGen().setText(cli.getNombre()+" "+cli.getApellido());
                 vGeneral.getCedulaGen().setText(cli.getCedula());
