@@ -33,5 +33,4 @@ public class principal {
         Usuario usu = ll.getUsu();
         Controlador controlador = new Controlador(vl, vGeneral, ll.getUser(), ll.getPassword(), usu);
     }
-
 }
