@@ -23,25 +23,28 @@ import vista.VistaLogin;
  * @author XaviO_o
  */
 public class conexionClientes {
+
     String sSQL = "";
     ConexionOracle conexion;
     Connection con;
 
-    public conexionClientes( ConexionOracle conexion, Connection con) {
+    public conexionClientes(ConexionOracle conexion, Connection con) {
         this.conexion = conexion;
         this.con = con;
     }
 
     public DefaultListaClientes obtenerClientes(DefaultListaClientes lisCli) {
         try {
+           
+                sSQL = "SELECT * FROM veterinaria.vt_clientes c, veterinaria.vt_personas p WHERE (c.per_codigo=p.per_codigo) AND (c.cli_estado='A')";
             
-            sSQL = "SELECT * FROM vt_clientes c, vt_personas p WHERE (c.per_codigo=p.per_codigo) AND (c.cli_estado='A')";
             Connection con = conexion.conectar();
             Statement cn = con.createStatement();
             ResultSet res = cn.executeQuery(sSQL);
 
             while (res.next()) {
                 Cliente c = new Cliente(res.getString("cli_estado"),
+                                    res.getInt("per_codigo"),
                                     res.getString("per_cedula"),
                                     res.getString("per_nombre"),
                                     res.getString("per_apellido"),
@@ -57,8 +60,8 @@ public class conexionClientes {
             System.out.println(x);
             System.out.println("no");
         }
-        
+
         return lisCli;
     }
-    
+
 }

@@ -4,6 +4,7 @@
  */
 package modelo;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -11,14 +12,16 @@ import java.util.Date;
  * @author Anthony Moya
  */
 public class Cabecera_Factura {
-    private Date fecha_emision;
+    private LocalDateTime fecha_emision;
+    private int codigo_cb;
     private float subtotal;
     private float valor_iva;
     private float total;
     private Cliente cliente;
     private Usuario usuario;
 
-    public Cabecera_Factura(Date fecha_emision, float subtotal, float valor_iva, float total, Cliente cliente, Usuario usuario) {
+    public Cabecera_Factura(int codigo_cb, LocalDateTime fecha_emision, float subtotal, float valor_iva, float total, Cliente cliente, Usuario usuario) {
+        this.codigo_cb = codigo_cb;
         this.fecha_emision = fecha_emision;
         this.subtotal = subtotal;
         this.valor_iva = valor_iva;
@@ -27,14 +30,23 @@ public class Cabecera_Factura {
         this.usuario = usuario;
     }
 
-    public Date getFecha_emision() {
+    public LocalDateTime getFecha_emision() {
         return fecha_emision;
     }
 
-    public void setFecha_emision(Date fecha_emision) {
+    public void setFecha_emision(LocalDateTime fecha_emision) {
         this.fecha_emision = fecha_emision;
     }
 
+    public int getCodigo_cb() {
+        return codigo_cb;
+    }
+
+    public void setCodigo_cb(int codigo_cb) {
+        this.codigo_cb = codigo_cb;
+    }
+
+    
     public float getSubtotal() {
         return subtotal;
     }
@@ -73,7 +85,5 @@ public class Cabecera_Factura {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }
-    
-    
+    }    
 }

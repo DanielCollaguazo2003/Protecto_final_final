@@ -13,12 +13,14 @@ public class ConexionOracle {
 
     private final String DRIVER = "oracle.jdbc.driver.OracleDriver";
     private final String URL = "jdbc:oracle:thin:@//localhost:1521/XE";
-    private final String USER = "proyecto_final";
-    private final String PASWORD = "clave";
+    private final String USER;
+    private final String PASWORD;
     public Connection cadena;
 
-    public ConexionOracle() {
+    public ConexionOracle(String USER, String PASWORD) {
         this.cadena = null;
+        this.USER = USER;
+        this.PASWORD = PASWORD;
     }
 
     public Connection conectar() {

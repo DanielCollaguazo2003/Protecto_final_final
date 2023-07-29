@@ -12,11 +12,13 @@ import java.util.ArrayList;
  */
 public class Permiso {
     
+    private int codigo_permiso;
     private String nombre;
     private String descripcion;
     private Rol rol;
 
-    public Permiso(String nombre, String descripcion, Rol rol) {
+    public Permiso(int codigo_permiso, String nombre, String descripcion, Rol rol) {
+        this.codigo_permiso = codigo_permiso;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.rol = rol;
@@ -44,6 +46,14 @@ public class Permiso {
 
     public void setRol(Rol rol) {
         this.rol = rol;
+    }
+
+    public int getCodigo_permiso() {
+        return codigo_permiso;
+    }
+
+    public void setCodigo_permiso(int codigo_permiso) {
+        this.codigo_permiso = codigo_permiso;
     }
     
     
