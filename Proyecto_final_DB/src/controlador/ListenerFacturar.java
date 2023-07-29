@@ -130,10 +130,10 @@ public class ListenerFacturar implements ActionListener {
                 ps.setInt(7, serCodigo);          // Proporciona el valor para ser_codigo
                 int filas = ps.executeUpdate();
                 con.setAutoCommit(false);
-
+                
                 if (filas == 1) {
                     con.commit();
-                    JOptionPane.showMessageDialog(vGeneral, "Factura generada con exito");
+                    JOptionPane.showMessageDialog(vGeneral, "Detalle generado con exito");
 
                 } else {
                     JOptionPane.showMessageDialog(vGeneral, "Algo fallo durante el proceso");
