@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
@@ -31,17 +32,28 @@ import vista.VistaGeneralSistema;
 public class ListenerAddServicio implements ActionListener {
 
     ArrayList<Servicio> listServicios;
-    Cliente cli;
+    Usuario usu;
     VistaGeneralSistema vGeneral;
     DefaultListaDetalles listaDetalles;
     DefaultTablaDetalles tableDetalles;
+    LocalDateTime fechaHoraActual = LocalDateTime.now();
+    Cabecera_Factura factura;
 
-    public ListenerAddServicio(ArrayList<Servicio> listServicios, Cliente cli, VistaGeneralSistema vGeneral, DefaultListaDetalles listaDetalles, DefaultTablaDetalles tableDetalles) {
+    float cantidadsubtotal = 0;
+    float cantidadTotal = 0;
+    float cantidadIVA = 0;
+
+    ArrayList<Detalle_Factura> listDetalles;
+    ListenerBucarClienteGeneral lBuscarCliente = null;
+
+    public ListenerAddServicio(ArrayList<Servicio> listServicios, Usuario usu, VistaGeneralSistema vGeneral, DefaultListaDetalles listaDetalles, DefaultTablaDetalles tableDetalles, ListenerBucarClienteGeneral lBuscarCliente) {
         this.listServicios = listServicios;
-        this.cli = cli;
+        this.usu = usu;
         this.vGeneral = vGeneral;
         this.listaDetalles = listaDetalles;
         this.tableDetalles = tableDetalles;
+        this.listDetalles = new ArrayList<>();
+        this.lBuscarCliente = lBuscarCliente;
     }
 
     @Override
@@ -52,7 +64,7 @@ public class ListenerAddServicio implements ActionListener {
         Servicio ServicioCompleto = null;
         //comparamos el codigo obtenido para obtener el servicio de nuestra tabla de servicios
         for (Servicio ser : listServicios) {
-            if (ser.getCodigo_s()== Integer.parseInt(partes[0])) {
+            if (ser.getCodigo_s() == Integer.parseInt(partes[0])) {
                 ServicioCompleto = ser;
             }
         }
@@ -69,11 +81,15 @@ public class ListenerAddServicio implements ActionListener {
         subtotal = cantidad * ServicioCompleto.getPrecio();
         total = subtotal + totalIva;
         //////
-        Usuario usu = null;
         if (buscarDetalle(ServicioCompleto) == false) {
+            factura = new Cabecera_Factura(0, fechaHoraActual, 0, 0, 0, lBuscarCliente.getCliente(), usu);
+            Detalle_Factura detalle = new Detalle_Factura(ServicioCompleto.getCodigo_s(), cantidad, ServicioCompleto.getPrecio(), subtotal, totalIva, total, factura, ServicioCompleto);
+            /*
             Cabecera_Factura cabecera = new Cabecera_Factura(0,new Date(2023, 02, 12), 0, 0, 0, cli, usu);
             Detalle_Factura detalle = new Detalle_Factura(ServicioCompleto.getCodigo_s(), cantidad, ServicioCompleto.getPrecio(), subtotal, totalIva, total, cabecera, ServicioCompleto);
+             */
             listaDetalles.addElement(detalle);
+            listDetalles.add(detalle);
             vGeneral.tableModelDetalles(tableDetalles);
 
         } else {
@@ -81,6 +97,9 @@ public class ListenerAddServicio implements ActionListener {
             vGeneral.repaint();
         }
         calcularTotalFactura();
+        factura.setSubtotal(cantidadsubtotal);
+        factura.setValor_iva(cantidadIVA);
+        factura.setTotal(cantidadTotal);
     }
 
     private boolean buscarDetalle(Servicio nuevoServicio) {
@@ -88,14 +107,14 @@ public class ListenerAddServicio implements ActionListener {
         float subtotal = 0;
         float total = 0;
         for (Detalle_Factura detalles : listaDetalles.getListaDetalles()) {
-            if (nuevoServicio.getCodigo_s()== detalles.getCodigo_dt()) {
+            if (nuevoServicio.getCodigo_s() == detalles.getCodigo_dt()) {
                 int cantidadNueva = detalles.getCantidad();
                 detalles.setCantidad(cantidadNueva + 1);
-                
+
                 if (nuevoServicio.getIva().equals("S")) {
-                    ivaTotal = ((nuevoServicio.getPrecio() * 12) / 100) * (cantidadNueva+1);
+                    ivaTotal = ((nuevoServicio.getPrecio() * 12) / 100) * (cantidadNueva + 1);
                 }
-                subtotal = (cantidadNueva+1) * nuevoServicio.getPrecio();
+                subtotal = (cantidadNueva + 1) * nuevoServicio.getPrecio();
                 total = subtotal + ivaTotal;
 
                 detalles.setSubtotal(subtotal);
@@ -109,22 +128,32 @@ public class ListenerAddServicio implements ActionListener {
 
     private void calcularTotalFactura() {
         int cantidadFilas = vGeneral.getTableServices().getRowCount();
-        float cantidadsubtotal = 0;
-        float cantidadTotal = 0;
-        float cantidadIVA = 0;
-        for (int i = 0; i < cantidadFilas; i++) {
-            Detalle_Factura detalle = listaDetalles.getElementAt(i);
-            //subtotal
-            cantidadsubtotal = cantidadsubtotal + detalle.getSubtotal();
-            //total
-            cantidadTotal = cantidadTotal + detalle.getTotal();
-            //iva
-            cantidadIVA = cantidadIVA + detalle.getValor_iva();
+        if (cantidadFilas != 1) {
+            cantidadsubtotal = 0;
+            cantidadTotal = 0;
+            cantidadIVA = 0;
+            for (int i = 0; i < cantidadFilas; i++) {
+                Detalle_Factura detalle = listaDetalles.getElementAt(i);
+                //subtotal
+                cantidadsubtotal = cantidadsubtotal + detalle.getSubtotal();
+                //total
+                cantidadTotal = cantidadTotal + detalle.getTotal();
+                //iva
+                cantidadIVA = cantidadIVA + detalle.getValor_iva();
+            }
+        } else {
+            Detalle_Factura detalle = listaDetalles.getElementAt(cantidadFilas - 1);
+            cantidadsubtotal = detalle.getSubtotal();
+            cantidadIVA = detalle.getValor_iva();
+            cantidadTotal = detalle.getTotal();
         }
-
         vGeneral.getSubtotalGen().setText("$ " + String.valueOf(cantidadsubtotal));
         vGeneral.getTotalIvaGen().setText("$ " + String.valueOf(cantidadIVA));
         vGeneral.getTotalGen().setText("$ " + String.valueOf(cantidadTotal));
+    }
+
+    public ArrayList<Detalle_Factura> getListDetalles() {
+        return listDetalles;
     }
 
     /*
@@ -165,4 +194,11 @@ public class ListenerAddServicio implements ActionListener {
             System.out.println("no");
         }
     }*/
+    public ArrayList<Servicio> getListServicios() {
+        return listServicios;
+    }
+
+    public Cabecera_Factura getFactura() {
+        return factura;
+    }
 }
