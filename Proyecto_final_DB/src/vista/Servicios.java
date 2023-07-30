@@ -9,6 +9,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -40,7 +42,7 @@ public class Servicios extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaServicios = new javax.swing.JTable();
         ActualizarEmp = new javax.swing.JButton();
         crearEmp = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -67,7 +69,6 @@ public class Servicios extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 126));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dubai Medium", 0, 18)); // NOI18N
@@ -75,7 +76,7 @@ public class Servicios extends javax.swing.JFrame {
         jLabel1.setText("CONTROL DE LOS SERVICIOS");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 340, 40));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaServicios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -86,7 +87,7 @@ public class Servicios extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaServicios);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1110, -1));
 
@@ -94,7 +95,6 @@ public class Servicios extends javax.swing.JFrame {
         ActualizarEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         ActualizarEmp.setForeground(new java.awt.Color(28, 119, 144));
         ActualizarEmp.setText("Actualizar");
-        ActualizarEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
         ActualizarEmp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ActualizarEmpMouseEntered(evt);
@@ -109,7 +109,6 @@ public class Servicios extends javax.swing.JFrame {
         crearEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         crearEmp.setForeground(new java.awt.Color(28, 119, 144));
         crearEmp.setText("Crear");
-        crearEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
         crearEmp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 crearEmpMouseEntered(evt);
@@ -124,14 +123,12 @@ public class Servicios extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(28, 119, 144));
         jButton3.setText("Crear");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 230, 50));
 
         eliminarEmp.setBackground(new java.awt.Color(255, 255, 253));
         eliminarEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         eliminarEmp.setForeground(new java.awt.Color(28, 119, 144));
         eliminarEmp.setText("Eliminar");
-        eliminarEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
         eliminarEmp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 eliminarEmpMouseEntered(evt);
@@ -166,6 +163,11 @@ public class Servicios extends javax.swing.JFrame {
             this.ubi = ubi;
         }
     }
+
+    public void setModeloTabla(TableModel m) {
+        tablaServicios.setModel(m);
+    }
+    
     private void crearEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseEntered
         crearEmp.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_crearEmpMouseEntered
@@ -237,6 +239,6 @@ public class Servicios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaServicios;
     // End of variables declaration//GEN-END:variables
 }

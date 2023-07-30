@@ -90,19 +90,40 @@ INCREMENT BY 1
 NOCACHE;
 
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargado de la Facturacion de la veterinaria',1);
-<<<<<<< HEAD
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',2);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',2);
-=======
-<<<<<<< HEAD
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',2);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',2);
-=======
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
 
-SELECT * FROM vt_usu
->>>>>>> 332b233ecc7a6601a982dd059cff17ef98e70a2d
->>>>>>> master
+
+SELECT * FROM vt_permisos;
+
 
 INSERT INTO vt_usuarios_sistema VALUES (1,'Sigua123','Sigua123',3);
+
+SELECT *  FROM vt_usuarios_sistema;
+
+COMMIT;
+
+SELECT * FROM vt_servicios;
+
+CREATE SEQUENCE ser_codigo_seq 
+START WITH 1
+MAXVALUE 99999
+INCREMENT BY 1
+NOCACHE;
+
+INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Consulta medica general','El servicio ofrece una evaluacion y diagnostico de salud general de la mascota', 25.0, 'S');
+INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Vacunación de rutina', 'El servicio ofrece la vacunación de administración contra enfermedades comunes en las mascotas, incluye todas las vacunas', 30.50, 'S');
+INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Exámenes médicos', 'El servicio ofrece la realización de exámenes de análisis y pruebas para detectar problemas de salud se realiza exámenes completos, como resonancias.', 60.0, 'S');
+INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Cirugía de castración', 'El servicio ofrece un cirugía de castración completa, además de la cirugía se le añadirá sus respectivas medicinas', 150.45, 'N');
+ INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Cirugía ortopédica', 'El servicio ofrece cirugía ortopédica además de sus análisis y medicamentos correspondientes', 200.65, 'N');
+ INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Atención de emergencia', 'El servicio ofrece servicio de atención inmediata luego de un accidente con una atención inmediata', 100.15, 'N');
+ INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Control de parásitos',  'El servicio ofrece un control de tratamiento y prevención derivadas de los daños que provocan pulgas, garrapatas, gusanos u otros', 10.0, 'N');
+ INSERT INTO vt_servicios VALUES(ser_codigo_seq.nextval, 'Control de peso y nutrición', 'El servicio ofrece un asesoramiento para mantener un peso saludable con una alimentación adecuada en la mascota', 15.0, 'N');
+ 
+ SELECT * FROM vt_clientes c, vt_personas p WHERE (c.per_codigo=p.per_codigo) AND (c.cli_estado='A');
+ 
+ select * from vt_empleados e, vt_personas p, vt_roles r WHERE (e.per_codigo=p.per_codigo) AND (r.rol_codigo(+)=e.rol_codigo);

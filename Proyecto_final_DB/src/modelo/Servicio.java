@@ -63,6 +63,11 @@ public class Servicio {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+
+    @Override
+    public String toString() {
+        return "Servicio{" + "codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + ", precio=" + precio + ", iva=" + iva + '}';
+    }
     
     
     

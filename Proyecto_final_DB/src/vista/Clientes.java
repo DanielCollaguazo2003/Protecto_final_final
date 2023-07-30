@@ -175,6 +175,7 @@ public class Clientes extends javax.swing.JFrame {
     public void setModeloTabla(TableModel m) {
         tablaClientes.setModel(m);
     }
+    
     private void crearEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseEntered
         crearEmp.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_crearEmpMouseEntered

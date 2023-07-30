@@ -11,12 +11,12 @@ package modelo;
 public class Empleado extends Persona {
     
     private String tipo;
-    private Rol rol;
+    private Permiso permiso;
 
-    public Empleado(String tipo, Rol rol, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
+    public Empleado(String tipo, Permiso permiso, String cedula, String nombre, String apellido, String direccion_p, String direccion_s, String telefono, String correo) {
         super(cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
         this.tipo = tipo;
-        this.rol = rol;
+        this.permiso = permiso;
     }
 
     public String getTipo() {
@@ -27,14 +27,12 @@ public class Empleado extends Persona {
         this.tipo = tipo;
     }
 
-    public Rol getRol() {
-        return rol;
+    public Permiso getPermiso() {
+        return permiso;
     }
 
-    public void setRol(Rol rol) {
-        this.rol = rol;
+    public void setPermiso(Permiso permiso) {
+        this.permiso = permiso;
     }
-
-    
-    
+   
 }

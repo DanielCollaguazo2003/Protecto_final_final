@@ -83,6 +83,12 @@ public class principal {
         DefaultTablaClientes tableCli = new DefaultTablaClientes(lisCli);
         c.setModeloTabla(tableCli);
         
+        DefaultListaServicios listSer = new DefaultListaServicios();
+        conexionServicios conSer = new conexionServicios(conexion, con);
+        conSer.obtenerServicios(listSer);
+        DefaultTablaServicios tableSer = new DefaultTablaServicios(listSer);
+        ser.setModeloTabla(tableSer);
+        
         vl.listener_login(ll);
         vl.listenerIniSesion(ll);
         
