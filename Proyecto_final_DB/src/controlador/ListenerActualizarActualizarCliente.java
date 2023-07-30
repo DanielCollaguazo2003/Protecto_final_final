@@ -63,10 +63,26 @@ public class ListenerActualizarActualizarCliente implements ActionListener {
             System.out.println("El codigo es " + codigoCli);
 
             int tuplaejecutada = ps.executeUpdate();
+            con.setAutoCommit(false);
             ps.close();
+            
+            if (tuplaejecutada == 1) {
+                con.commit();
+                JOptionPane.showMessageDialog(actualizarCli, "Actualizado Exitosamente!!");
+                actualizarCli.getApeliido().setText("");
+                actualizarCli.getNombre().setText("");
+                actualizarCli.getId().setText("");
+                actualizarCli.getTelefono().setText("");
+                actualizarCli.getDireccionPrin().setText("");
+                actualizarCli.getDireccionSecu().setText("");
+                actualizarCli.getCorreo().setText("");
+                actualizarCli.setVisible(false);
 
+            } else {
+                JOptionPane.showMessageDialog(actualizarCli, "Algo fallo durante el proceso");
+            }
         } catch (SQLException ex) {
-            System.out.println("Ocurrio un error");
+            System.out.println(ex);
             JOptionPane.showMessageDialog(actualizarCli, "Error al actualizar la Base de Datos");
             
         }
