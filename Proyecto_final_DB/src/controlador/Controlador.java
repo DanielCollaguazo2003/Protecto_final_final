@@ -71,7 +71,9 @@ public class Controlador {
         ListenerCrearClienteSistema lccs = new ListenerCrearClienteSistema(con, ccli,  conexion, lisCli, c);
         ListenerCrearClienteControl lccc = new ListenerCrearClienteControl(c, ccli);
         ListenerBorrarClienteControl lbcc = new ListenerBorrarClienteControl(c, con, ccli, conexion, lisCli);
-
+        ListenerBucarActualizar lbact =  new ListenerBucarActualizar(conexion, con, actCli);
+        ListenerActualizarActualizar lactact = new ListenerActualizarActualizar(conexion, con, actCli);
+        
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
         vGeneral.listenerActualizar(lactcli);
@@ -88,6 +90,8 @@ public class Controlador {
         ccli.addActionListenerCrear(lrc);
         ccli.addActionListenerCrearUsuario(lccs);
         
+        actCli.listenerBuscarCliente(lbact);
+        actCli.listenerActualizarCliente(lactact);
         
         c.addActionListenerBotonCrear(lccc);
         c.addActionListenerBotonEliminar(lbcc);
