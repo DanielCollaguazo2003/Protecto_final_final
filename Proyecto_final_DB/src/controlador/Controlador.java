@@ -48,9 +48,11 @@ public class Controlador {
 
         Vista_Crear_Usuario createUser = new Vista_Crear_Usuario();
 
-        ControladorServicios controladorServicios = new ControladorServicios(vGeneral, conexion, con);
+        ControladorBox controladorServicios = new ControladorBox(vGeneral, citas, conexion, con);
 
         controladorServicios.serviciosBoxList();
+        controladorServicios.veterinariosBox();
+        controladorServicios.tipoMascotaBox();
 
         listenerActualizarClientes lactcli = new listenerActualizarClientes(actCli);
         listenerClientes lcli = new listenerClientes(c);
@@ -80,7 +82,7 @@ public class Controlador {
         vGeneral.listenerFinSesion(lfs);
         vl.listenerCrearUser(lCreateUs);
         vGeneral.listenerFacturar(lFacturar);
-        
+
         ccli.addActionListenerCrear(lrc);
 
         DefaultListaClientes lisCli = new DefaultListaClientes();
@@ -90,11 +92,10 @@ public class Controlador {
         DefaultTablaClientes tableCli = new DefaultTablaClientes(lisCli);
 
         c.setModeloTabla(tableCli);
-        
+
         vGeneral.repaint();
-        
+
         vGeneral.setVisible(true);
     }
-    
-    
+
 }

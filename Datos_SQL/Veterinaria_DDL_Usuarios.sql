@@ -25,7 +25,8 @@ GRANT SELECT, ALTER ON fac_codigo_seq TO empleados_generales;
 GRANT SELECT, ALTER ON det_codigo_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_fac_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_det_seq TO empleados_generales;
-
+GRANT SELECT ON vt_tipos_mascotas TO empleados_generales;
+GRANT SELECT ON vt_empleados TO empleados_generales;
 -- Creacion de los usuarios nuevos
 CREATE USER daniel_admin IDENTIFIED BY 12345;
 CREATE USER paul_admin IDENTIFIED BY 12345;
