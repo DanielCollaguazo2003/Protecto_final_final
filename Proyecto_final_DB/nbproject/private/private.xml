@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/Citas.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/listenerClientes.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/ActualizarCliente.java</file>
@@ -31,6 +32,41 @@
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/conexionClientes.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/controlador/ListenerCreateUser.java</file>
             <file>file:/C:/Users/Anthony%20Moya/OneDrive%20-%20Universidad%20Politecnica%20Salesiana/Documentos/NetBeansProjects/proyecto_final/Protecto_final_final/Proyecto_final_DB/src/vista/Empleados.java</file>
+=======
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/listenerServicios.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/vista/ActualizarCliente.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerFinalizarSesion.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/vista/VistaLogin.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Cabecera_Factura.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/DefaultListaClientes.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerAddServicio.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/listener_login.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Detalle_Factura.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Empleado.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/envioCorreo.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/vista/VistaGeneralSistema.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Servicio.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerCreateUser.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerCitas.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Persona.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/conexion/ConexionOracle.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerBucarClienteGeneral.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerRegresarCreacionClientes.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/principal.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/Controlador.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/listenerCrearClientes.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ControladorBox.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerCrearClienteSistema.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/listenerEmpleados.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/modelo/Usuario.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerDeleteDetalle.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerBuscarClienteCitas.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/listenerActualizarClientes.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/listenerClientes.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerFacturar.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/VerificacionHilo.java</file>
+            <file>file:/C:/Users/XaviO_o/Desktop/Universidad/Universidad%204%20ciclo/Fundamentos%20de%20base%20de%20datos/ProyectoFinalDOC/Proyecto_final_DB/src/controlador/ListenerEstadisticas.java</file>
+>>>>>>> master
         </group>
     </open-files>
 </project-private>

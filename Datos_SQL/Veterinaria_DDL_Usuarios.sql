@@ -15,8 +15,8 @@ GRANT CONNECT TO empleados_administrador;
 --Se asigna privilegios de conexion al rol
 GRANT CONNECT TO empleados_generales;
 
-GRANT INSERT ON vt_cabeceras_facturas TO empleados_generales;
-GRANT INSERT ON vt_detalles_facturas TO empleados_generales;
+GRANT INSERT, SELECT ON vt_cabeceras_facturas TO empleados_generales;
+GRANT INSERT, SELECT ON vt_detalles_facturas TO empleados_generales;
 
 GRANT INSERT, UPDATE, SELECT ON vt_clientes TO empleados_generales;
 GRANT INSERT, UPDATE, SELECT ON vt_personas TO empleados_generales;
@@ -25,9 +25,14 @@ GRANT SELECT, ALTER ON fac_codigo_seq TO empleados_generales;
 GRANT SELECT, ALTER ON det_codigo_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_fac_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_det_seq TO empleados_generales;
+<<<<<<< HEAD
 GRANT EXECUTE ON proximo_valor_per_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_cli_seq TO empleados_generales;
 
+=======
+GRANT SELECT ON vt_tipos_mascotas TO empleados_generales;
+GRANT SELECT ON vt_empleados TO empleados_generales;
+>>>>>>> master
 -- Creacion de los usuarios nuevos
 CREATE USER daniel_admin IDENTIFIED BY 12345;
 CREATE USER paul_admin IDENTIFIED BY 12345;
@@ -40,6 +45,3 @@ GRANT empleados_administrador TO daniel_admin;
 GRANT empleados_administrador TO paul_admin;
 GRANT empleados_generales TO daniel_general;
 GRANT empleados_generales TO paul_general;
--- Se asigna el privilegio de crear tablas dentro del propio esquema 
-GRANT CREATE TABLE TO empleado_contabilidad;
-GRANT ALL PRIVILEGES TO empleados_administrador;

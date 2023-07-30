@@ -4,11 +4,15 @@
  */
 package vista;
 
+import com.toedter.calendar.JDateChooser;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.table.TableModel;
 
 /**
@@ -63,22 +67,22 @@ public class Citas extends javax.swing.JFrame {
         jPanel1 = f;
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        crearEmp = new javax.swing.JButton();
-        crearEmp1 = new javax.swing.JButton();
+        buscarCita = new javax.swing.JButton();
+        regresarCita = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        tipoMascota = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        correoCitas = new javax.swing.JLabel();
+        nombreCitas = new javax.swing.JLabel();
+        cedulaCitas = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        dateCitas = new com.toedter.calendar.JDateChooser();
         jLabel14 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        crearEmp2 = new javax.swing.JButton();
-        crearEmp3 = new javax.swing.JButton();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        nombreMascCitas = new javax.swing.JTextField();
+        veterinarioCitas = new javax.swing.JComboBox<>();
+        addClienteCita = new javax.swing.JButton();
+        agendarCita = new javax.swing.JButton();
+        horaCitas = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -115,120 +119,120 @@ public class Citas extends javax.swing.JFrame {
         jLabel1.setText("REGISTRO DE LAS CITAS");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 340, 30));
 
-        crearEmp.setBackground(new java.awt.Color(255, 255, 253));
-        crearEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        crearEmp.setForeground(new java.awt.Color(28, 119, 144));
-        crearEmp.setText("Buscar");
-        crearEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        crearEmp.addMouseListener(new java.awt.event.MouseAdapter() {
+        buscarCita.setBackground(new java.awt.Color(255, 255, 253));
+        buscarCita.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        buscarCita.setForeground(new java.awt.Color(28, 119, 144));
+        buscarCita.setText("Buscar");
+        buscarCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        buscarCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                crearEmpMouseEntered(evt);
+                buscarCitaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                crearEmpMouseExited(evt);
+                buscarCitaMouseExited(evt);
             }
         });
-        jPanel2.add(crearEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 160, 40));
+        jPanel2.add(buscarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 160, 40));
 
-        crearEmp1.setBackground(new java.awt.Color(255, 255, 253));
-        crearEmp1.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        crearEmp1.setForeground(new java.awt.Color(28, 119, 144));
-        crearEmp1.setText("Regresar");
-        crearEmp1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        crearEmp1.addMouseListener(new java.awt.event.MouseAdapter() {
+        regresarCita.setBackground(new java.awt.Color(255, 255, 253));
+        regresarCita.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        regresarCita.setForeground(new java.awt.Color(28, 119, 144));
+        regresarCita.setText("Regresar");
+        regresarCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        regresarCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                crearEmp1MouseEntered(evt);
+                regresarCitaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                crearEmp1MouseExited(evt);
+                regresarCitaMouseExited(evt);
             }
         });
-        jPanel2.add(crearEmp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 180, 40));
+        jPanel2.add(regresarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 180, 40));
 
         jLabel11.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel11.setText("Fecha");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 120, 20));
 
-        jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de mascota", "gato" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        tipoMascota.setBackground(new java.awt.Color(204, 204, 204));
+        tipoMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de mascota" }));
+        tipoMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                tipoMascotaActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 350, 40));
+        jPanel2.add(tipoMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 350, 40));
 
         jLabel4.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel4.setText("Correo Electronico:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 120, 20));
 
-        jLabel2.setText("collaguazodaniel48@gmail.com");
-        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 350, 40));
+        correoCitas.setText("collaguazodaniel48@gmail.com");
+        correoCitas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(correoCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 350, 40));
 
-        jLabel3.setText("Daniel Collaguazo");
-        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 350, 40));
+        nombreCitas.setText("Daniel Collaguazo");
+        nombreCitas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(nombreCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 350, 40));
 
-        jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 350, 40));
+        cedulaCitas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(cedulaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 350, 40));
 
         jLabel13.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel13.setText("Cliente C.I:");
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 120, 20));
 
-        jDateChooser1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 180, 40));
+        dateCitas.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.add(dateCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 180, 40));
 
         jLabel14.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel14.setText("Nombre de la Mascota:");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 150, 20));
 
-        jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 350, 40));
+        nombreMascCitas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        jPanel2.add(nombreMascCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 350, 40));
 
-        jComboBox3.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione al Medico Veterinario", "Juan Casillas" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        veterinarioCitas.setBackground(new java.awt.Color(204, 204, 204));
+        veterinarioCitas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione al Medico Veterinario" }));
+        veterinarioCitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                veterinarioCitasActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 350, 40));
+        jPanel2.add(veterinarioCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 350, 40));
 
-        crearEmp2.setBackground(new java.awt.Color(255, 255, 253));
-        crearEmp2.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        crearEmp2.setForeground(new java.awt.Color(28, 119, 144));
-        crearEmp2.setText("Añadir Cliente");
-        crearEmp2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        crearEmp2.addMouseListener(new java.awt.event.MouseAdapter() {
+        addClienteCita.setBackground(new java.awt.Color(255, 255, 253));
+        addClienteCita.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        addClienteCita.setForeground(new java.awt.Color(28, 119, 144));
+        addClienteCita.setText("Añadir Cliente");
+        addClienteCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        addClienteCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                crearEmp2MouseEntered(evt);
+                addClienteCitaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                crearEmp2MouseExited(evt);
+                addClienteCitaMouseExited(evt);
             }
         });
-        jPanel2.add(crearEmp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 180, 40));
+        jPanel2.add(addClienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 180, 40));
 
-        crearEmp3.setBackground(new java.awt.Color(255, 255, 253));
-        crearEmp3.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        crearEmp3.setForeground(new java.awt.Color(28, 119, 144));
-        crearEmp3.setText("Agendar");
-        crearEmp3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        crearEmp3.addMouseListener(new java.awt.event.MouseAdapter() {
+        agendarCita.setBackground(new java.awt.Color(255, 255, 253));
+        agendarCita.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        agendarCita.setForeground(new java.awt.Color(28, 119, 144));
+        agendarCita.setText("Agendar");
+        agendarCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        agendarCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                crearEmp3MouseEntered(evt);
+                agendarCitaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                crearEmp3MouseExited(evt);
+                agendarCitaMouseExited(evt);
             }
         });
-        jPanel2.add(crearEmp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 230, 50));
+        jPanel2.add(agendarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 230, 50));
 
-        jComboBox4.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione la Hora", "08:00", "09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00", "17:00" }));
-        jPanel2.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 150, 40));
+        horaCitas.setBackground(new java.awt.Color(204, 204, 204));
+        horaCitas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione la Hora", "08:00", "09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00", "17:00" }));
+        jPanel2.add(horaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 150, 40));
 
         jLabel6.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel6.setText("Nombre:");
@@ -247,45 +251,45 @@ public class Citas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void crearEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseEntered
-        crearEmp.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_crearEmpMouseEntered
+    private void buscarCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarCitaMouseEntered
+        buscarCita.setBackground(new Color(180,245,245));
+    }//GEN-LAST:event_buscarCitaMouseEntered
 
-    private void crearEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseExited
-        crearEmp.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_crearEmpMouseExited
+    private void buscarCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarCitaMouseExited
+        buscarCita.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_buscarCitaMouseExited
 
-    private void crearEmp1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmp1MouseEntered
+    private void regresarCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarCitaMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_crearEmp1MouseEntered
+    }//GEN-LAST:event_regresarCitaMouseEntered
 
-    private void crearEmp1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmp1MouseExited
+    private void regresarCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarCitaMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_crearEmp1MouseExited
+    }//GEN-LAST:event_regresarCitaMouseExited
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void tipoMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_tipoMascotaActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void veterinarioCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_veterinarioCitasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_veterinarioCitasActionPerformed
 
-    private void crearEmp2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmp2MouseEntered
+    private void addClienteCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addClienteCitaMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_crearEmp2MouseEntered
+    }//GEN-LAST:event_addClienteCitaMouseEntered
 
-    private void crearEmp2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmp2MouseExited
+    private void addClienteCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addClienteCitaMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_crearEmp2MouseExited
+    }//GEN-LAST:event_addClienteCitaMouseExited
 
-    private void crearEmp3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmp3MouseEntered
+    private void agendarCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agendarCitaMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_crearEmp3MouseEntered
+    }//GEN-LAST:event_agendarCitaMouseEntered
 
-    private void crearEmp3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmp3MouseExited
+    private void agendarCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agendarCitaMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_crearEmp3MouseExited
+    }//GEN-LAST:event_agendarCitaMouseExited
 
     /**
      * @param args the command line arguments
@@ -322,28 +326,94 @@ public class Citas extends javax.swing.JFrame {
         });
     }
 
+    public JTextField getCedulaCitas() {
+        return cedulaCitas;
+    }
+
+    public void setCedulaCitas(JTextField cedulaCitas) {
+        this.cedulaCitas = cedulaCitas;
+    }
+
+    public JLabel getCorreoCitas() {
+        return correoCitas;
+    }
+
+    public void setCorreoCitas(JLabel correoCitas) {
+        this.correoCitas = correoCitas;
+    }
+
+    public JDateChooser getDateCitas() {
+        return dateCitas;
+    }
+
+    public void setDateCitas(JDateChooser dateCitas) {
+        this.dateCitas = dateCitas;
+    }
+
+    public JComboBox<String> getHoraCitas() {
+        return horaCitas;
+    }
+
+    public void setHoraCitas(JComboBox<String> horaCitas) {
+        this.horaCitas = horaCitas;
+    }
+
+    public JLabel getNombreCitas() {
+        return nombreCitas;
+    }
+
+    public void setNombreCitas(JLabel nombreCitas) {
+        this.nombreCitas = nombreCitas;
+    }
+
+    public JTextField getNombreMascCitas() {
+        return nombreMascCitas;
+    }
+
+    public void setNombreMascCitas(JTextField nombreMascCitas) {
+        this.nombreMascCitas = nombreMascCitas;
+    }
+
+    public JComboBox<String> getTipoMascota() {
+        return tipoMascota;
+    }
+
+    public void setTipoMascota(JComboBox<String> tipoMascota) {
+        this.tipoMascota = tipoMascota;
+    }
+
+    public JComboBox<String> getVeterinarioCitas() {
+        return veterinarioCitas;
+    }
+
+    public void setVeterinarioCitas(JComboBox<String> veterinarioCitas) {
+        this.veterinarioCitas = veterinarioCitas;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton crearEmp;
-    private javax.swing.JButton crearEmp1;
-    private javax.swing.JButton crearEmp2;
-    private javax.swing.JButton crearEmp3;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JButton addClienteCita;
+    private javax.swing.JButton agendarCita;
+    private javax.swing.JButton buscarCita;
+    private javax.swing.JTextField cedulaCitas;
+    private javax.swing.JLabel correoCitas;
+    private com.toedter.calendar.JDateChooser dateCitas;
+    private javax.swing.JComboBox<String> horaCitas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JLabel nombreCitas;
+    private javax.swing.JTextField nombreMascCitas;
+    private javax.swing.JButton regresarCita;
+    private javax.swing.JComboBox<String> tipoMascota;
+    private javax.swing.JComboBox<String> veterinarioCitas;
     // End of variables declaration//GEN-END:variables
 }
