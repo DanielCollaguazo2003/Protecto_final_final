@@ -11,17 +11,19 @@ import javax.swing.AbstractListModel;
  *
  * @author XaviO_o
  */
-public class DefaultListaDetalles extends AbstractListModel<Detalle_Factura>{
+public class DefaultListaDetalles extends AbstractListModel<Detalle_Factura> {
+
     private ArrayList<Detalle_Factura> listaDetalles;
 
     public DefaultListaDetalles() {
         this.listaDetalles = new ArrayList<>();
     }
-    public boolean verificarLista(){
+
+    public boolean verificarLista() {
         return listaDetalles.isEmpty();
     }
-    
-        public void fireIntervalRemoved(Detalle_Factura detalle, int index) {
+
+    public void fireIntervalRemoved(Detalle_Factura detalle, int index) {
         listaDetalles.remove(detalle);
         super.fireIntervalRemoved(this, index, index);
     }
@@ -45,7 +47,5 @@ public class DefaultListaDetalles extends AbstractListModel<Detalle_Factura>{
     public ArrayList<Detalle_Factura> getListaDetalles() {
         return listaDetalles;
     }
-    
-    
-}
 
+}

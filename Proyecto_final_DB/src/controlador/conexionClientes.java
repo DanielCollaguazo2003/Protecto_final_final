@@ -44,7 +44,7 @@ public class conexionClientes {
 
             while (res.next()) {
                 Cliente c = new Cliente(res.getString("cli_estado"),
-                                    res.getInt("per_codigo"),
+                                    res.getInt("cli_codigo"),
                                     res.getString("per_cedula"),
                                     res.getString("per_nombre"),
                                     res.getString("per_apellido"),

@@ -15,7 +15,7 @@ import javax.swing.table.AbstractTableModel;
  */
 public class DefaultTablaClientes extends AbstractTableModel {
 
-    String[] title = {"CEDULA", "NOMBRES", "APELLIDOS", "DIRECCION PRINCIPAL", "DIRECCION SECUNDARIA", "TELEFONO", "CORREO ELECTRONICO", "Estado"};
+    String[] title = {"CODIGO", "CEDULA", "NOMBRES", "APELLIDOS", "DIRECCION PRINCIPAL", "DIRECCION SECUNDARIA", "TELEFONO", "CORREO ELECTRONICO", "Estado"};
     DefaultListaClientes listaClientes;
 
     public DefaultTablaClientes(DefaultListaClientes listaClientes) {
@@ -57,27 +57,29 @@ public class DefaultTablaClientes extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 8;
+        return 9;
     }
 
     @Override
     public Object getValueAt(int row, int col) {
         switch (col) {
             case 0:
-                return listaClientes.getElementAt(row).getCedula();
+                return listaClientes.getElementAt(row).getCodigo_p();
             case 1:
-                return listaClientes.getElementAt(row).getNombre();
+                return listaClientes.getElementAt(row).getCedula();
             case 2:
-                return listaClientes.getElementAt(row).getApellido();
+                return listaClientes.getElementAt(row).getNombre();
             case 3:
-                return listaClientes.getElementAt(row).getDireccion_p();
+                return listaClientes.getElementAt(row).getApellido();
             case 4:
-                return listaClientes.getElementAt(row).getDireccion_s();
+                return listaClientes.getElementAt(row).getDireccion_p();
             case 5:
-                return listaClientes.getElementAt(row).getTelefono();
+                return listaClientes.getElementAt(row).getDireccion_s();
             case 6:
-                return listaClientes.getElementAt(row).getCorreo();
+                return listaClientes.getElementAt(row).getTelefono();
             case 7:
+                return listaClientes.getElementAt(row).getCorreo();
+            case 8:
                 return listaClientes.getElementAt(row).getEstado();
             default:
                 return "";

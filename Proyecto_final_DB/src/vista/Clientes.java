@@ -7,8 +7,10 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.table.TableModel;
 
 /**
@@ -144,7 +146,12 @@ public class Clientes extends javax.swing.JFrame {
         });
         jPanel2.add(eliminarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 230, 50));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 230, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 1160, 580));
@@ -199,6 +206,10 @@ public class Clientes extends javax.swing.JFrame {
         ActualizarEmp.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_ActualizarEmpMouseExited
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -235,6 +246,18 @@ public class Clientes extends javax.swing.JFrame {
                 new Clientes().setVisible(true);
             }
         });
+    }
+    
+    public void addActionListenerBotonCrear(ActionListener a){
+        crearEmp.addActionListener(a);
+    }
+    
+    public void addActionListenerBotonEliminar(ActionListener a){
+        eliminarEmp.addActionListener(a);
+    }
+
+    public JTable getTablaClientes() {
+        return tablaClientes;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

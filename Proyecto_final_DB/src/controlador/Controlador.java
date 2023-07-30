@@ -35,7 +35,8 @@ public class Controlador {
         ConexionOracle conexion = new ConexionOracle(user, password);
 
         Connection con = conexion.conectar();
-
+        
+        DefaultListaClientes lisCli = new DefaultListaClientes();
         DefaultListaDetalles listaDetalles = new DefaultListaDetalles();
         DefaultTablaDetalles tablaDetalles = new DefaultTablaDetalles(listaDetalles);
 
@@ -67,6 +68,9 @@ public class Controlador {
         ListenerRegresarCreacionClientes lrc = new ListenerRegresarCreacionClientes(ccli);
         ListenerFinalizarSesion lfs = new ListenerFinalizarSesion(vGeneral, vl);
         ListenerFacturar lFacturar = new ListenerFacturar(conexion, vl, vGeneral, con, lAddService);
+        ListenerCrearClienteSistema lccs = new ListenerCrearClienteSistema(con, ccli,  conexion, lisCli, c);
+        ListenerCrearClienteControl lccc = new ListenerCrearClienteControl(c, ccli);
+        ListenerBorrarClienteControl lbcc = new ListenerBorrarClienteControl(c, con, ccli, conexion, lisCli);
 
         vGeneral.listenerDeleteDetalle(lDeleteDetalle);
         vGeneral.listenerAnadirServicios(lAddService);
@@ -82,8 +86,13 @@ public class Controlador {
         vGeneral.listenerFacturar(lFacturar);
         
         ccli.addActionListenerCrear(lrc);
+        ccli.addActionListenerCrearUsuario(lccs);
+        
+        
+        c.addActionListenerBotonCrear(lccc);
+        c.addActionListenerBotonEliminar(lbcc);
 
-        DefaultListaClientes lisCli = new DefaultListaClientes();
+        
         conexionClientes conCli = new conexionClientes(conexion, con);
 
         conCli.obtenerClientes(lisCli);

@@ -306,8 +306,6 @@ public class CrearClientes extends javax.swing.JFrame {
     public void setjTextFieldNumCell(JTextField jTextFieldNumCell) {
         this.jTextFieldNumCell = jTextFieldNumCell;
     }
-
-    
     
     public void addActionListenerCrear(ActionListener a) {
         regreadd.addActionListener(a);
