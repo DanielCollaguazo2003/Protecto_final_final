@@ -24,7 +24,7 @@ INSERT INTO vt_personas VALUES (personas_codigo_seq.nextval,'0185258683','Juan',
 INSERT INTO vt_personas VALUES (personas_codigo_seq.nextval,'0183628745','Belen','Collaguazo','Racar','Rosendo Lopez Díaz','0965274618','lcollaguazo@gmail.com');
 INSERT INTO vt_personas VALUES (personas_codigo_seq.nextval,'0173548353','Fernanda','Cordero','El Batan','Av. Gral. Escandón','0972718349','frcordero@gmail.com');
 
-
+SELECT * FROM VT_PERSONAS;
 
 CREATE SEQUENCE empleados_codigo_seq 
 START WITH 1
@@ -38,7 +38,7 @@ INSERT INTO vt_empleados VALUES (empleados_codigo_seq.nextval,'V',4,null);
 INSERT INTO vt_empleados VALUES (empleados_codigo_seq.nextval,'C',2,2);
 INSERT INTO vt_empleados VALUES (empleados_codigo_seq.nextval,'V',3,null);
 
-
+SELECT * FROM VT_EMPLEADOS;
 
 
 CREATE SEQUENCE clientes_codigo_seq 
@@ -84,7 +84,8 @@ INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Lily',6);
 INSERT INTO vt_mascotas VALUES (mascotas_codigo_seq.nextval,'Coco',1);
 
 
-
+SELECT * FROM vt_clientes;
+SELECT * FROM vt_personas;
 
 
 CREATE SEQUENCE citas_codigo_seq 
@@ -100,17 +101,45 @@ INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-08-13', 'YYY
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-07-25', 'YYYY-MM-DD'),'I',2,1,4);
 INSERT INTO vt_citas VALUES (citas_codigo_seq.nextval,TO_DATE('2023-08-01', 'YYYY-MM-DD'),'A',2,3,2);
 
-
-
-
 CREATE SEQUENCE permisos_codigo_seq 
 START WITH 1
 MAXVALUE 99999
 INCREMENT BY 1
-NOCACHE
+NOCACHE;
 
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Facturar','Encargado de la Facturacion de la veterinaria',1);
+
+INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',2);
+INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',2);
+
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Registrar','Encargado de registrar nuevos clientes',3);
 INSERT INTO vt_permisos VALUES (permisos_codigo_seq.nextval,'Actualizar','Encargado de actualizar los datos de los clientes',3);
 
+UPDATE vt_personas p
+SET p.per_cedula = '0102532324',
+    p.per_nombre = 'David',
+    p.per_apellido = 'Crespo',
+    p.per_direccion_principal = 'jaja',
+    p.per_direccion_secundaria = 'Via a Jadan',
+    p.per_telefono = '090909',
+    p.per_correo_electronico = 'dcrespo@email.com'
+WHERE EXISTS (
+    SELECT 1
+    FROM vt_clientes c
+    WHERE p.per_codigo = c.per_codigo
+      AND c.cli_codigo = 3
+);
 
+
+SELECT * FROM vt_clientes;
+SELECT * FROM vt_personas;
+
+commit;
+
+SELECT c.cli_codigo 
+FROM vt_clientes c, vt_personas p 
+WHERE p.per_codigo=c.per_codigo;
+
+SELECT * FROM vt_clientes c, vt_personas p 
+WHERE (c.per_codigo=p.per_codigo) 
+and (p.per_cedula=p.per_cedula and c.cli_estado='A');
