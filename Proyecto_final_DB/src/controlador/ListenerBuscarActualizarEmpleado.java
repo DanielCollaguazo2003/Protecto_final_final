@@ -93,39 +93,20 @@ public class ListenerBuscarActualizarEmpleado implements ActionListener {
         }
 
     }
-
-    public int getCodigoCliente(String cliente) throws SQLException {
-        int codigoCliente = -1; // Valor predeterminado en caso de que el cliente no se encuentre
-
-        String cedula = actualizarEmp.getId().getText();
-        ps = con.prepareStatement("SELECT cli_codigo FROM veterinaria.vt_clientes c, veterinaria.vt_personas p WHERE (c.per_codigo=p.per_codigo) and (p.per_cedula=? and c.cli_estado='A')");
-        ps.setString(1, cedula);
-        ResultSet res = ps.executeQuery();
-
-        if (res.next()) {
-            codigoCliente = res.getInt("cli_codigo");
-        }
-
-        res.close();
-        ps.close();
-
-        return codigoCliente;
-    }
-
     private Permiso extraerPermiso(int codigoPermiso) {
         try {
             ps = con.prepareStatement("""
                                       SELECT * 
                                       FROM veterinaria.vt_permisos 
-                                      WHERE prm_codigo = ?;
+                                      WHERE prm_codigo = ?
                                       """);
             ps.setInt(1, codigoPermiso);
             ResultSet res = ps.executeQuery();
 
             while (res.next()) {
-                int perCodigo = res.getInt("per_codigo");
-                String perNombre = res.getString("cli_estado");
-                String perDescripcion = res.getString("per_nombre");
+                int perCodigo = res.getInt("prm_codigo");
+                String perNombre = res.getString("prm_nombre");
+                String perDescripcion = res.getString("prm_descripcion");
 
                 per = new Permiso(perCodigo, perNombre, perDescripcion);
             }
@@ -141,4 +122,14 @@ public class ListenerBuscarActualizarEmpleado implements ActionListener {
         }
         return per;
     }
+
+    public void setEmp(Empleado emp) {
+        this.emp = emp;
+    }
+
+    public Empleado getEmp() {
+        return emp;
+    }
+    
+    
 }

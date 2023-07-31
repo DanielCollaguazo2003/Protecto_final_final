@@ -14,8 +14,11 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
 import modelo.DefaultListaClientes;
+import modelo.DefaultListaEmplados;
 import modelo.DefaultListaServicios;
 import modelo.DefaultTablaClientes;
+import modelo.Empleado;
+import modelo.Permiso;
 import modelo.Servicio;
 import vista.VistaGeneralSistema;
 import vista.VistaLogin;
@@ -91,6 +94,44 @@ public class conexionTablas {
         }
 
         return listSer;
+    }
+    
+    public DefaultListaEmplados obtenerEmpleados(DefaultListaEmplados empl) {
+        try {
+
+            sSQL = """
+                   SELECT * 
+                   FROM veterinaria.vt_empleados e, veterinaria.vt_personas p, veterinaria.vt_permisos pr  
+                   WHERE (e.per_codigo=p.per_codigo) and (pr.prm_codigo=e.prm_codigo)
+                   """;
+
+            Connection con = conexion.conectar();
+            Statement cn = con.createStatement();
+            ResultSet res = cn.executeQuery(sSQL);
+
+            while (res.next()) {
+                Permiso p = new Permiso(res.getInt("prm_codigo"),
+                        res.getString("prm_nombre"),
+                        res.getString("prm_descripcion"));
+                Empleado e = new Empleado(res.getString("emp_tipo"),
+                        res.getInt("emp_codigo"), p,
+                        res.getString("per_cedula"),
+                        res.getString("per_nombre"),
+                        res.getString("per_apellido"),
+                        res.getString("per_direccion_principal"),
+                        res.getString("per_direccion_secundaria"),
+                        res.getString("per_telefono"),
+                        res.getString("per_correo_electronico"));
+                empl.addElement(e);
+                System.out.println(e.toString());
+            }
+            //tableCli = new DefaultTablaClientes(lisCli);
+        } catch (SQLException x) {
+            System.out.println(x);
+            System.out.println("no");
+        }
+
+        return empl;
     }
 
 }

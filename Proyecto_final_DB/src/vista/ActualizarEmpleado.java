@@ -55,7 +55,7 @@ public class ActualizarEmpleado extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         telefono = new javax.swing.JTextField();
         buscarAct = new javax.swing.JButton();
-        Actualizar = new javax.swing.JButton();
+        ActualizarEmp = new javax.swing.JButton();
         regreadd1 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         permisosComboBox = new javax.swing.JComboBox<>();
@@ -148,20 +148,20 @@ public class ActualizarEmpleado extends javax.swing.JFrame {
         });
         jPanel2.add(buscarAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 410, 40));
 
-        Actualizar.setBackground(new java.awt.Color(255, 255, 253));
-        Actualizar.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        Actualizar.setForeground(new java.awt.Color(28, 119, 144));
-        Actualizar.setText("Actualizar");
-        Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+        ActualizarEmp.setBackground(new java.awt.Color(255, 255, 253));
+        ActualizarEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        ActualizarEmp.setForeground(new java.awt.Color(28, 119, 144));
+        ActualizarEmp.setText("Actualizar");
+        ActualizarEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        ActualizarEmp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ActualizarMouseEntered(evt);
+                ActualizarEmpMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                ActualizarMouseExited(evt);
+                ActualizarEmpMouseExited(evt);
             }
         });
-        jPanel2.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 170, 50));
+        jPanel2.add(ActualizarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 170, 50));
 
         regreadd1.setBackground(new java.awt.Color(255, 255, 253));
         regreadd1.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
@@ -229,13 +229,13 @@ public class ActualizarEmpleado extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_buscarActActionPerformed
 
-    private void ActualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseEntered
-        Actualizar.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_ActualizarMouseEntered
+    private void ActualizarEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarEmpMouseEntered
+        ActualizarEmp.setBackground(new Color(180,245,245));
+    }//GEN-LAST:event_ActualizarEmpMouseEntered
 
-    private void ActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseExited
-        Actualizar.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_ActualizarMouseExited
+    private void ActualizarEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarEmpMouseExited
+        ActualizarEmp.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_ActualizarEmpMouseExited
 
     private void regreadd1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regreadd1MouseEntered
         regreadd1.setBackground(new Color(180,245,245));
@@ -318,7 +318,7 @@ public class ActualizarEmpleado extends javax.swing.JFrame {
     }
     
     public void listenerActualizarEmpleado(ActionListener l){
-        Actualizar.addActionListener(l);
+        ActualizarEmp.addActionListener(l);
     }
 
     public JTextField getDireccionSecu() {
@@ -352,7 +352,7 @@ public class ActualizarEmpleado extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Actualizar;
+    private javax.swing.JButton ActualizarEmp;
     private javax.swing.JTextField DireccionSecu;
     private javax.swing.JTextField apellido;
     private javax.swing.JButton buscarAct;

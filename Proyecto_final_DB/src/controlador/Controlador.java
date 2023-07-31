@@ -11,9 +11,11 @@ import modelo.Cabecera_Factura;
 import modelo.Cliente;
 import modelo.DefaultListaClientes;
 import modelo.DefaultListaDetalles;
+import modelo.DefaultListaEmplados;
 import modelo.DefaultListaServicios;
 import modelo.DefaultTablaClientes;
 import modelo.DefaultTablaDetalles;
+import modelo.DefaultTablaEmpleados;
 import modelo.DefaultTablaServicios;
 import modelo.Usuario;
 import vista.ActualizarCliente;
@@ -45,6 +47,8 @@ public class Controlador {
         DefaultTablaDetalles tablaDetalles = new DefaultTablaDetalles(listaDetalles);
         DefaultListaServicios lisServ = new DefaultListaServicios();
         DefaultTablaServicios tablaServicios = new DefaultTablaServicios(lisServ);
+        DefaultListaEmplados listEmpleados = new DefaultListaEmplados();
+        DefaultTablaEmpleados tablaEmpleados = new DefaultTablaEmpleados(listEmpleados);
 
         ActualizarCliente actCli = new ActualizarCliente();
         Clientes c = new Clientes();
@@ -90,7 +94,7 @@ public class Controlador {
         ListenerActualizarServicio lActualzarServicio = new ListenerActualizarServicio(conexion, con, vCrearServicios, lisServ, ser);
         ListenerCrearServicios listenerCrearServicios = new ListenerCrearServicios(con, conexion, vCrearServicios, lisServ, ser, controladorServicios, vGeneral);
         ListenerBuscarActualizarEmpleado lbusActEmp = new ListenerBuscarActualizarEmpleado(conexion, con, actEmpleado);
-        //ListenerActualizarEmpleado lActEmpleado = new ListenerActualizarEmpleado(conexion, con, actCli);
+        ListenerActualizarEmpleado lActEmpleado = new ListenerActualizarEmpleado(conexion, con, lbusActEmp, actEmpleado);
         ListenerMostrarVentaaActualizarEmp lmActEmp = new ListenerMostrarVentaaActualizarEmp(actEmpleado);
         
         
@@ -129,13 +133,16 @@ public class Controlador {
         c.addActionListenerBotonEliminar(lbcc);
         
         actEmpleado.listenerBuscarEmpleado(lbusActEmp);
+        actEmpleado.listenerActualizarEmpleado(lActEmpleado);
         
         conexionTablas conCli = new conexionTablas(conexion, con);
 
         conCli.obtenerClientes(lisCli);
         conCli.obtenerServicios(lisServ);
+        conCli.obtenerEmpleados(listEmpleados);
 
         ser.setModelTableServicios(tablaServicios);
+        emp.setModelTablaEmpleados(tablaEmpleados);
 
         DefaultTablaClientes tableCli = new DefaultTablaClientes(lisCli);
 

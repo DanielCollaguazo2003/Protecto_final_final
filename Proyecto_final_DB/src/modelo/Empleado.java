@@ -19,6 +19,14 @@ public class Empleado extends Persona {
         this.permiso = permiso;
     }
 
+    public Permiso getPermiso() {
+        return permiso;
+    }
+
+    public void setPermiso(Permiso permiso) {
+        this.permiso = permiso;
+    }
+    
     public String getTipo() {
         return tipo;
     }
