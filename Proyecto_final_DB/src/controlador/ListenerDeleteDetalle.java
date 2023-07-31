@@ -41,6 +41,8 @@ public class ListenerDeleteDetalle implements ActionListener {
                 listaDetalles.fireIntervalRemoved(detalle, fila);
                 vGeneral.tableModelDetalles(tableDetalles);
                 calcularTotalFactura();
+            }else {
+                calcularTotalFactura();
             }
             vGeneral.repaint();
         }

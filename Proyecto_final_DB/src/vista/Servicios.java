@@ -7,8 +7,10 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -40,11 +42,9 @@ public class Servicios extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        ActualizarEmp = new javax.swing.JButton();
-        crearEmp = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        eliminarEmp = new javax.swing.JButton();
+        serviciosTable = new javax.swing.JTable();
+        eliminarServicio = new javax.swing.JButton();
+        crearActServicio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1215, 780));
@@ -73,9 +73,9 @@ public class Servicios extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dubai Medium", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(28, 119, 144));
         jLabel1.setText("CONTROL DE LOS SERVICIOS");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 340, 40));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 330, 40));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        serviciosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -86,61 +86,39 @@ public class Servicios extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(serviciosTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1110, -1));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1100, -1));
 
-        ActualizarEmp.setBackground(new java.awt.Color(255, 255, 253));
-        ActualizarEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        ActualizarEmp.setForeground(new java.awt.Color(28, 119, 144));
-        ActualizarEmp.setText("Actualizar");
-        ActualizarEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        ActualizarEmp.addMouseListener(new java.awt.event.MouseAdapter() {
+        eliminarServicio.setBackground(new java.awt.Color(255, 255, 253));
+        eliminarServicio.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        eliminarServicio.setForeground(new java.awt.Color(28, 119, 144));
+        eliminarServicio.setText("Eliminar un Servicio");
+        eliminarServicio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        eliminarServicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ActualizarEmpMouseEntered(evt);
+                eliminarServicioMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                ActualizarEmpMouseExited(evt);
+                eliminarServicioMouseExited(evt);
             }
         });
-        jPanel2.add(ActualizarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 510, 230, 50));
+        jPanel2.add(eliminarServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 340, 50));
 
-        crearEmp.setBackground(new java.awt.Color(255, 255, 253));
-        crearEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        crearEmp.setForeground(new java.awt.Color(28, 119, 144));
-        crearEmp.setText("Crear");
-        crearEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        crearEmp.addMouseListener(new java.awt.event.MouseAdapter() {
+        crearActServicio.setBackground(new java.awt.Color(255, 255, 253));
+        crearActServicio.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
+        crearActServicio.setForeground(new java.awt.Color(28, 119, 144));
+        crearActServicio.setText("Crear o Actualizar Servicios");
+        crearActServicio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
+        crearActServicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                crearEmpMouseEntered(evt);
+                crearActServicioMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                crearEmpMouseExited(evt);
+                crearActServicioMouseExited(evt);
             }
         });
-        jPanel2.add(crearEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 230, 50));
-
-        jButton3.setBackground(new java.awt.Color(255, 255, 253));
-        jButton3.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(28, 119, 144));
-        jButton3.setText("Crear");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 230, 50));
-
-        eliminarEmp.setBackground(new java.awt.Color(255, 255, 253));
-        eliminarEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        eliminarEmp.setForeground(new java.awt.Color(28, 119, 144));
-        eliminarEmp.setText("Eliminar");
-        eliminarEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        eliminarEmp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                eliminarEmpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                eliminarEmpMouseExited(evt);
-            }
-        });
-        jPanel2.add(eliminarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 230, 50));
+        jPanel2.add(crearActServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 340, 50));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 1160, 580));
 
@@ -166,29 +144,21 @@ public class Servicios extends javax.swing.JFrame {
             this.ubi = ubi;
         }
     }
-    private void crearEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseEntered
-        crearEmp.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_crearEmpMouseEntered
+    private void eliminarServicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarServicioMouseEntered
+        eliminarServicio.setBackground(new Color(180,245,245));
+    }//GEN-LAST:event_eliminarServicioMouseEntered
 
-    private void crearEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseExited
-        crearEmp.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_crearEmpMouseExited
+    private void eliminarServicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarServicioMouseExited
+        eliminarServicio.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_eliminarServicioMouseExited
 
-    private void eliminarEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarEmpMouseEntered
-        eliminarEmp.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_eliminarEmpMouseEntered
+    private void crearActServicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearActServicioMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crearActServicioMouseEntered
 
-    private void eliminarEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarEmpMouseExited
-        eliminarEmp.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_eliminarEmpMouseExited
-
-    private void ActualizarEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarEmpMouseEntered
-        ActualizarEmp.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_ActualizarEmpMouseEntered
-
-    private void ActualizarEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarEmpMouseExited
-        ActualizarEmp.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_ActualizarEmpMouseExited
+    private void crearActServicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearActServicioMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crearActServicioMouseExited
 
     /**
      * @param args the command line arguments
@@ -227,16 +197,26 @@ public class Servicios extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void listenerCrearActualizarServicio(ActionListener l){
+        crearActServicio.addActionListener(l);
+    }
+    
+    public void listenerEliminarServicio(ActionListener l){
+        eliminarServicio.addActionListener(l);
+    }
+    
+    public void setModelTableServicios(TableModel m){
+        serviciosTable.setModel(m);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ActualizarEmp;
-    private javax.swing.JButton crearEmp;
-    private javax.swing.JButton eliminarEmp;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton crearActServicio;
+    private javax.swing.JButton eliminarServicio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable serviciosTable;
     // End of variables declaration//GEN-END:variables
 }

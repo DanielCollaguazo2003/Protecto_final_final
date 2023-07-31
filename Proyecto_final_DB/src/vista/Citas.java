@@ -8,6 +8,7 @@ import com.toedter.calendar.JDateChooser;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -324,6 +325,14 @@ public class Citas extends javax.swing.JFrame {
                 new Citas().setVisible(true);
             }
         });
+    }
+    
+    public void listenerBuscarClienteCita(ActionListener l){
+        buscarCita.addActionListener(l);
+    }
+    
+    public void listenerAgendarCita(ActionListener l){
+        agendarCita.addActionListener(l);
     }
 
     public JTextField getCedulaCitas() {

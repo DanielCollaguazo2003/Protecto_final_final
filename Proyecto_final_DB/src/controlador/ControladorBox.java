@@ -101,4 +101,9 @@ public class ControladorBox {
     public ArrayList<Servicio> getListServicios(){
         return listServicios;
     }
+
+    public ArrayList<Tipo_Mascota> getListTipMascotas() {
+        return listTipMascotas;
+    }
+    
 }

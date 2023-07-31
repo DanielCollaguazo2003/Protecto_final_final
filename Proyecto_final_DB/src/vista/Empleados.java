@@ -7,6 +7,7 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
@@ -226,6 +227,9 @@ public class Empleados extends javax.swing.JFrame {
                 new Empleados().setVisible(true);
             }
         });
+    }
+    public void listenerActEmpleado(ActionListener l){
+        ActualizarEmp.addActionListener(l);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
