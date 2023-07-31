@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
 import vista.VistaGeneralSistema;
@@ -20,29 +21,40 @@ import vista.VistaLogin;
  *
  * @author XaviO_o
  */
-public class ListenerBucarClienteGeneral implements ActionListener{
+public class ListenerBucarClienteGeneral implements ActionListener {
+
     String sSQL = "";
     ConexionOracle conexion;
     PreparedStatement ps = null;
     Connection con;
     VistaGeneralSistema vGeneral;
     Cliente cli = null;
+
     public ListenerBucarClienteGeneral(ConexionOracle conexion, Connection con, VistaGeneralSistema vGeneral) {
         this.conexion = conexion;
         this.con = con;
         this.vGeneral = vGeneral;
+        
     }
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
+        String cedula = vGeneral.getCedulacam().getText();
+        obtenerClienteBD(vGeneral, cedula);
+        vGeneral.getNombreGen().setText(cli.getNombre() + " " + cli.getApellido());
+                vGeneral.getCedulaGen().setText(cli.getCedula());
+                vGeneral.getDireccionGen().setText(cli.getDireccion_p() + " " + cli.getDireccion_s());
+                vGeneral.getTelefonoGen().setText(cli.getTelefono());
+                vGeneral.getCorreoGen().setText(cli.getCorreo());
+    }
 
-            String cedula = vGeneral.getCedulacam().getText();
+    public void obtenerClienteBD(JFrame vista, String cedula) {
+        try {
+            
             ps = con.prepareStatement("SELECT * FROM veterinaria.vt_clientes c, veterinaria.vt_personas p WHERE (c.per_codigo=p.per_codigo) and (p.per_cedula=? and c.cli_estado='A')");
             ps.setString(1, cedula);
             ResultSet res = ps.executeQuery();
-            
+
             while (res.next()) {
                 String estado = res.getString("cli_estado");
                 int codigo = res.getInt("cli_codigo");
@@ -53,29 +65,25 @@ public class ListenerBucarClienteGeneral implements ActionListener{
                 String direccion_s = res.getString("per_direccion_secundaria");
                 String telefono = res.getString("per_telefono");
                 String correo = res.getString("per_correo_electronico");
-                cli = new Cliente(estado,codigo, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+                cli = new Cliente(estado, codigo, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+
                 
-                vGeneral.getNombreGen().setText(cli.getNombre()+" "+cli.getApellido());
-                vGeneral.getCedulaGen().setText(cli.getCedula());
-                vGeneral.getDireccionGen().setText(cli.getDireccion_p()+" "+cli.getDireccion_s());
-                vGeneral.getTelefonoGen().setText(cli.getTelefono());
-                vGeneral.getCorreoGen().setText(cli.getCorreo());
 
             }
 
             res = ps.executeQuery();
 
             if (res.next() == false) {
-                JOptionPane.showMessageDialog(vGeneral, "Usuario no encontrado!");
+                JOptionPane.showMessageDialog(vista, "Usuario no encontrado!");
             }
         } catch (SQLException x) {
             System.out.println(x);
             System.out.println("no");
         }
     }
-    
-    public Cliente getCliente(){
+
+    public Cliente getCliente() {
         return cli;
     }
-    
+
 }

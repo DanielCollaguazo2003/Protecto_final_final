@@ -7,8 +7,10 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -40,7 +42,7 @@ public class Empleados extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabalEmpleados = new javax.swing.JTable();
         ActualizarEmp = new javax.swing.JButton();
         crearEmp = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -77,7 +79,7 @@ public class Empleados extends javax.swing.JFrame {
         jLabel1.setText("CONTROL DE LOS EMPLEADOS");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 340, 40));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabalEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -88,7 +90,7 @@ public class Empleados extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabalEmpleados);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1110, -1));
 
@@ -227,6 +229,13 @@ public class Empleados extends javax.swing.JFrame {
             }
         });
     }
+    public void listenerActEmpleado(ActionListener l){
+        ActualizarEmp.addActionListener(l);
+    }
+    
+    public void setModelTablaEmpleados(TableModel m){
+        tabalEmpleados.setModel(m);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ActualizarEmp;
@@ -237,6 +246,6 @@ public class Empleados extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabalEmpleados;
     // End of variables declaration//GEN-END:variables
 }

@@ -15,13 +15,11 @@ public class Permiso {
     private int codigo_permiso;
     private String nombre;
     private String descripcion;
-    private Rol rol;
 
-    public Permiso(int codigo_permiso, String nombre, String descripcion, Rol rol) {
+    public Permiso(int codigo_permiso, String nombre, String descripcion) {
         this.codigo_permiso = codigo_permiso;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.rol = rol;
     }
 
     public String getNombre() {
@@ -38,14 +36,6 @@ public class Permiso {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }
-
-    public Rol getRol() {
-        return rol;
-    }
-
-    public void setRol(Rol rol) {
-        this.rol = rol;
     }
 
     public int getCodigo_permiso() {

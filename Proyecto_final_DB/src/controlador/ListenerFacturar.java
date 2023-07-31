@@ -52,7 +52,7 @@ public class ListenerFacturar implements ActionListener {
         agregarFacturaBD();
         factura.setCodigo_cb(extraercodigo());
         agregarDetallesFacturaBD(factura.getCodigo_cb());
-
+        enviarCorreo();
     }
 
     private void agregarFacturaBD() {
@@ -143,5 +143,11 @@ public class ListenerFacturar implements ActionListener {
                 System.out.println("no");
             }
         }
+    }
+    
+    private void enviarCorreo(){
+        envioCorreo envio = new envioCorreo();
+        envio.enviarCorreo();
+        envio.sendEmail();
     }
 }

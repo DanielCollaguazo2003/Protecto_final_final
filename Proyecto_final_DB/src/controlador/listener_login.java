@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import modelo.Empleado;
+import modelo.Permiso;
 import modelo.Usuario;
 import vista.VistaGeneralSistema;
 
@@ -100,7 +101,7 @@ public class listener_login implements ActionListener, KeyListener {
                 String direccion_s = res.getString("per_direccion_secundaria");
                 String telefono = res.getString("per_telefono");
                 String correo = res.getString("per_correo_electronico");
-                emp = new Empleado(tipo, 0, cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
+                emp = new Empleado(tipo, 0,new Permiso(0, "", ""), cedula, nombre, apellido, direccion_p, direccion_s, telefono, correo);
             }
 
             res = ps.executeQuery();
