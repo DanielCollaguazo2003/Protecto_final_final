@@ -20,19 +20,18 @@ GRANT INSERT, SELECT ON vt_detalles_facturas TO empleados_generales;
 
 GRANT INSERT, UPDATE, SELECT ON vt_clientes TO empleados_generales;
 GRANT INSERT, UPDATE, SELECT ON vt_personas TO empleados_generales;
+GRANT INSERT, SELECT ON vt_citas TO empleados_generales;
 GRANT SELECT ON vt_servicios TO empleados_generales;
 GRANT SELECT, ALTER ON fac_codigo_seq TO empleados_generales;
 GRANT SELECT, ALTER ON det_codigo_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_fac_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_det_seq TO empleados_generales;
-<<<<<<< HEAD
 GRANT EXECUTE ON proximo_valor_per_seq TO empleados_generales;
 GRANT EXECUTE ON proximo_valor_cli_seq TO empleados_generales;
+GRANT EXECUTE ON proximo_valor_cit_seq TO empleados_generales;
 
-=======
 GRANT SELECT ON vt_tipos_mascotas TO empleados_generales;
 GRANT SELECT ON vt_empleados TO empleados_generales;
->>>>>>> master
 -- Creacion de los usuarios nuevos
 CREATE USER daniel_admin IDENTIFIED BY 12345;
 CREATE USER paul_admin IDENTIFIED BY 12345;
