@@ -1,0 +1,555 @@
+[33mcommit 7f2bd7cc0060e8c06355dff0d5c593eb48bacbfa[m[33m ([m[1;36mHEAD -> [m[1;32manthony[m[33m, [m[1;31morigin/anthony[m[33m)[m
+Merge: 8a89c19 3212ef1
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Sun Jul 30 01:14:46 2023 -0500
+
+    commit de miedo
+
+[33mcommit 3212ef126f6819b238a016efdac69cdf5c2cc9f6[m[33m ([m[1;32mdaniel[m[33m)[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Sat Jul 29 12:49:35 2023 -0500
+
+    traer cambios a anthony
+
+[33mcommit 8a89c1981ee593c6b08b7ed3d543dc2839da3708[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Sat Jul 29 12:47:06 2023 -0500
+
+    commit para ir a daniel
+
+[33mcommit 15ed1530018ffd039358880d21cde63339d6a012[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Sat Jul 29 00:00:12 2023 -0500
+
+    xddddddddddd
+
+[33mcommit 63680daac064d28d086740643fedff8c48282abe[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 23:58:39 2023 -0500
+
+    hola mundo
+
+[33mcommit e04d33118d55b3af51f512ad19f3b5a13ef7f499[m
+Merge: db959c1 d819946
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 22:21:52 2023 -0500
+
+    traer los datos de daniel
+
+[33mcommit d819946bc48b614485036b9d6a4eb661be53c2db[m
+Merge: 15872a6 a3209a9
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 22:19:25 2023 -0500
+
+    otro commit para irme
+
+[33mcommit db959c176aacc9f17a36f613c7a242218d020279[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 22:17:19 2023 -0500
+
+    commit para ir a daniel
+
+[33mcommit a3209a945fa7250a7865e70424f24e3922b57eca[m[33m ([m[1;31morigin/daniel[m[33m)[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 22:09:44 2023 -0500
+
+    Termino de configurar el envio de facturas a la base de datos
+
+[33mcommit 15872a685feb50b439a47d37be37594b3f382618[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 19:51:22 2023 -0500
+
+    commit nuevo
+
+[33mcommit 66aca65a4edb447235118e6077417ff93add5646[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 19:44:33 2023 -0500
+
+    commit nuevo
+
+[33mcommit 13481de665401fd489c1707cdc51c87c41adec13[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 07:49:56 2023 -0500
+
+    Cambios completos anthony 2
+
+[33mcommit 3c8c6ed114e609ddaeb77312b18d899e09060fa9[m
+Merge: 2ce9125 7dadfdb
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 07:43:43 2023 -0500
+
+    Cambios completos anthony
+
+[33mcommit 7dadfdb66b7138c1a7e5e9c0162f7e1463aa4e59[m
+Merge: d354166 36e5695
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 07:31:25 2023 -0500
+
+    traigo cambios completos
+
+[33mcommit 2ce91254ec67fd3eb20b45032cfcb94fa47771d3[m
+Merge: 323e3fa d354166
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 07:30:24 2023 -0500
+
+    Cambios parciales anthony
+
+[33mcommit d354166d693295220dfe33458ade67a14e116004[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 07:27:27 2023 -0500
+
+    Traigo cambios del anthony
+
+[33mcommit 323e3fa581911d3415b38989e34075d8a642bdf5[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Fri Jul 28 07:25:19 2023 -0500
+
+    Inicio de sesion en el programa y la base de datos
+
+[33mcommit 36e5695d9c15e663e29f4d6f59549083eebe1a24[m
+Merge: 3e00931 c8b8d19
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 02:07:07 2023 -0500
+
+    cconfiguracion de clientes
+
+[33mcommit 3e009318fa82a6de7d8b4c77e1926e1e17f960f9[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Fri Jul 28 02:03:46 2023 -0500
+
+    configuracion de creacion cliennte
+
+[33mcommit ece0c4abf9d6b8b32bffcab11503162b8a51ea3a[m
+Merge: 3e1613c a31d7bd
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:23:02 2023 -0500
+
+    traer toda la informacion de nuevo
+
+[33mcommit a31d7bdabfc469127040ee403d76d27f3d861f25[m
+Merge: 7df24b7 9b4c8be
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:22:25 2023 -0500
+
+    traer cambios de nuevo
+
+[33mcommit 3e1613cb95d66eed7bc0aa7b7bef22663d34b62d[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:21:05 2023 -0500
+
+    jesus
+
+[33mcommit 9b4c8beaefabc8392cb4073c3014de1bcdf10033[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 23:20:18 2023 -0500
+
+    Prueba de errores para solucuonar problema anthony
+
+[33mcommit 7cd38d4ed66fb1c93bd9f38b9ac6b7c00fc2474c[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 23:19:17 2023 -0500
+
+    Cambios parciales en los usuarios
+
+[33mcommit 53e8e6cf52bca35bff887c70a0caf754b2477e4e[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:15:04 2023 -0500
+
+    hola mundo
+
+[33mcommit 1b921af30de38a96222316595234e443a07297fa[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:12:24 2023 -0500
+
+    dios mio
+
+[33mcommit f4efdadd06ce93dbb32176acecefa2fa94026964[m
+Merge: 896e41f 7df24b7
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:10:02 2023 -0500
+
+    traer info de master
+
+[33mcommit 896e41f8b75ed291fd4dc43e79229069f19a3be1[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:08:55 2023 -0500
+
+    commit para traer cambios de master
+
+[33mcommit 7df24b7ee43147a0aef771984dbd82df882024b6[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:07:49 2023 -0500
+
+    comprobacion de errores
+
+[33mcommit 1a02e66656ea3c36bba377e20f2c275da12a5474[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:05:13 2023 -0500
+
+    commit con erroes
+
+[33mcommit 971e6c6c5129d80d1c51300fadb7ddbc6bae2ac1[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 23:04:00 2023 -0500
+
+    commit con errores en el main
+
+[33mcommit 1d1e14e1a2faf070471b509e0d14ef189082378d[m
+Merge: 9b2e869 1fea88b
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 22:44:26 2023 -0500
+
+    traer cambios de master
+
+[33mcommit 1fea88b44e3aa118614cc8050279f4b23405d168[m
+Merge: d6ce77d 2009392
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 22:38:45 2023 -0500
+
+    Merge branch 'daniel' of https://github.com/DanielCollaguazo2003/Protecto_final_final into daniel
+
+[33mcommit d6ce77d2fefb37211f6808b5d925f73af4393549[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 22:38:29 2023 -0500
+
+    cambios previso
+
+[33mcommit 2009392870ef0625861ac38b982f6ec343452453[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 22:34:26 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 9b2e869342c86fd8b33c2ee36ac54032ff6df5c2[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 22:32:59 2023 -0500
+
+    arreglo de clase conexion clientes
+
+[33mcommit 87252158013f3ac298fba3ed56485e8e0d990b95[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 22:20:59 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 7da3f03ac557c995e7cac8f591347464c280427d[m
+Merge: c2eb400 332b233
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 21:43:58 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit c2eb4005de39ef4005f968eb694c528a951cbb68[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 21:38:55 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 14eed4464729fee56f6c82ccab3201a7accc596b[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 21:32:27 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 332b233ecc7a6601a982dd059cff17ef98e70a2d[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 21:15:43 2023 -0500
+
+    Ultimo commit daniel
+
+[33mcommit c8b8d198eda2d97335e5ae35f6d861b1a2429509[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 17:03:29 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 259d582b2c3c688d00f333f4366aa29ddc42062b[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 16:59:50 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 55c2c84cd1ba42249aa602311136225b40189a2d[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 16:29:04 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit df5634f8897be0d24385ec8246af7a98dbe8b2ed[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 16:11:06 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 9e04a28d6f65b8cbcab8cabcc7d768887d54ffe6[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 16:10:01 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 74d100bb2dea384a7aa0e834f2d287c60c7be19d[m
+Merge: 583237d d5d0eb3
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 16:08:31 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 583237d181b5b484211e9a937dc6f179368dc0e9[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 27 16:02:02 2023 -0500
+
+    Cambios 27/07/2023
+
+[33mcommit 61fc7975f8388fd543e8e0826aa4d4bef69c695c[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 13:05:58 2023 -0500
+
+    Agrgacion de atributos a los modelos
+
+[33mcommit 81510b05aa079c050af999bf5b2bbfbaadfa6069[m
+Merge: 329aab2 50bde36
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 12:11:36 2023 -0500
+
+    Arreglo errores del merge
+
+[33mcommit 50bde36cd76488165a37af8c2c107ce6bc2d28e2[m
+Merge: 752c496 826dcfd
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 12:08:50 2023 -0500
+
+    Cambios
+
+[33mcommit 752c496af5d6ab6eced683e8f7de654a95334955[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 12:04:04 2023 -0500
+
+    cambios
+
+[33mcommit 826dcfdab91fc126d07a5a66820abeecbd28ba2e[m
+Merge: ced1b93 d5d0eb3
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 27 11:59:11 2023 -0500
+
+    implementacion boton regresar en crear vista general
+
+[33mcommit 329aab24e0104aa8d6a34bedc3835b2c641829be[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 11:56:53 2023 -0500
+
+    Termino la vistaGeneral solamente falta el boton facturar
+
+[33mcommit 4b07295f7fb92de3b7c96800d9149104790d0527[m
+Merge: f00129c d5d0eb3
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 11:56:00 2023 -0500
+
+    traigo los cambios
+
+[33mcommit f00129c99dc2cc5ab6388ba4f585c704c05b681f[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 27 02:22:36 2023 -0500
+
+    Vista general por terminar
+
+[33mcommit ced1b93485200d822c92aa28dbef39878a718398[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 11:22:20 2023 -0500
+
+    commit regreso boton
+
+[33mcommit d5d0eb351184dc5a3ba7ab371f980cca2acc61f7[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 11:19:06 2023 -0500
+
+    implementacion boton return
+
+[33mcommit 708ca8a28482129086f5343dbd7e575631f11a03[m
+Merge: 8d985aa 3f1f2e5
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 10:45:53 2023 -0500
+
+    Merge branch 'daniel' of https://github.com/DanielCollaguazo2003/Protecto_final_final into daniel
+
+[33mcommit 3f1f2e55767c42071250ae25d613aa08c7624e92[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Wed Jul 26 10:44:38 2023 -0500
+
+    Termino las vistas 2
+
+[33mcommit a78250c0390b76105775441d2a906ab4750fd35a[m
+Merge: a7b915f 8d985aa
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 10:41:37 2023 -0500
+
+    commit actualizado
+
+[33mcommit 8d985aacf5827980ff8d5edb4c22bef0ebea3c34[m
+Merge: bbc56e2 8aa4ca5
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 10:40:41 2023 -0500
+
+    traer cambios 2
+
+[33mcommit a7b915f812c0407afb8de38ae62ce56a1fd90c8e[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 10:37:57 2023 -0500
+
+    otro commit
+
+[33mcommit 3ff96dee5d361eea84247892e7f53d28abd79538[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 10:37:23 2023 -0500
+
+    otro commit
+
+[33mcommit 8aa4ca5c16e3d0349e70716c6ecac0576ee04412[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Wed Jul 26 10:35:26 2023 -0500
+
+    Termino las vistas
+
+[33mcommit e5e02ea42efe960fd4d71bfa5f16e98aca67ecff[m
+Merge: 5aa12f7 bbc56e2
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 09:46:39 2023 -0500
+
+    traigo cambios
+
+[33mcommit bbc56e2b1db044cd7c574207646915669e2b364d[m
+Merge: 8ab4508 c37c824
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 09:45:54 2023 -0500
+
+    traigo cambios
+
+[33mcommit 8ab4508f1511ff0a600c30d417b44faa5936685c[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 09:45:28 2023 -0500
+
+    mi trabajo
+
+[33mcommit 5aa12f7ab561c41eab7aca36eb0e3a78ac3e490b[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Wed Jul 26 09:40:49 2023 -0500
+
+    mi trabajo
+
+[33mcommit c37c8240ecbcfac18d60854ed00ab19301a8d665[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Mon Jul 17 23:00:59 2023 -0500
+
+    Creacion de las Vistas
+
+[33mcommit 1e0b4b8d2d1bccfc3b1cbf58246a4b27a4782f3c[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Sat Jul 15 18:04:09 2023 -0500
+
+    Creacion de la interfaz para iniciar sesion y crear usuario
+
+[33mcommit 5f390f862d879b7c28c1e22c4f2f67a93ea57c6a[m
+Merge: c1b6ee3 6269e5e
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 13 22:39:49 2023 -0500
+
+    Proyecto extraido
+
+[33mcommit 6269e5ea4358bcb279b9aa7f0242f5635b04dff3[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 13 22:38:17 2023 -0500
+
+    Proyecto completo
+
+[33mcommit c1b6ee36a7c9dda873573a2887c1bfa457a822d5[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 13 22:33:27 2023 -0500
+
+    Arreglo errores
+
+[33mcommit cf3f11ae81812a3b6ed8d594e1c4f5cf12692ef1[m
+Merge: 623120a 598d4f1
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:26:03 2023 -0500
+
+    Agregacion de cmabios del anthony
+
+[33mcommit 623120a8fb5a4a61dd3154ea5b61470e4cfdf763[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:25:03 2023 -0500
+
+    Antes de agrgar los cambios de anthony
+
+[33mcommit 598d4f15414389c534f8bb610ada2ffba4fa095e[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:23:26 2023 -0500
+
+    Cambios de anthony 2
+
+[33mcommit eb87e126efac4c537f9b54abce0bd04e727c1f56[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:22:27 2023 -0500
+
+    Cambios de anthony
+
+[33mcommit 95a68e5fa2ca43e5699e42282a63648ddf776023[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 13 22:21:00 2023 -0500
+
+    Agregacion de datos a modelos
+
+[33mcommit f02b61e705e4dfeded646f73ebdc23ce44c3e863[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 13 22:16:34 2023 -0500
+
+    Correcion de errores
+
+[33mcommit 23fe0fc16e76fa21fd8d718c0bd8a5110401c2ca[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:12:53 2023 -0500
+
+    1ra Agreacion de todos los cambios
+
+[33mcommit 9628b59c185717be6b0cef7433dcff34b0458f43[m
+Merge: cc7e09b 4eb7811
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:11:24 2023 -0500
+
+    Merge branch 'anthony'
+
+[33mcommit 4eb781162c12ccba3f002cc7e27c6424a14d6908[m
+Author: Anthony Moya <anthonymoya246@gmail.com>
+Date:   Thu Jul 13 22:08:19 2023 -0500
+
+    Creacion modelo
+
+[33mcommit cc7e09b2c4e42bc0485287ccd7015c9e5ecf31d3[m
+Merge: a5ec300 86488cf
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:05:36 2023 -0500
+
+    Merge branch 'paul'
+
+[33mcommit 86488cfaa2ff6cde949494e546657d0abab0f896[m
+Merge: dd8976e 3613af3
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:05:06 2023 -0500
+
+    arreglo cambios
+
+[33mcommit dd8976e5719adcd66934d5f034323470e3c0487b[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:03:08 2023 -0500
+
+    Arreglo de errores
+
+[33mcommit fe4f29930e403c8ac1201260cb81984fe90fd3d8[m
+Author: Daniel Collaguazo <collaguazodaniel48@gmail.com>
+Date:   Thu Jul 13 22:01:21 2023 -0500
+
+    Vistas paul
+
+[33mcommit 3613af3b44e6c09b4730147ffe9f53b3cc06bd5f[m
+Author: Paul Sigua <mateosigua2002@gmail.com>
+Date:   Thu Jul 13 21:59:16 2023 -0500
+
+    Cambios en la vista 13/07/2023
