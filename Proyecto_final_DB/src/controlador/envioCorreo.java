@@ -5,14 +5,23 @@
 package controlador;
 
 import java.io.File;
-import javax.activation.*;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.NoSuchProviderException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-
-import javax.mail.*;
-import javax.mail.internet.*;
-import oracle.jdbc.clio.annotations.Debug.Level;
-import vista.VistaGeneralSistema;
 
 /**
  *
@@ -22,18 +31,24 @@ public class envioCorreo {
 
     private static String emailFrom = "upsproyectoveterinaria@gmail.com";
     private static String passwordFrom = "aivhqniymyvyxazf";
-    private String emailTo = "collaguazodaniel21@gmail.com";
-    private String subject = "lalala";
-    private String content = "mundo";
+    private String emailTo;
+    private String subject;
 
     private Properties mProperties = new Properties();
-    private Session mSession;
-    private MimeMessage mCorreo;
+    private Session mSession =  null;
+    private MimeMessage mCorreo = null;
+    private File mArchivosAdjuntos;
+   // private String nombres_archivos;
 
-    public envioCorreo() {
+    public envioCorreo(String emailTo, String subject, File mArchivosAdjuntos) {
+        this.emailTo = emailTo;
+        this.subject = subject;
+        this.mArchivosAdjuntos = mArchivosAdjuntos;
     }
 
-    public void enviarCorreo() {
+    
+
+    public void enviarCorreo(String content) {
         // Simple mail transfer protocol
         mProperties.put("mail.smtp.host", "smtp.gmail.com");
         mProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
@@ -45,11 +60,25 @@ public class envioCorreo {
 
         mSession = Session.getDefaultInstance(mProperties);
         try {
+            MimeMultipart mElementosCorreo = new MimeMultipart();
+            // contenido del correo
+            MimeBodyPart mcontenido = new MimeBodyPart();
+            mcontenido.setContent(content, "txt/html; charser=utf-8");
+            mElementosCorreo.addBodyPart(mcontenido);
+
+            //Agregar archivos adjuntos
+            MimeBodyPart mAdjuntos = null;
+            mAdjuntos = new MimeBodyPart();
+            mAdjuntos.setDataHandler(new DataHandler(new FileDataSource(mArchivosAdjuntos.getAbsolutePath())));
+            mAdjuntos.setFileName(mArchivosAdjuntos.getName());
+            mElementosCorreo.addBodyPart(mAdjuntos);
+
             mCorreo = new MimeMessage(mSession);
             mCorreo.setFrom(new InternetAddress(emailFrom));
             mCorreo.setRecipient(Message.RecipientType.TO, new InternetAddress(emailTo));
             mCorreo.setSubject(subject);
-            mCorreo.setText(content, "ISO-8859-1", "html");
+            mCorreo.setContent(mElementosCorreo);
+            //mCorreo.setText(content, "ISO-8859-1", "html");
 
         } catch (AddressException ex) {
             System.out.println(ex);

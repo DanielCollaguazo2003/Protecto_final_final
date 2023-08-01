@@ -68,6 +68,13 @@ public class listener_login implements ActionListener, KeyListener {
                 verfificar = true;
                 vGeneral.getUsuarioLabel().setText(res.getString("nombre") + "(" + res.getString("prm_nombre") + ")");
                 extraerEmpleado();
+                if (res.getString("prm_nombre").equals("General")) {
+                    vGeneral.getClientes().setEnabled(false);
+                    vGeneral.getEmpleados().setEnabled(false);
+                    vGeneral.getEstadisticas().setEnabled(false);
+                    vGeneral.getCitas().setEnabled(false);
+                    vGeneral.getServiciosBoton().setEnabled(false);
+                }
                 usu = new Usuario(res.getInt("usu_codigo"), res.getString("usu_nombre_usuario"), res.getString("usu_contrasenia"), emp);
                 conexion.desconectar();
                 

@@ -24,6 +24,7 @@ public class VistaLogin extends javax.swing.JFrame {
         initComponents();
         //this.setExtendedState(6);
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -40,10 +41,7 @@ public class VistaLogin extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        remember = new javax.swing.JCheckBox();
-        olvido = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        create = new javax.swing.JButton();
         sesion = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -58,56 +56,18 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 380, 40));
-        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 380, 40));
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 380, 40));
 
         jLabel7.setForeground(new java.awt.Color(73, 80, 87));
         jLabel7.setText("Contraseña");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 70, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 70, -1));
 
         jLabel6.setForeground(new java.awt.Color(73, 80, 87));
         jLabel6.setText("Usuario");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        remember.setForeground(new java.awt.Color(73, 80, 87));
-        remember.setText("Recuerdame");
-        remember.setBorder(null);
-        remember.setContentAreaFilled(false);
-        jPanel1.add(remember, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
-
-        olvido.setForeground(new java.awt.Color(116, 120, 141));
-        olvido.setText("¿Olvidaste la contraseña?");
-        olvido.setBorder(null);
-        olvido.setBorderPainted(false);
-        olvido.setContentAreaFilled(false);
-        olvido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                olvidoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(olvido, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 190, 20));
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, -1));
-
-        create.setBackground(new java.awt.Color(255, 252, 252));
-        create.setFont(new java.awt.Font("Dubai Medium", 0, 18)); // NOI18N
-        create.setForeground(new java.awt.Color(0, 116, 165));
-        create.setText("Crear Usuario");
-        create.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        create.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                createMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                createMouseExited(evt);
-            }
-        });
-        create.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createActionPerformed(evt);
-            }
-        });
-        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 180, 40));
 
         sesion.setBackground(new java.awt.Color(255, 252, 255));
         sesion.setFont(new java.awt.Font("Dubai Medium", 0, 18)); // NOI18N
@@ -127,7 +87,7 @@ public class VistaLogin extends javax.swing.JFrame {
                 sesionActionPerformed(evt);
             }
         });
-        jPanel1.add(sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 180, 40));
+        jPanel1.add(sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 230, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cabecera2_0.png"))); // NOI18N
         jLabel1.setToolTipText("");
@@ -142,14 +102,6 @@ public class VistaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void olvidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_olvidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_olvidoActionPerformed
-
-    private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_createActionPerformed
-
     private void sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sesionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sesionActionPerformed
@@ -161,14 +113,6 @@ public class VistaLogin extends javax.swing.JFrame {
     private void sesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sesionMouseExited
         sesion.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_sesionMouseExited
-
-    private void createMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createMouseExited
-        create.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_createMouseExited
-
-    private void createMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createMouseEntered
-        create.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_createMouseEntered
 
     public void listener_login(ActionListener l){
        sesion.addActionListener(l);
@@ -182,9 +126,6 @@ public class VistaLogin extends javax.swing.JFrame {
         return user;
     }
      
-    public void listenerCrearUser(ActionListener l){
-        create.addActionListener(l);
-    }
 
     public JButton getSesion() {
         return sesion;
@@ -230,16 +171,13 @@ public class VistaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton create;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton olvido;
     private javax.swing.JPasswordField password;
-    private javax.swing.JCheckBox remember;
     private javax.swing.JButton sesion;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables

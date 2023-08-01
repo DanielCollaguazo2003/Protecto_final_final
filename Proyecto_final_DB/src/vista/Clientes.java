@@ -26,6 +26,7 @@ public class Clientes extends javax.swing.JFrame {
         this.setContentPane(f);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -48,7 +49,6 @@ public class Clientes extends javax.swing.JFrame {
         crearEmp = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         eliminarEmp = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1215, 780));
@@ -146,14 +146,6 @@ public class Clientes extends javax.swing.JFrame {
         });
         jPanel2.add(eliminarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 230, 50));
 
-        jButton1.setText("Regresar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 230, 30));
-
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 1160, 580));
 
         pack();
@@ -206,10 +198,6 @@ public class Clientes extends javax.swing.JFrame {
         ActualizarEmp.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_ActualizarEmpMouseExited
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -252,6 +240,10 @@ public class Clientes extends javax.swing.JFrame {
         crearEmp.addActionListener(a);
     }
     
+    public void addActionListeneractuaizarCrear(ActionListener a){
+        ActualizarEmp.addActionListener(a);
+    }
+    
     public void addActionListenerBotonEliminar(ActionListener a){
         eliminarEmp.addActionListener(a);
     }
@@ -264,7 +256,6 @@ public class Clientes extends javax.swing.JFrame {
     private javax.swing.JButton ActualizarEmp;
     private javax.swing.JButton crearEmp;
     private javax.swing.JButton eliminarEmp;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

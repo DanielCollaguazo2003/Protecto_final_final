@@ -48,4 +48,9 @@ public class DefaultListaDetalles extends AbstractListModel<Detalle_Factura> {
         return listaDetalles;
     }
 
+    public void clearAllElements() {
+        int size = listaDetalles.size();
+        listaDetalles.clear();
+        fireIntervalRemoved(this, 0, size - 1);
+    }
 }

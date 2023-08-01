@@ -30,6 +30,7 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         this.setContentPane(fondo);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
     
     public void listenerBuscarServicio(ActionListener l){
@@ -44,9 +45,6 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         limpiarServicio.addActionListener(l);
     }
     
-    public void listenerRegresarServicio(ActionListener l){
-        regresarServicio.addActionListener(l);
-    }
     
     public void listenerCrearServicio(ActionListener l){
         crearServicio.addActionListener(l);
@@ -64,10 +62,6 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         return crearServicio;
     }
 
-    public JButton getRegresarServicio() {
-        return regresarServicio;
-    }
-    
     
     public JTextField getCodigoServicio() {
         return codigoServicio;
@@ -101,7 +95,7 @@ public class VistaCrearServicios extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoPanel f = new FondoPanel();
-        f.ubi = "/imagenes/añadir.png";
+        f.ubi = "/imagenes/añadirServiciocab.png";
         jPanel1 = f;
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -120,9 +114,8 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         crearServicio = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         actualizarServicio = new javax.swing.JButton();
-        regresarServicio = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(797, 490));
         setMinimumSize(new java.awt.Dimension(797, 490));
         setPreferredSize(new java.awt.Dimension(797, 490));
@@ -138,10 +131,10 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 83, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 100));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 83));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -188,8 +181,9 @@ public class VistaCrearServicios extends javax.swing.JFrame {
                 limpiarServicioActionPerformed(evt);
             }
         });
-        jPanel2.add(limpiarServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 150, 40));
+        jPanel2.add(limpiarServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 260, 40));
 
+        buscarServicio.setBackground(new java.awt.Color(255, 255, 255));
         buscarServicio.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         buscarServicio.setForeground(new java.awt.Color(28, 119, 144));
         buscarServicio.setText("Buscar");
@@ -220,6 +214,7 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         codigoServicio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
         jPanel2.add(codigoServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 80, 40));
 
+        crearServicio.setBackground(new java.awt.Color(255, 255, 255));
         crearServicio.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         crearServicio.setForeground(new java.awt.Color(28, 119, 144));
         crearServicio.setText("Crear");
@@ -258,26 +253,6 @@ public class VistaCrearServicios extends javax.swing.JFrame {
         });
         jPanel2.add(actualizarServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 180, 40));
 
-        regresarServicio.setBackground(new java.awt.Color(255, 255, 253));
-        regresarServicio.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        regresarServicio.setForeground(new java.awt.Color(28, 119, 144));
-        regresarServicio.setText("Regresar");
-        regresarServicio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        regresarServicio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                regresarServicioMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                regresarServicioMouseExited(evt);
-            }
-        });
-        regresarServicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regresarServicioActionPerformed(evt);
-            }
-        });
-        jPanel2.add(regresarServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 100, 40));
-
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 740, 320));
 
         pack();
@@ -304,36 +279,24 @@ public class VistaCrearServicios extends javax.swing.JFrame {
     }//GEN-LAST:event_buscarServicioMouseExited
 
     private void crearServicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearServicioMouseEntered
-        // TODO add your handling code here:
+        crearServicio.setBackground(new Color(180, 245, 245));
     }//GEN-LAST:event_crearServicioMouseEntered
 
     private void crearServicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearServicioMouseExited
-        // TODO add your handling code here:
+        crearServicio.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_crearServicioMouseExited
 
     private void actualizarServicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actualizarServicioMouseEntered
-        // TODO add your handling code here:
+        actualizarServicio.setBackground(new Color(180, 245, 245));
     }//GEN-LAST:event_actualizarServicioMouseEntered
 
     private void actualizarServicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actualizarServicioMouseExited
-        // TODO add your handling code here:
+        actualizarServicio.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_actualizarServicioMouseExited
 
     private void actualizarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarServicioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_actualizarServicioActionPerformed
-
-    private void regresarServicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarServicioMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regresarServicioMouseEntered
-
-    private void regresarServicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarServicioMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regresarServicioMouseExited
-
-    private void regresarServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarServicioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regresarServicioActionPerformed
     class FondoPanel extends JPanel {
 
         Image img;
@@ -410,6 +373,5 @@ public class VistaCrearServicios extends javax.swing.JFrame {
     private javax.swing.JButton limpiarServicio;
     private javax.swing.JTextField nombreServicio;
     private javax.swing.JTextField precioServicio;
-    private javax.swing.JButton regresarServicio;
     // End of variables declaration//GEN-END:variables
 }

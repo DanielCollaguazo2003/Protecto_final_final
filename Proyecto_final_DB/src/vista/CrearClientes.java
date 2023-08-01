@@ -26,6 +26,7 @@ public class CrearClientes extends javax.swing.JFrame {
         this.setContentPane(f);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -157,6 +158,7 @@ public class CrearClientes extends javax.swing.JFrame {
         });
         jPanel2.add(regreadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 140, 40));
 
+        crearadd.setBackground(new java.awt.Color(255, 255, 255));
         crearadd.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         crearadd.setForeground(new java.awt.Color(28, 119, 144));
         crearadd.setText("Crear");

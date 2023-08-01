@@ -26,6 +26,7 @@ public class CrearEmpleados extends javax.swing.JFrame {
         this.setContentPane(f);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -38,7 +39,7 @@ public class CrearEmpleados extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoPanel f = new FondoPanel();
-        f.ubi = "/imagenes/añadir.png";
+        f.ubi = "/imagenes/añadirEmpleadocab.png";
         jPanel1 = f;
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -161,6 +162,7 @@ public class CrearEmpleados extends javax.swing.JFrame {
         });
         jPanel2.add(regreadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 180, 50));
 
+        crearadd.setBackground(new java.awt.Color(255, 255, 255));
         crearadd.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         crearadd.setForeground(new java.awt.Color(28, 119, 144));
         crearadd.setText("Crear");

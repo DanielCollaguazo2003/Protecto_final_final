@@ -30,8 +30,7 @@ public class ListenerFinalizarSesion implements ActionListener {
         int eleccion = JOptionPane.showOptionDialog(vg, "¿Desea finalizar la sesión?",
                 "", 0, 0, null,botones, this);
         if (eleccion == JOptionPane.YES_OPTION) {
-            this.vg.setVisible(false);
-            this.vl.setVisible(true);
+            System.exit(0);
         } 
 
     }

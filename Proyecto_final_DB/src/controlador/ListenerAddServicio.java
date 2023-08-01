@@ -84,10 +84,6 @@ public class ListenerAddServicio implements ActionListener {
         if (buscarDetalle(ServicioCompleto) == false) {
             factura = new Cabecera_Factura(0, fechaHoraActual, 0, 0, 0, lBuscarCliente.getCliente(), usu);
             Detalle_Factura detalle = new Detalle_Factura(ServicioCompleto.getCodigo_s(), cantidad, ServicioCompleto.getPrecio(), subtotal, totalIva, total, factura, ServicioCompleto);
-            /*
-            Cabecera_Factura cabecera = new Cabecera_Factura(0,new Date(2023, 02, 12), 0, 0, 0, cli, usu);
-            Detalle_Factura detalle = new Detalle_Factura(ServicioCompleto.getCodigo_s(), cantidad, ServicioCompleto.getPrecio(), subtotal, totalIva, total, cabecera, ServicioCompleto);
-             */
             listaDetalles.addElement(detalle);
             listDetalles.add(detalle);
             vGeneral.tableModelDetalles(tableDetalles);
@@ -156,44 +152,6 @@ public class ListenerAddServicio implements ActionListener {
         return listDetalles;
     }
 
-    /*
-    public void agregarDetalleBD(){
-        try {
-
-            String cedula = vGeneral.getCedulacam().getText();
-            ps = con.prepareStatement("SELECT * FROM vt_clientes c, vt_personas p WHERE (c.per_codigo=p.per_codigo) and (p.per_cedula=? and c.cli_estado='A')");
-            ps.setString(1, cedula);
-            ResultSet res = ps.executeQuery();
-            
-            while (res.next()) {
-                String estado = res.getString("cli_estado");
-                String nombre = res.getString("per_nombre");
-                String apellido = res.getString("per_apellido");
-                String cedulaCli = res.getString("per_cedula");
-                String direccion_p = res.getString("per_direccion_principal");
-                String direccion_s = res.getString("per_direccion_secundaria");
-                String telefono = res.getString("per_telefono");
-                String correo = res.getString("per_correo_electronico");
-                cli = new Cliente(estado, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
-                
-                vGeneral.getNombreGen().setText(cli.getNombre()+" "+cli.getApellido());
-                vGeneral.getCedulaGen().setText(cli.getCedula());
-                vGeneral.getDireccionGen().setText(cli.getDireccion_p()+" "+cli.getDireccion_s());
-                vGeneral.getTelefonoGen().setText(cli.getTelefono());
-                vGeneral.getCorreoGen().setText(cli.getCorreo());
-
-            }
-
-            res = ps.executeQuery();
-
-            if (res.next() == false) {
-                JOptionPane.showMessageDialog(vGeneral, "Usuario no encontrado!");
-            }
-        } catch (SQLException x) {
-            System.out.println(x);
-            System.out.println("no");
-        }
-    }*/
     public ArrayList<Servicio> getListServicios() {
         return listServicios;
     }

@@ -25,6 +25,7 @@ public class Servicios extends javax.swing.JFrame {
         this.setContentPane(f);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -153,11 +154,11 @@ public class Servicios extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminarServicioMouseExited
 
     private void crearActServicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearActServicioMouseEntered
-        // TODO add your handling code here:
+        crearActServicio.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_crearActServicioMouseEntered
 
     private void crearActServicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearActServicioMouseExited
-        // TODO add your handling code here:
+        crearActServicio.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_crearActServicioMouseExited
 
     /**

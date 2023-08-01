@@ -9,6 +9,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -68,7 +69,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         direccionGen = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        fechaVista = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         cedulaGen = new javax.swing.JLabel();
         correoGen = new javax.swing.JLabel();
@@ -121,9 +122,14 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
 
         estadisticas.setBackground(new java.awt.Color(180, 245, 245));
         estadisticas.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
-        estadisticas.setText("Estadisticas");
+        estadisticas.setText("Facturas");
         estadisticas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         estadisticas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        estadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadisticasActionPerformed(evt);
+            }
+        });
 
         citas.setBackground(new java.awt.Color(180, 245, 245));
         citas.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
@@ -220,7 +226,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         actgen.setBackground(new java.awt.Color(255, 255, 254));
         actgen.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         actgen.setForeground(new java.awt.Color(28, 119, 144));
-        actgen.setText("Actualizar");
+        actgen.setText("Actu. Cliente");
         actgen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
         actgen.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -268,7 +274,6 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("N° de Factura:");
 
-        jLabel9.setText("VTCD093");
         jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
 
         direccionGen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -279,8 +284,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel17.setText("Fecha Facturacion:");
 
-        jLabel19.setText("15-07-2023   20:07");
-        jLabel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        fechaVista.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -395,7 +399,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(actgen, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(fechaVista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(6, 6, 6))
         );
         jPanel3Layout.setVerticalGroup(
@@ -421,7 +425,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(fechaVista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -642,7 +646,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1285, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -702,28 +706,32 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     }//GEN-LAST:event_facturarMouseExited
 
     private void agendarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agendarMouseEntered
-        // TODO add your handling code here:
+        agendar.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_agendarMouseEntered
 
     private void agendarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agendarMouseExited
-        // TODO add your handling code here:
+        agendar.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_agendarMouseExited
 
     private void anadirSerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_anadirSerMouseEntered
-        // TODO add your handling code here:
+        anadirSer.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_anadirSerMouseEntered
 
     private void anadirSerMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_anadirSerMouseExited
-        // TODO add your handling code here:
+        anadirSer.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_anadirSerMouseExited
 
     private void deleteDetalleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteDetalleMouseEntered
-        // TODO add your handling code here:
+        deleteDetalle.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_deleteDetalleMouseEntered
 
     private void deleteDetalleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteDetalleMouseExited
-        // TODO add your handling code here:
+        deleteDetalle.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_deleteDetalleMouseExited
+
+    private void estadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadisticasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_estadisticasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -780,6 +788,42 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
         
         
     }
+
+    public JLabel getFechaVista() {
+        return fechaVista;
+    }
+
+    public JLabel getIdFactura() {
+        return jLabel9;
+    }
+    
+    
+
+    public JButton getServiciosBoton() {
+        return serviciosBoton;
+    }
+
+    public JButton getFacturar() {
+        return facturar;
+    }
+    
+
+    public JButton getCitas() {
+        return citas;
+    }
+
+    public JButton getClientes() {
+        return clientes;
+    }
+
+    public JButton getEmpleados() {
+        return empleados;
+    }
+
+    public JButton getEstadisticas() {
+        return estadisticas;
+    }
+    
     
     /* METODOS EXTRACCION BOTONES */
     public void listenerClientes(ActionListener l){
@@ -909,6 +953,7 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     private javax.swing.JButton empleados;
     private javax.swing.JButton estadisticas;
     private javax.swing.JButton facturar;
+    private javax.swing.JLabel fechaVista;
     private javax.swing.JButton finSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -917,7 +962,6 @@ public class VistaGeneralSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;

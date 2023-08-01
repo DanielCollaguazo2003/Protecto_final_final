@@ -4,6 +4,7 @@
  */
 package modelo;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -13,26 +14,38 @@ import java.util.Date;
 public class Cita {
     
     private int codigo_cita;
-    private Date fecha;
+    private LocalDateTime fecha;
     private String estado;
     private Cliente cliente;
     private String nombre_mascota;
     private Empleado empleado;
+    private Tipo_Mascota tipo_Mascota;
 
-    public Cita(int codigo_cita, Date fecha, String estado, Cliente cliente, String nombre_mascota, Empleado empleado) {
+    public Cita(int codigo_cita, LocalDateTime fecha, String estado, Cliente cliente, String nombre_mascota, Empleado empleado, Tipo_Mascota tipo_Mascota) {
         this.codigo_cita = codigo_cita;
         this.fecha = fecha;
         this.estado = estado;
         this.cliente = cliente;
         this.nombre_mascota = nombre_mascota;
         this.empleado = empleado;
+        this.tipo_Mascota = tipo_Mascota;
     }
 
-    public Date getFecha() {
+    public Tipo_Mascota getTipo_Mascota() {
+        return tipo_Mascota;
+    }
+
+    public void setTipo_Mascota(Tipo_Mascota tipo_Mascota) {
+        this.tipo_Mascota = tipo_Mascota;
+    }
+
+        
+    
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 

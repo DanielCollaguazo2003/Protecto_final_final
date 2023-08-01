@@ -67,7 +67,7 @@ public class ListenerBucarClienteGeneral implements ActionListener {
                 String correo = res.getString("per_correo_electronico");
                 cli = new Cliente(estado, codigo, cedulaCli, nombre, apellido, direccion_p, direccion_s, telefono, correo);
 
-                
+                vGeneral.getFacturar().setEnabled(true);
 
             }
 

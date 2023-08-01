@@ -27,6 +27,7 @@ public class ActualizarEmpleado extends javax.swing.JFrame {
         this.setContentPane(f);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

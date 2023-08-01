@@ -31,6 +31,7 @@ public class Citas extends javax.swing.JFrame {
         this.setContentPane(f);
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
     
     class FondoPanel extends JPanel {
@@ -69,7 +70,6 @@ public class Citas extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         buscarCita = new javax.swing.JButton();
-        regresarCita = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         tipoMascota = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
@@ -135,21 +135,6 @@ public class Citas extends javax.swing.JFrame {
         });
         jPanel2.add(buscarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 160, 40));
 
-        regresarCita.setBackground(new java.awt.Color(255, 255, 253));
-        regresarCita.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        regresarCita.setForeground(new java.awt.Color(28, 119, 144));
-        regresarCita.setText("Regresar");
-        regresarCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        regresarCita.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                regresarCitaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                regresarCitaMouseExited(evt);
-            }
-        });
-        jPanel2.add(regresarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 180, 40));
-
         jLabel11.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel11.setText("Fecha");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 120, 20));
@@ -167,11 +152,9 @@ public class Citas extends javax.swing.JFrame {
         jLabel4.setText("Correo Electronico:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 120, 20));
 
-        correoCitas.setText("collaguazodaniel48@gmail.com");
         correoCitas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
         jPanel2.add(correoCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 350, 40));
 
-        nombreCitas.setText("Daniel Collaguazo");
         nombreCitas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
         jPanel2.add(nombreCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 350, 40));
 
@@ -204,7 +187,7 @@ public class Citas extends javax.swing.JFrame {
         addClienteCita.setBackground(new java.awt.Color(255, 255, 253));
         addClienteCita.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
         addClienteCita.setForeground(new java.awt.Color(28, 119, 144));
-        addClienteCita.setText("Añadir Cliente");
+        addClienteCita.setText("Nuevo Cliente");
         addClienteCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
         addClienteCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -260,14 +243,6 @@ public class Citas extends javax.swing.JFrame {
         buscarCita.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_buscarCitaMouseExited
 
-    private void regresarCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarCitaMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regresarCitaMouseEntered
-
-    private void regresarCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarCitaMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regresarCitaMouseExited
-
     private void tipoMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoMascotaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tipoMascotaActionPerformed
@@ -277,19 +252,19 @@ public class Citas extends javax.swing.JFrame {
     }//GEN-LAST:event_veterinarioCitasActionPerformed
 
     private void addClienteCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addClienteCitaMouseEntered
-        // TODO add your handling code here:
+        buscarCita.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_addClienteCitaMouseEntered
 
     private void addClienteCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addClienteCitaMouseExited
-        // TODO add your handling code here:
+        buscarCita.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_addClienteCitaMouseExited
 
     private void agendarCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agendarCitaMouseEntered
-        // TODO add your handling code here:
+        buscarCita.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_agendarCitaMouseEntered
 
     private void agendarCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agendarCitaMouseExited
-        // TODO add your handling code here:
+        buscarCita.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_agendarCitaMouseExited
 
     /**
@@ -329,6 +304,10 @@ public class Citas extends javax.swing.JFrame {
     
     public void listenerBuscarClienteCita(ActionListener l){
         buscarCita.addActionListener(l);
+    }
+    
+     public void listeneraddClienteCita(ActionListener l){
+        addClienteCita.addActionListener(l);
     }
     
     public void listenerAgendarCita(ActionListener l){
@@ -421,7 +400,6 @@ public class Citas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel nombreCitas;
     private javax.swing.JTextField nombreMascCitas;
-    private javax.swing.JButton regresarCita;
     private javax.swing.JComboBox<String> tipoMascota;
     private javax.swing.JComboBox<String> veterinarioCitas;
     // End of variables declaration//GEN-END:variables
