@@ -45,13 +45,9 @@ public class Empleados extends javax.swing.JFrame {
         tabalEmpleados = new javax.swing.JTable();
         ActualizarEmp = new javax.swing.JButton();
         crearEmp = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        eliminarEmp = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1215, 780));
         setMinimumSize(new java.awt.Dimension(1215, 780));
-        setPreferredSize(new java.awt.Dimension(1215, 780));
         setSize(new java.awt.Dimension(1215, 780));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -107,7 +103,7 @@ public class Empleados extends javax.swing.JFrame {
                 ActualizarEmpMouseExited(evt);
             }
         });
-        jPanel2.add(ActualizarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 510, 230, 50));
+        jPanel2.add(ActualizarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 230, 50));
 
         crearEmp.setBackground(new java.awt.Color(255, 255, 253));
         crearEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
@@ -122,29 +118,7 @@ public class Empleados extends javax.swing.JFrame {
                 crearEmpMouseExited(evt);
             }
         });
-        jPanel2.add(crearEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 230, 50));
-
-        jButton3.setBackground(new java.awt.Color(255, 255, 253));
-        jButton3.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(28, 119, 144));
-        jButton3.setText("Crear");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 230, 50));
-
-        eliminarEmp.setBackground(new java.awt.Color(255, 255, 253));
-        eliminarEmp.setFont(new java.awt.Font("Dubai Medium", 0, 24)); // NOI18N
-        eliminarEmp.setForeground(new java.awt.Color(28, 119, 144));
-        eliminarEmp.setText("Eliminar");
-        eliminarEmp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(180, 245, 245), 2, true));
-        eliminarEmp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                eliminarEmpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                eliminarEmpMouseExited(evt);
-            }
-        });
-        jPanel2.add(eliminarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 230, 50));
+        jPanel2.add(crearEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, 230, 50));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 1160, 580));
 
@@ -177,14 +151,6 @@ public class Empleados extends javax.swing.JFrame {
     private void crearEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearEmpMouseExited
         crearEmp.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_crearEmpMouseExited
-
-    private void eliminarEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarEmpMouseEntered
-        eliminarEmp.setBackground(new Color(180,245,245));
-    }//GEN-LAST:event_eliminarEmpMouseEntered
-
-    private void eliminarEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarEmpMouseExited
-        eliminarEmp.setBackground(new Color(255,255,255));
-    }//GEN-LAST:event_eliminarEmpMouseExited
 
     private void ActualizarEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarEmpMouseEntered
         ActualizarEmp.setBackground(new Color(180,245,245));
@@ -233,6 +199,10 @@ public class Empleados extends javax.swing.JFrame {
         ActualizarEmp.addActionListener(l);
     }
     
+    public void addActionListenerCrearEmpleado(ActionListener a){
+        crearEmp.addActionListener(a);
+    }
+    
     public void setModelTablaEmpleados(TableModel m){
         tabalEmpleados.setModel(m);
     }
@@ -240,8 +210,6 @@ public class Empleados extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ActualizarEmp;
     private javax.swing.JButton crearEmp;
-    private javax.swing.JButton eliminarEmp;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

@@ -47,5 +47,11 @@ public class DefaultListaEmplados extends AbstractListModel<Empleado> {
     public ArrayList<Empleado> getListaDetalles() {
         return listaEmpleados;
     }
+    
+    public void clearAllElements() {
+        int size = listaEmpleados.size();
+        listaEmpleados.clear();
+        fireIntervalRemoved(this, 0, size - 1);
+    }
 
 }

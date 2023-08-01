@@ -58,9 +58,9 @@ public class CrearEmpleados extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         regreadd = new javax.swing.JButton();
         crearadd = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxPermiso = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBoxRol = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -175,15 +175,20 @@ public class CrearEmpleados extends javax.swing.JFrame {
         });
         jPanel2.add(crearadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, 190, 50));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 200, 40));
+        jComboBoxPermiso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccionar", "Administrador", "General", "Sin Permisos" }));
+        jPanel2.add(jComboBoxPermiso, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 200, 40));
 
         jLabel12.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel12.setText("Permisos");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 300, 110, 20));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 190, 40));
+        jComboBoxRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccionar", "Veterinario" }));
+        jComboBoxRol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxRolActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jComboBoxRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 190, 40));
 
         jLabel13.setFont(new java.awt.Font("Dubai Medium", 0, 14)); // NOI18N
         jLabel13.setText("Rol que cumple:");
@@ -213,6 +218,10 @@ public class CrearEmpleados extends javax.swing.JFrame {
     private void regreaddMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regreaddMouseEntered
         regreadd.setBackground(new Color(180,245,245));
     }//GEN-LAST:event_regreaddMouseEntered
+
+    private void jComboBoxRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxRolActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxRolActionPerformed
     class FondoPanel extends JPanel {
 
             Image img;        
@@ -268,7 +277,21 @@ public class CrearEmpleados extends javax.swing.JFrame {
         });
     }
 
+    public JComboBox<String> getjComboBoxPermiso() {
+        return jComboBoxPermiso;
+    }
 
+    public void setjComboBoxPermiso(JComboBox<String> jComboBoxPermiso) {
+        this.jComboBoxPermiso = jComboBoxPermiso;
+    }
+
+    public JComboBox<String> getjComboBoxRol() {
+        return jComboBoxRol;
+    }
+
+    public void setjComboBoxRol(JComboBox<String> jComboBoxRol) {
+        this.jComboBoxRol = jComboBoxRol;
+    }
 
     public JTextField getjTextFieldApellidos() {
         return jTextFieldApellidos;
@@ -326,18 +349,18 @@ public class CrearEmpleados extends javax.swing.JFrame {
         this.jTextFieldNumCell = jTextFieldNumCell;
     }
     
-    public void addActionListenerCrear(ActionListener a) {
+    public void addActionListenerRegresar(ActionListener a) {
         regreadd.addActionListener(a);
     }
     
-    public void addActionListenerCrearUsuario(ActionListener a){
+    public void addActionListenerCreaEmpleado(ActionListener a){
         crearadd.addActionListener(a);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton crearadd;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBoxPermiso;
+    private javax.swing.JComboBox<String> jComboBoxRol;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

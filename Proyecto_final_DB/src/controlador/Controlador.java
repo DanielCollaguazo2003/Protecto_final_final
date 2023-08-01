@@ -23,6 +23,7 @@ import vista.ActualizarEmpleado;
 import vista.Citas;
 import vista.Clientes;
 import vista.CrearClientes;
+import vista.CrearEmpleados;
 import vista.Empleados;
 import vista.Servicios;
 import vista.VistaCrearServicios;
@@ -54,6 +55,7 @@ public class Controlador {
         Clientes c = new Clientes();
         CrearClientes ccli = new CrearClientes();
         Empleados emp = new Empleados();
+        CrearEmpleados cemp = new CrearEmpleados();
         Servicios ser = new Servicios();
         Citas citas = new Citas();
         ActualizarEmpleado actEmpleado = new ActualizarEmpleado();
@@ -96,6 +98,10 @@ public class Controlador {
         ListenerBuscarActualizarEmpleado lbusActEmp = new ListenerBuscarActualizarEmpleado(conexion, con, actEmpleado);
         ListenerActualizarEmpleado lActEmpleado = new ListenerActualizarEmpleado(conexion, con, lbusActEmp, actEmpleado);
         ListenerMostrarVentaaActualizarEmp lmActEmp = new ListenerMostrarVentaaActualizarEmp(actEmpleado);
+        ListenerMostrarVentanaCreacionEmp lmvce = new ListenerMostrarVentanaCreacionEmp(emp, cemp);
+        ListenerRegresarCreacionEmpleados lrce = new ListenerRegresarCreacionEmpleados(cemp);
+        ListenerCrearEmpleado lce = new ListenerCrearEmpleado(con, cemp, conexion, listEmpleados, emp, lccs);
+        ListenerBorrarEmpleado lbe = new ListenerBorrarEmpleado();
         
         
         
@@ -143,6 +149,11 @@ public class Controlador {
 
         ser.setModelTableServicios(tablaServicios);
         emp.setModelTablaEmpleados(tablaEmpleados);
+        emp.addActionListenerCrearEmpleado(lmvce);
+        
+        
+        cemp.addActionListenerRegresar(lrce);
+        cemp.addActionListenerCreaEmpleado(lce);
 
         DefaultTablaClientes tableCli = new DefaultTablaClientes(lisCli);
 
